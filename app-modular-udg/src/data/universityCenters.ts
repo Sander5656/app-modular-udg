@@ -268,5 +268,206 @@ export const universityCenters: UniversityCenter[] = [
         centerId: "cucsh"
       }
     ]
+  },
+  {
+    id: "cucba",
+    name: "Centro Universitario de Ciencias Biológicas y Agropecuarias",
+    acronym: "CUCBA",
+    description: "El CUCBA se dedica a la formación de profesionales en ciencias biológicas y agropecuarias, enfocado en la investigación y el desarrollo sustentable.",
+    address: "Camino Ramón Padilla Sánchez 2100, Zapopan, Jalisco",
+    phone: "33 3777 1150",
+    email: "contacto@cucba.udg.mx",
+    website: "http://www.cucba.udg.mx",
+    interestingFacts: [
+      "Cuenta con más de 3,000 estudiantes",
+      "Tiene granjas experimentales y áreas de producción",
+      "Líder en investigación sobre biodiversidad",
+      "Programas enfocados en sustentabilidad"
+    ],
+    coordinates: { lat: 20.7489, lng: -103.5120 },
+    careers: [
+      {
+        id: "agronomia",
+        name: "Ingeniería Agronómica",
+        description: "Forma profesionales capaces de desarrollar sistemas de producción agrícola sustentable.",
+        duration: "9 semestres",
+        modality: "Presencial",
+        admissionRequirements: [
+          "Certificado de bachillerato",
+          "Examen de admisión",
+          "Curso propedéutico",
+          "Documentación oficial"
+        ],
+        fieldOfStudy: "Agronomía y Producción Agrícola",
+        professionalProfile: "Diseña y gestiona sistemas de producción agrícola, aplica técnicas de cultivo sustentable y asesora en proyectos agropecuarios.",
+        centerId: "cucba"
+      },
+      {
+        id: "medicina-veterinaria",
+        name: "Medicina Veterinaria y Zootecnia",
+        description: "Prepara profesionales para el cuidado de la salud animal y la producción pecuaria.",
+        duration: "10 semestres",
+        modality: "Presencial",
+        admissionRequirements: [
+          "Certificado de bachillerato",
+          "Examen de admisión",
+          "Curso propedéutico",
+          "Documentación oficial"
+        ],
+        fieldOfStudy: "Medicina Veterinaria",
+        professionalProfile: "Diagnostica y trata enfermedades animales, gestiona producción pecuaria y promueve la salud pública veterinaria.",
+        centerId: "cucba"
+      },
+      {
+        id: "biologia",
+        name: "Licenciatura en Biología",
+        description: "Forma científicos dedicados al estudio de los seres vivos y su entorno.",
+        duration: "8 semestres",
+        modality: "Presencial",
+        admissionRequirements: [
+          "Certificado de bachillerato",
+          "Examen de admisión",
+          "Curso propedéutico",
+          "Documentación oficial"
+        ],
+        fieldOfStudy: "Ciencias Biológicas",
+        professionalProfile: "Realiza investigación científica, evalúa impacto ambiental y desarrolla proyectos de conservación.",
+        centerId: "cucba"
+      }
+    ]
+  },
+  {
+    id: "cuaad",
+    name: "Centro Universitario de Arte, Arquitectura y Diseño",
+    acronym: "CUAAD",
+    description: "El CUAAD es el centro especializado en la formación de profesionales creativos en las áreas de arte, arquitectura y diseño, destacando por su innovación y vanguardia.",
+    address: "Calzada Independencia Norte 5075, Huentitán El Bajo, Guadalajara, Jalisco",
+    phone: "33 3202 3000",
+    email: "contacto@cuaad.udg.mx",
+    website: "http://www.cuaad.udg.mx",
+    interestingFacts: [
+      "Único centro especializado en arte y diseño de la UdeG",
+      "Cuenta con más de 4,500 estudiantes",
+      "Instalaciones con talleres y estudios especializados",
+      "Exposiciones y eventos culturales permanentes"
+    ],
+    coordinates: { lat: 20.7233, lng: -103.3178 },
+    careers: [
+      {
+        id: "arquitectura",
+        name: "Arquitectura",
+        description: "Forma arquitectos capaces de diseñar espacios funcionales, estéticos y sustentables.",
+        duration: "10 semestres",
+        modality: "Presencial",
+        admissionRequirements: [
+          "Certificado de bachillerato",
+          "Examen de admisión",
+          "Examen de habilidades",
+          "Documentación oficial"
+        ],
+        fieldOfStudy: "Arquitectura y Urbanismo",
+        professionalProfile: "Diseña y supervisa proyectos arquitectónicos, planifica espacios urbanos y aplica criterios de sustentabilidad.",
+        centerId: "cuaad"
+      },
+      {
+        id: "diseno-grafico",
+        name: "Diseño para la Comunicación Gráfica",
+        description: "Prepara diseñadores capaces de crear soluciones visuales efectivas para la comunicación.",
+        duration: "8 semestres",
+        modality: "Presencial",
+        admissionRequirements: [
+          "Certificado de bachillerato",
+          "Examen de admisión",
+          "Examen de habilidades creativas",
+          "Documentación oficial"
+        ],
+        fieldOfStudy: "Diseño Gráfico",
+        professionalProfile: "Desarrolla identidades visuales, diseña campañas publicitarias y crea contenido visual para medios digitales.",
+        centerId: "cuaad"
+      },
+      {
+        id: "artes-visuales",
+        name: "Artes Visuales para la Expresión Fotográfica",
+        description: "Forma artistas especializados en fotografía y expresión visual contemporánea.",
+        duration: "8 semestres",
+        modality: "Presencial",
+        admissionRequirements: [
+          "Certificado de bachillerato",
+          "Examen de admisión",
+          "Portafolio de trabajos",
+          "Documentación oficial"
+        ],
+        fieldOfStudy: "Artes Visuales y Fotografía",
+        professionalProfile: "Produce obra fotográfica artística, gestiona proyectos visuales y desarrolla propuestas creativas contemporáneas.",
+        centerId: "cuaad"
+      }
+    ]
+  },
+  {
+    id: "cucosta",
+    name: "Centro Universitario de la Costa",
+    acronym: "CUCosta",
+    description: "El CUCosta ofrece educación superior de calidad en la región costera de Jalisco, con programas innovadores y vinculación regional.",
+    address: "Av. Universidad 203, Delegación Ixtapa, Puerto Vallarta, Jalisco",
+    phone: "322 226 2200",
+    email: "contacto@cuc.udg.mx",
+    website: "http://www.cuc.udg.mx",
+    interestingFacts: [
+      "Ubicado en Puerto Vallarta",
+      "Más de 3,500 estudiantes",
+      "Enfoque en turismo y desarrollo sustentable",
+      "Convenios con sector hotelero y turístico"
+    ],
+    coordinates: { lat: 20.6534, lng: -105.2253 },
+    careers: [
+      {
+        id: "turismo",
+        name: "Licenciatura en Gestión y Desarrollo Turístico",
+        description: "Forma profesionales especializados en la gestión y desarrollo del sector turístico.",
+        duration: "8 semestres",
+        modality: "Presencial",
+        admissionRequirements: [
+          "Certificado de bachillerato",
+          "Examen de admisión",
+          "Curso propedéutico",
+          "Documentación oficial"
+        ],
+        fieldOfStudy: "Turismo y Hospitalidad",
+        professionalProfile: "Gestiona empresas turísticas, desarrolla proyectos de turismo sustentable y promueve destinos turísticos.",
+        centerId: "cucosta"
+      },
+      {
+        id: "sistemas-informacion",
+        name: "Ingeniería en Sistemas de Información",
+        description: "Prepara ingenieros capaces de desarrollar e implementar sistemas de información.",
+        duration: "9 semestres",
+        modality: "Presencial",
+        admissionRequirements: [
+          "Certificado de bachillerato",
+          "Examen de admisión",
+          "Curso propedéutico",
+          "Documentación oficial"
+        ],
+        fieldOfStudy: "Sistemas de Información",
+        professionalProfile: "Desarrolla sistemas de información, gestiona bases de datos y administra infraestructura tecnológica.",
+        centerId: "cucosta"
+      },
+      {
+        id: "contaduria-publica-costa",
+        name: "Licenciatura en Contaduría Pública",
+        description: "Forma contadores públicos con enfoque en la gestión financiera regional.",
+        duration: "8 semestres",
+        modality: "Presencial",
+        admissionRequirements: [
+          "Certificado de bachillerato",
+          "Examen de admisión",
+          "Curso propedéutico",
+          "Documentación oficial"
+        ],
+        fieldOfStudy: "Contabilidad y Finanzas",
+        professionalProfile: "Gestiona información contable, realiza auditorías y asesora en materia fiscal y financiera.",
+        centerId: "cucosta"
+      }
+    ]
   }
 ];
