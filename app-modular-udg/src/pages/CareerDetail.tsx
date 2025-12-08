@@ -132,7 +132,7 @@ const CareerDetail = () => {
           <p className="text-muted-foreground mb-6">
             Visita el sitio web del {center.acronym} para conocer más detalles sobre el proceso de admisión, plan de estudios y oportunidades académicas.
           </p>
-          <a href={center.website} target="_blank" rel="noopener noreferrer">
+          <a href={career.website} target="_blank" rel="noopener noreferrer">
             <Button size="lg">
               Visitar {center.acronym}
             </Button>

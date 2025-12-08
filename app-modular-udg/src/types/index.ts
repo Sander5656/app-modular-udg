@@ -8,6 +8,7 @@ export interface Career {
   fieldOfStudy: string;
   professionalProfile: string;
   centerId: string;
+  website: string;
 }
 
 export interface UniversityCenter {
