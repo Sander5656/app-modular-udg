@@ -26,4 +26,5 @@ export interface UniversityCenter {
     lng: number;
   };
   careers: Career[];
+  image?: string; 
 }

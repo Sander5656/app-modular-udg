@@ -17,6 +17,7 @@ export const universityCenters: UniversityCenter[] = [
     "Tiene convenios con más de 100 universidades internacionales"
   ],
   coordinates: { lat: 20.6557, lng: -103.3256 },
+  image: "/centers/cucei.jpg",
   careers: [
     {
       id: "lic-fisica",
@@ -295,6 +296,7 @@ export const universityCenters: UniversityCenter[] = [
   website: "http://www.cucs.udg.mx",
   interestingFacts: ["Primer centro de salud de la UdeG","Cuenta con 4 hospitales escuela","Más de 8,000 estudiantes","Programas reconocidos internacionalmente"],
   coordinates: { lat: 20.6739, lng: -103.3478 },
+  image: "/centers/cucs.jpeg",
   careers: [
     {
       id: "medicina",
@@ -453,6 +455,7 @@ export const universityCenters: UniversityCenter[] = [
   website: "http://www.cucea.udg.mx",
   interestingFacts: ["Más de 18,000 estudiantes","Centro acreditado internacionalmente","Programas con triple acreditación","Red de más de 200 empresas colaboradoras"],
   coordinates: { lat: 20.7411, lng: -103.3801 },
+  image: "/centers/cucea.jpeg",
   careers: [
     {
       id: "administracion",
@@ -664,6 +667,7 @@ export const universityCenters: UniversityCenter[] = [
     "Programas reconocidos a nivel nacional"
   ],
   coordinates: { lat: 20.6961, lng: -103.3485 },
+  image: "/centers/cucsh.jpeg",
   careers: [
     {
       id: "derecho",
@@ -887,6 +891,7 @@ export const universityCenters: UniversityCenter[] = [
     "Programas enfocados en sustentabilidad"
   ],
   coordinates: { lat: 20.7489, lng: -103.5120 },
+  image: "/centers/cucba.jpeg",
   careers: [
     {
       id: "ing-agronomia",
@@ -966,6 +971,7 @@ export const universityCenters: UniversityCenter[] = [
     "Exposiciones y eventos culturales permanentes"
   ],
   "coordinates": { "lat": 20.7233, "lng": -103.3178 },
+  image: "/centers/cuaad.jpg",
   "careers": [
     {
       "id": "arquitectura",
@@ -1222,6 +1228,7 @@ export const universityCenters: UniversityCenter[] = [
     "Programas con enfoque práctico"
   ],
   coordinates: { lat: 20.6534, lng: -105.2253 },
+  image: "/centers/cucosta.jpeg",
   careers: [
     {
       id: "administracion",
