@@ -16,6 +16,12 @@ export const Header = () => {
           >
             Inicio
           </Link>
+          <Link
+          to="/cuestionario"
+          className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
+          >
+          Mi carrera
+          </Link>
         </nav>
       </div>
     </header>

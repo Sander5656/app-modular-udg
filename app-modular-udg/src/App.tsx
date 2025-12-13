@@ -3,10 +3,12 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Index from "./pages/Index";
 import CenterDetail from "./pages/CenterDetail";
 import CareerDetail from "./pages/CareerDetail";
 import NotFound from "./pages/NotFound";
+import Questionnaire from "@/pages/Questionnaire";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/centro/:id" element={<CenterDetail />} />
           <Route path="/carrera/:id" element={<CareerDetail />} />
+
+          {/* ✅ RUTA DEL CUESTIONARIO */}
+          <Route path="/cuestionario" element={<Questionnaire />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
@@ -28,3 +34,4 @@ const App = () => (
 );
 
 export default App;
+
