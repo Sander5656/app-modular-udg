@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import MainLayout from "@/layouts/MainLayout";
 import Index from "./pages/Index";
 import CenterDetail from "./pages/CenterDetail";
 import CareerDetail from "./pages/CareerDetail";
@@ -19,13 +20,15 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/centro/:id" element={<CenterDetail />} />
-          <Route path="/carrera/:id" element={<CareerDetail />} />
+          {/* 🌐 Layout con Header */}
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Index />} />
+            <Route path="/centro/:id" element={<CenterDetail />} />
+            <Route path="/carrera/:id" element={<CareerDetail />} />
+            <Route path="/cuestionario" element={<Questionnaire />} />
+          </Route>
 
-          {/* ✅ RUTA DEL CUESTIONARIO */}
-          <Route path="/cuestionario" element={<Questionnaire />} />
-
+          {/* ❌ 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
@@ -34,4 +37,5 @@ const App = () => (
 );
 
 export default App;
+
 

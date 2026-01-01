@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom";
 import { universityCenters } from "@/data/universityCenters";
-import { Header } from "@/components/Header";
 import { CareerCard } from "@/components/CareerCard";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -14,7 +13,7 @@ const CenterDetail = () => {
   if (!center) {
     return (
       <div className="min-h-screen bg-background">
-        <Header />
+        
         <div className="container py-12 text-center">
           <h1 className="text-2xl font-bold">Centro no encontrado</h1>
           <Link to="/">
@@ -27,7 +26,7 @@ const CenterDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      
       
       <div className="relative bg-gradient-hero text-primary-foreground">
         <div className="container py-12 space-y-6">

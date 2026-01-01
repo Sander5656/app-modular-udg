@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom";
 import { universityCenters } from "@/data/universityCenters";
-import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -24,7 +23,7 @@ const CareerDetail = () => {
   if (!career || !center) {
     return (
       <div className="min-h-screen bg-background">
-        <Header />
+        
         <div className="container py-12 text-center">
           <h1 className="text-2xl font-bold">Carrera no encontrada</h1>
           <Link to="/">
@@ -37,7 +36,7 @@ const CareerDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      
       
       <div className="relative bg-gradient-hero text-primary-foreground">
         <div className="container py-12 space-y-6">
