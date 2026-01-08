@@ -1,15 +1,22 @@
 import { UniversityCenter } from "@/types";
 
+
+
 export const universityCenters: UniversityCenter[] = [
   {
   id: "cucei",
   name: "Centro Universitario de Ciencias Exactas e Ingenierías",
   acronym: "CUCEI",
   description: "El CUCEI es el centro líder en la formación de profesionales en ciencias exactas e ingenierías, destacando por su infraestructura moderna y programas educativos de excelencia.",
+  admissionScoresPdf: {
+  label: "Consultar puntajes mínimos de los ciclos escolares recientes",
+  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+},
   address: "Blvd. Marcelino García Barragán 1421, Guadalajara, Jalisco",
   phone: "33 1378 5900",
   email: "contacto@cucei.udg.mx",
   website: "http://www.cucei.udg.mx",
+  
   interestingFacts: [
     "Cuenta con más de 15,000 estudiantes",
     "Ofrece 20 programas de licenciatura",
@@ -18,6 +25,8 @@ export const universityCenters: UniversityCenter[] = [
   ],
   coordinates: { lat: 20.6557, lng: -103.3256 },
   image: "/centers/cucei.jpg",
+  
+
   careers: [
     {
       id: "lic-fisica",
@@ -290,6 +299,11 @@ export const universityCenters: UniversityCenter[] = [
   name: "Centro Universitario de Ciencias de la Salud",
   acronym: "CUCS",
   description: "El CUCS es reconocido por formar profesionales de la salud con excelencia académica y compromiso social, contando con hospitales escuela de primer nivel.",
+    admissionScoresPdf: {
+  label: "Consultar puntajes mínimos de los ciclos escolares recientes",
+  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+},
+
   address: "Sierra Mojada 950, Guadalajara, Jalisco",
   phone: "33 1058 5200",
   email: "contacto@cucs.udg.mx",
@@ -449,6 +463,10 @@ export const universityCenters: UniversityCenter[] = [
   name: "Centro Universitario de Ciencias Económico Administrativas",
   acronym: "CUCEA",
   description: "El CUCEA es líder en la formación de profesionales en áreas económicas y administrativas, con programas innovadores y vinculación con el sector empresarial.",
+    admissionScoresPdf: {
+  label: "Consultar puntajes mínimos de los ciclos escolares recientes",
+  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+},
   address: "Periférico Norte 799, Zapopan, Jalisco",
   phone: "33 3770 3300",
   email: "contacto@cucea.udg.mx",
@@ -656,6 +674,10 @@ export const universityCenters: UniversityCenter[] = [
   name: "Centro Universitario de Ciencias Sociales y Humanidades",
   acronym: "CUCSH",
   description: "El CUCSH se distingue por su compromiso con las ciencias sociales y humanidades, formando profesionales críticos y comprometidos con la sociedad.",
+    admissionScoresPdf: {
+  label: "Consultar puntajes mínimos de los ciclos escolares recientes",
+  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+},
   address: "Av. de los Maestros y Mariano Bárcena, Guadalajara, Jalisco",
   phone: "33 3819 3300",
   email: "contacto@cucsh.udg.mx",
@@ -880,6 +902,10 @@ export const universityCenters: UniversityCenter[] = [
   name: "Centro Universitario de Ciencias Biológicas y Agropecuarias",
   acronym: "CUCBA",
   description: "El CUCBA se dedica a la formación de profesionales en ciencias biológicas y agropecuarias, enfocado en la investigación y el desarrollo sustentable.",
+    admissionScoresPdf: {
+  label: "Consultar puntajes mínimos de los ciclos escolares recientes",
+  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+},
   address: "Camino Ramón Padilla Sánchez 2100, Zapopan, Jalisco",
   phone: "33 3777 1150",
   email: "contacto@cucba.udg.mx",
@@ -960,6 +986,10 @@ export const universityCenters: UniversityCenter[] = [
   "name": "Centro Universitario de Arte, Arquitectura y Diseño",
   "acronym": "CUAAD",
   "description": "El CUAAD es el centro especializado en la formación de profesionales creativos en las áreas de arte, arquitectura y diseño, destacando por su innovación y vanguardia.",
+    admissionScoresPdf: {
+  label: "Consultar puntajes mínimos de los ciclos escolares recientes",
+  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+},
   "address": "Calzada Independencia Norte 5075, Huentitán El Bajo, Guadalajara, Jalisco",
   "phone": "33 3202 3000",
   "email": "contacto@cuaad.udg.mx",
@@ -1217,6 +1247,10 @@ export const universityCenters: UniversityCenter[] = [
   name: "Centro Universitario de la Costa",
   acronym: "CUCOSTA",
   description: "El CUCosta ofrece formación universitaria orientada al desarrollo regional y turístico de la costa, con programas en ciencias sociales, empresariales, artes y tecnología.",
+    admissionScoresPdf: {
+  label: "Consultar puntajes mínimos de los ciclos escolares recientes",
+  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+},
   address: "Avenida Universidad s/n, Puerto Vallarta, Jalisco",
   phone: "33 1234 5678",
   email: "contacto@cucosta.udg.mx",

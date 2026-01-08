@@ -20,11 +20,19 @@ export interface UniversityCenter {
   phone: string;
   email: string;
   website: string;
+
+  // 👇 NUEVO CAMPO (OPCIONAL)
+  admissionScoresPdf?: {
+    label: string;
+    url: string;
+  };
+
   interestingFacts: string[];
   coordinates: {
     lat: number;
     lng: number;
   };
   careers: Career[];
-  image?: string; 
+  image?: string;
 }
+
