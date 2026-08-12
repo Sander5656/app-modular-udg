@@ -33,12 +33,7 @@ const CenterDetail = () => {
       {/* ===== HERO ===== */}
       <div className="bg-gradient-hero text-primary-foreground">
         <div className="container py-12 space-y-4">
-          <Link to="/">
-            <Button variant="secondary" size="sm">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Volver
-            </Button>
-          </Link>
+          
 
           <Badge>{center.acronym}</Badge>
           <h1 className="text-4xl font-bold">{center.name}</h1>
