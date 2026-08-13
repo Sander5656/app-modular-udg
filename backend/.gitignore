@@ -1,0 +1,12 @@
+# Dependencias
+node_modules/
+
+# Archivos de entorno (Claves privadas)
+.env
+
+# Código compilado de TypeScript
+dist/
+build/
+
+# Logs
+npm-debug.log*

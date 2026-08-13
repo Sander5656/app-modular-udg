@@ -17,6 +17,12 @@ export const Header = () => {
             Inicio
           </Link>
           <Link
+          to="/chat"
+          className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
+          >
+          Asistente
+          </Link>
+          <Link
           to="/cuestionario"
           className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
           >

@@ -10,6 +10,7 @@ import CenterDetail from "./pages/CenterDetail";
 import CareerDetail from "./pages/CareerDetail";
 import NotFound from "./pages/NotFound";
 import Questionnaire from "@/pages/Questionnaire";
+import { Chatbot } from "@/pages/Chatbot";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/centro/:id" element={<CenterDetail />} />
             <Route path="/carrera/:id" element={<CareerDetail />} />
             <Route path="/cuestionario" element={<Questionnaire />} />
+            <Route path="/chat" element={<Chatbot />} /> 
           </Route>
 
           {/* ❌ 404 */}
@@ -37,5 +39,3 @@ const App = () => (
 );
 
 export default App;
-
-
