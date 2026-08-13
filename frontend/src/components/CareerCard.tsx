@@ -12,7 +12,7 @@ export const CareerCard = ({ career }: CareerCardProps) => {
   return (
     <Link to={`/carrera/${career.id}`}>
       <Card className="group hover:shadow-card-hover transition-all duration-300 border-border cursor-pointer overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+        {/* <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-5 transition-opacity duration-300" /> */}
         <div className="relative p-6 space-y-4">
           <div className="flex items-start justify-between">
             <div className="flex-1">
