@@ -80,7 +80,7 @@ export const Chatbot = () => {
     }
   };
 
-  return (
+ return (
   <div className="w-full max-w-4xl h-[85vh] border rounded-xl p-4 shadow-sm bg-white flex flex-col mx-auto mt-4">
     <h2 className="text-lg md:text-xl font-bold mb-4 text-center">
       Test Vocacional con IA
@@ -127,3 +127,4 @@ export const Chatbot = () => {
     </div>
   </div>
 );
+};
