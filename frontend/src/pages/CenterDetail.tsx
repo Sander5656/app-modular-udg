@@ -29,7 +29,12 @@ const CenterDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      
+      <div className="container py-12 text-center">
+        <h1 className="text-2xl font-bold">Centro no encontrado</h1>
+        <Link to="/">
+          <Button className="mt-4">Volver</Button>
+        </Link>
+      </div>
       {/* ===== HERO ===== */}
       <div className="bg-gradient-hero text-primary-foreground">
         <div className="container py-12 space-y-4">
