@@ -81,42 +81,49 @@ export const Chatbot = () => {
   };
 
   return (
-    <div className="w-full max-w-md border rounded-xl p-4 shadow-sm bg-white flex flex-col mx-auto mt-10">
-      <h2 className="text-lg font-bold mb-4 text-center">Test Vocacional con IA</h2>
-      
-      <div className="h-80 overflow-y-auto mb-4 space-y-4 p-2 flex flex-col">
-        {messages.map((msg, idx) => (
-          <div 
-            key={idx} 
-            className={`p-3 rounded-lg max-w-[80%] ${
-              msg.role === 'user' 
-                ? 'bg-blue-600 text-white self-end' 
-                : 'bg-gray-100 text-gray-800 self-start'
-            }`}
-          >
-            {msg.content}
-          </div>
-        ))}
-        {isLoading && <div className="text-gray-400 text-sm italic self-start">Escribiendo...</div>}
-      </div>
+  <div className="w-full max-w-4xl h-[85vh] border rounded-xl p-4 shadow-sm bg-white flex flex-col mx-auto mt-4">
+    <h2 className="text-lg md:text-xl font-bold mb-4 text-center">
+      Test Vocacional con IA
+    </h2>
 
-      <div className="flex gap-2">
-        <input 
-          className="flex-1 border rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
-          value={input} 
-          onChange={(e) => setInput(e.target.value)} 
-          placeholder="Escribe tu respuesta..."
-          onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
-          disabled={isLoading}
-        />
-        <button 
-          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 disabled:opacity-50"
-          onClick={sendMessage}
-          disabled={isLoading}
+    <div className="flex-1 overflow-y-auto mb-4 space-y-4 p-2 flex flex-col">
+      {messages.map((msg, idx) => (
+        <div
+          key={idx}
+          className={`p-3 rounded-lg max-w-[90%] md:max-w-[75%] break-words ${
+            msg.role === 'user'
+              ? 'bg-blue-600 text-white self-end'
+              : 'bg-gray-100 text-gray-800 self-start'
+          }`}
         >
-          Enviar
-        </button>
-      </div>
+          {msg.content}
+        </div>
+      ))}
+
+      {isLoading && (
+        <div className="text-gray-400 text-sm italic self-start">
+          Escribiendo...
+        </div>
+      )}
     </div>
-  );
-};
+
+    <div className="flex flex-col sm:flex-row gap-2">
+      <input
+        className="flex-1 border rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Escribe tu respuesta..."
+        onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+        disabled={isLoading}
+      />
+
+      <button
+        className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 disabled:opacity-50 sm:w-auto w-full"
+        onClick={sendMessage}
+        disabled={isLoading}
+      >
+        Enviar
+      </button>
+    </div>
+  </div>
+);
