@@ -24,7 +24,7 @@ export const Chatbot = () => {
     setInput('');
     setIsLoading(true);
 
-   try {
+    try {
       const response = await fetch('https://udg-backend-api.onrender.com/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -37,8 +37,39 @@ export const Chatbot = () => {
       });
       
       const data = await response.json();
+      const botResponseText = data.botResponse;
       
-      setMessages([...newMessages, { role: 'bot', content: data.botResponse }] as Message[]);
+      // --- NUEVO CÓDIGO: Intercepción del JSON ---
+      // Detectamos si la respuesta incluye la palabra clave de nuestro perfil
+      if (botResponseText.includes('"perfil_completado":')) {
+        try {
+          // Limpiamos el texto por si Gemini le puso comillas de código markdown (```json ... ```)
+          const cleanString = botResponseText.replace(/```json/g, '').replace(/```/g, '').trim();
+          
+          // Convertimos el texto crudo a un objeto de JavaScript real
+          const finalData = JSON.parse(cleanString);
+
+          // Mostramos SOLO el mensaje de despedida en el chat (ocultando los números)
+          setMessages([...newMessages, { role: 'bot', content: finalData.mensaje_despedida }] as Message[]);
+
+          // AQUÍ TIENES TUS DATOS CAPTURADOS EN SILENCIO
+          console.log("Puntajes obtenidos:", finalData);
+          
+          // Lanzamos un alert para confirmar que los datos se separaron correctamente
+          alert(`¡Test finalizado!\n\nMatemáticas: ${finalData.matematicas}\nCreatividad: ${finalData.creatividad}\nLógica: ${finalData.logica}\nEmpatía: ${finalData.empatia}`);
+          
+          setIsLoading(false);
+          return; // Detenemos la función para que no imprima el JSON crudo en la pantalla
+          
+        } catch (error) {
+          console.error("Error al intentar leer el JSON final", error);
+        }
+      }
+
+      // Si no es el JSON final, mostramos el mensaje normal de plática
+      setMessages([...newMessages, { role: 'bot', content: botResponseText }] as Message[]);
+      // -------------------------------------------
+
     } catch (error) {
       console.error("Error conectando al chat", error);
       // TRUCO: Si falla, usamos 'messages' (el historial viejo sin el mensaje del usuario) 
