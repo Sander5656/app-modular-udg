@@ -40,7 +40,7 @@ const CenterDetail = () => {
             </Button>
           </Link>
 
-          <div>
+
 
           <Badge>{center.acronym}</Badge>
           <h1 className="text-4xl font-bold">{center.name}</h1>
