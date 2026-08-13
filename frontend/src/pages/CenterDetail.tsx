@@ -29,7 +29,10 @@ const CenterDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container py-12 space-y-6">
+      
+      {/* ===== HERO ===== */}
+      <div className="bg-gradient-hero text-primary-foreground">
+        <div className="container py-12 space-y-4">
           <Link to="/">
             <Button variant="secondary" size="sm">
               <ArrowLeft className="h-4 w-4 mr-2" />
@@ -38,10 +41,6 @@ const CenterDetail = () => {
           </Link>
 
           <div>
-      {/* ===== HERO ===== */}
-      <div className="bg-gradient-hero text-primary-foreground">
-        <div className="container py-12 space-y-4">
-          
 
           <Badge>{center.acronym}</Badge>
           <h1 className="text-4xl font-bold">{center.name}</h1>
