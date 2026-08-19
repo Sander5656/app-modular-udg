@@ -38,7 +38,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Ciencias Exactas",
       professionalProfile: "Investigación y docencia en física.",
       centerId: "cucei",
-      website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-licenciatura-en-fisica"
+      website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-fisica"
     },
     {
       id: "lic-matematicas",
@@ -50,7 +50,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Ciencias Exactas",
       professionalProfile: "Modelado matemático, docencia e investigación.",
       centerId: "cucei",
-      website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-licenciatura-en-matematicas"
+      website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-matematicas"
     },
     {
       id: "lic-quimica",
@@ -62,7 +62,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Ciencias Exactas",
       professionalProfile: "Industria química, investigación y control de calidad.",
       centerId: "cucei",
-      website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-licenciatura-en-quimica"
+      website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-quimica"
     },
     {
       id: "qfb",
@@ -122,7 +122,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Geociencias",
       professionalProfile: "Cartografía, SIG y georreferenciación.",
       centerId: "cucei",
-      website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-en-topografia-geomatica"
+      website: "https://www.cucei.udg.mx/es/oferta-academica/licenciaturas/licenciatura-en-ingenieria-topografica"
     },
     {
       id: "ing-industrial",
@@ -254,7 +254,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Mecatrónica",
       professionalProfile: "Diseño de sistemas automatizados y robóticos.",
       centerId: "cucei",
-      website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/lingenieria-en-mecatronica-inteligente"
+      website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/ingenieria-en-mecatronica-inteligente"
     },
     {
       id: "ing-robotica",
@@ -485,7 +485,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Administración y Gestión",
       professionalProfile: "Gestiona empresas, desarrolla estrategias organizacionales y lidera equipos de trabajo.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/administracion"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-administracion"
     },
     {
       id: "administracion-financiera-sistemas",
@@ -497,7 +497,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Finanzas y Sistemas",
       professionalProfile: "Gestión financiera apoyada en sistemas de información.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/administracion-financiera-y-sistemas"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-administracion-financiera-y-sistemas"
     },
     {
       id: "administracion-gubernamental-politicas-publicas",
@@ -509,7 +509,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Políticas Públicas",
       professionalProfile: "Gestión pública, evaluación y diseño de políticas públicas.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/administracion-gubernamental-y-politicas-publicas"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-administracion-gubernamental-y-politicas-publicas"
     },
     {
       id: "auditoria-contabilidad-gubernamental",
@@ -521,7 +521,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Contabilidad Pública",
       professionalProfile: "Auditoría, control y transparencia en instituciones públicas.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/auditoria-y-contabilidad-gubernamental"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-auditoria-y-contabilidad-gubernamental"
     },
     {
       id: "contaduria-publica",
@@ -533,7 +533,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Contabilidad y Finanzas",
       professionalProfile: "Realiza auditorías, gestiona información financiera y asesora en temas fiscales y contables.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/contaduria-publica"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-contaduria-publica"
     },
     {
       id: "economia",
@@ -545,7 +545,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Economía",
       professionalProfile: "Análisis económico, investigación y diseño de políticas públicas.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/economia"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-economia"
     },
     {
       id: "gestion-negocios-gastronomicos",
@@ -557,7 +557,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Gestión Gastronómica",
       professionalProfile: "Administración y desarrollo de negocios gastronómicos y de servicios.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/gestion-de-negocios-gastronomicos"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-gestion-de-negocios-gastronomicos"
     },
     {
       id: "gestion-economia-ambiental",
@@ -569,7 +569,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Economía Ambiental",
       professionalProfile: "Diseño de estrategias de gestión ambiental y evaluación económica de recursos.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/gestion-y-economia-ambiental"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-gestion-y-economia-ambiental"
     },
     {
       id: "ingenieria-en-negocios",
@@ -581,7 +581,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Negocios e Ingeniería",
       professionalProfile: "Integración de soluciones técnicas y administrativas para la gestión empresarial.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/ingenieria-en-negocios"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-ingenieria-en-negocios"
     },
     {
       id: "mercadotecnia",
@@ -593,7 +593,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Marketing y Publicidad",
       professionalProfile: "Desarrolla estrategias de marketing, gestiona marcas y analiza el comportamiento del consumidor.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/mercadotecnia"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-mercadotecnia"
     },
     {
       id: "mercadotecnia-digital",
@@ -605,7 +605,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Marketing Digital",
       professionalProfile: "Diseño y ejecución de campañas digitales y análisis de datos de mercado.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/mercadotecnia-digital"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-mercadotecnia-digital"
     },
     {
       id: "negocios-internacionales",
@@ -617,7 +617,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Comercio Internacional",
       professionalProfile: "Gestión de operaciones internacionales, comercio exterior y negociación internacional.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/negocios-internacionales"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-negocios-internacionales"
     },
     {
       id: "recursos-humanos",
@@ -629,7 +629,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Gestión Humana",
       professionalProfile: "Selección, capacitación y desarrollo del talento humano en organizaciones.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/recursos-humanos"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-recursos-humanos"
     },
     {
       id: "relaciones-publicas-comunicacion",
@@ -641,7 +641,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Comunicación",
       professionalProfile: "Comunicación estratégica, relaciones públicas y manejo de crisis.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/relaciones-publicas-y-comunicacion"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-relaciones-publicas-y-comunicacion"
     },
     {
       id: "tecnologias-informacion",
@@ -653,7 +653,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Tecnologías de la Información",
       professionalProfile: "Desarrollo de software, administración de redes y servicios TI.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/tecnologias-de-la-informacion"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-tecnologias-de-la-informacion"
     },
     {
       id: "turismo",
@@ -665,7 +665,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Turismo",
       professionalProfile: "Desarrollo y gestión de productos y servicios turísticos.",
       centerId: "cucea",
-      website: "https://www.cucea.udg.mx/oferta-academica/licenciaturas/turismo"
+      website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-turismo"
     }
   ]
 },
@@ -761,7 +761,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Enseñanza de Lenguas",
       professionalProfile: "Docencia del francés en distintos niveles educativos.",
       centerId: "cucsh",
-      website: "https://www.cucsh.udg.mx/licenciaturas/didactica-del-frances"
+      website: "https://www.cucsh.udg.mx/licenciaturas/Licenciatura%20en%20Did%C3%A1ctica%20del%20Franc%C3%A9s%20como%20Lengua%20Extranjera"
     },
     {
       id: "docencia-ingles",
@@ -773,7 +773,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Enseñanza de Lenguas",
       professionalProfile: "Docencia del inglés y diseño curricular.",
       centerId: "cucsh",
-      website: "https://www.cucsh.udg.mx/licenciaturas/docencia-del-ingles"
+      website: "https://www.cucsh.udg.mx/licenciaturas/Licenciatura%20en%20Docencia%20del%20Ingl%C3%A9s%20%28Modalidad%20Semiescolarizada%20Abierta%20y%20a%20Distancia%29"
     },
     {
       id: "escritura-creativa",
@@ -929,7 +929,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Agronomía y Producción Agrícola",
       professionalProfile: "Diseña y gestiona sistemas de producción agrícola, aplica técnicas de cultivo sustentable y asesora en proyectos agropecuarios.",
       centerId: "cucba",
-      website: "https://cucba.udg.mx/oferta-academica/licenciaturas/ingenieria-agronomica"
+      website: "https://cucba.udg.mx/oferta-academica/licenciaturas/ingeniero-agronomo"
     },
     {
       id: "medicina-veterinaria-y-zootecnia",
@@ -941,7 +941,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Medicina Veterinaria",
       professionalProfile: "Diagnostica y trata enfermedades animales, gestiona producción pecuaria y promueve la salud pública veterinaria.",
       centerId: "cucba",
-      website: "https://cucba.udg.mx/oferta-academica/licenciaturas/medicina-veterinaria-y-zootecnia"
+      website: "https://cucba.udg.mx/contenido/licenciatura-en-medicina-veterinaria-y-zootecnia-0"
     },
     {
       id: "lic-biologia",
@@ -965,7 +965,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Ciencia y Tecnología de Alimentos",
       professionalProfile: "Desarrollo, control y aseguramiento de la calidad en la industria alimentaria.",
       centerId: "cucba",
-      website: "https://cucba.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ciencia-de-los-alimentos"
+      website: "https://cucba.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ciencias-de-los-alimentos"
     },
     {
       id: "lic-agronegocios",
@@ -1018,7 +1018,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Arquitectura y Urbanismo",
       "professionalProfile": "Diseña y supervisa proyectos arquitectónicos, planifica espacios urbanos y aplica criterios de sustentabilidad.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/arquitectura"
+      "website": "https://cuaad.udg.mx/oferta/licenciaturas/la/presentacion"
     },
     {
       "id": "diseno-para-la-comunicacion-grafica",
@@ -1035,7 +1035,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Diseño Gráfico",
       "professionalProfile": "Desarrolla identidades visuales, diseña campañas publicitarias y crea contenido visual para medios digitales.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/diseno-para-la-comunicacion-grafica"
+      "website": "https://cuaad.udg.mx/oferta/licenciatura/ldcg/perfil-del-aspirante"
     },
     {
       "id": "artes-visuales-fotografia",
@@ -1052,7 +1052,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Artes Visuales y Fotografía",
       "professionalProfile": "Produce obra fotográfica artística, gestiona proyectos visuales y desarrolla propuestas creativas contemporáneas.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/artes-visuales-fotografia"
+      "website": "https://cuaad.udg.mx/oferta/licenciatura/lavef/presentacion"
     },
     {
       "id": "artes-audiovisuales",
@@ -1069,7 +1069,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Artes Audiovisuales",
       "professionalProfile": "Producción, dirección y postproducción audiovisual.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/artes-audiovisuales"
+      "website": "https://cuaad.udg.mx/oferta/licenciaturas/laa/presentacion"
     },
     {
       "id": "artes-escenicas-dancistica",
@@ -1086,7 +1086,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Artes Escénicas",
       "professionalProfile": "Interpretación, coreografía y gestión escénica.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/artes-escenicas-dancistica"
+      "website": "https://cuaad.udg.mx/oferta/licenciatura/laeed/perfil-del-aspirante"
     },
     {
       "id": "artes-escenicas-teatral",
@@ -1103,7 +1103,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Artes Escénicas",
       "professionalProfile": "Actuación, dirección y producción teatral.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/artes-escenicas-teatral"
+      "website": "https://cuaad.udg.mx/oferta/licenciaturas/laeet/presentacion"
     },
     {
       "id": "artes-visuales-plastica",
@@ -1120,7 +1120,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Artes Visuales",
       "professionalProfile": "Creación plástica, curaduría y gestión cultural.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/artes-visuales-plastica"
+      "website": "https://cuaad.udg.mx/oferta/licenciatura/lavep/presentacion"
     },
     {
       "id": "diseno-de-interiores",
@@ -1137,7 +1137,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Diseño de Interiores",
       "professionalProfile": "Proyecto y ambientación de espacios interiores.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/diseno-de-interiores"
+      "website": "https://cuaad.udg.mx/oferta/licenciatura/ldia/perfil-de-aspirante"
     },
     {
       "id": "diseno-de-modas",
@@ -1154,7 +1154,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Diseño de Modas",
       "professionalProfile": "Diseño de colecciones, producción y gestión de moda.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/diseno-de-modas"
+      "website": "https://cuaad.udg.mx/oferta/licenciatura/ldm/presentacion"
     },
     {
       "id": "diseno-industrial",
@@ -1171,7 +1171,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Diseño Industrial",
       "professionalProfile": "Diseño de producto, prototipado y producción.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/diseno-industrial"
+      "website": "https://cuaad.udg.mx/oferta/licenciatura/ldi/presentacion"
     },
     {
       "id": "diseno-arte-tecnologias-interactivas",
@@ -1188,7 +1188,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Diseño y Tecnología",
       "professionalProfile": "Proyectos interactivos, instalaciones y experiencias digitales.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/diseno-arte-tecnologias-interactivas"
+      "website": "https://cuaad.udg.mx/oferta/licenciatura/ldati/presentacion"
     },
     {
       "id": "musica",
@@ -1205,7 +1205,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Música",
       "professionalProfile": "Interpretación, composición, producción y gestión musical.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/musica"
+      "website": "https://cuaad.udg.mx/oferta/licenciaturas/lm/presentacion"
     },
     {
       "id": "urbanistica-y-medio-ambiente",
@@ -1221,7 +1221,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Urbanismo y Medio Ambiente",
       "professionalProfile": "Planificación urbana sostenible y gestión ambiental.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/urbanistica-y-medio-ambiente"
+      "website": "https://cuaad.udg.mx/oferta/licenciatura/luma/perfil-de-aspirante"
     },
     {
       "id": "nivelacion-a-licenciatura-artes",
@@ -1238,7 +1238,7 @@ export const universityCenters: UniversityCenter[] = [
       "fieldOfStudy": "Artes",
       "professionalProfile": "Preparación y nivelación para estudios de licenciatura en artes.",
       "centerId": "cuaad",
-      "website": "https://cuaad.udg.mx/oferta-academica/licenciaturas/nivelacion-a-licenciatura-artes"
+      "website": "https://cuaad.udg.mx/oferta/licenciaturas/na/presentacion"
     }
   ]
 },
@@ -1274,7 +1274,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Administración y Gestión",
       professionalProfile: "Gestión empresarial y emprendimiento.",
       centerId: "cucosta",
-      website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-administracion"
+      website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/licenciatura-en-administracion"
     },
     {
       id: "contaduria-publica",
@@ -1286,7 +1286,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Contabilidad y Finanzas",
       professionalProfile: "Contabilidad, auditoría y asesoría fiscal.",
       centerId: "cucosta",
-      website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-contaduria-publica"
+      website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/contaduria-publica"
     },
     {
       id: "derecho",
@@ -1298,7 +1298,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Derecho y Ciencias Jurídicas",
       professionalProfile: "Ejerce la abogacía y asesoría legal.",
       centerId: "cucosta",
-      website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-derecho"
+      website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/abogado"
     },
     {
       id: "psicologia",
@@ -1310,7 +1310,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Psicología",
       professionalProfile: "Intervención clínica y comunitaria.",
       centerId: "cucosta",
-      website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-psicologia"
+      website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/licenciatura-en-psicologia"
     },
     {
       id: "trabajo-social",
@@ -1334,7 +1334,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Turismo",
       professionalProfile: "Gestión de productos y servicios turísticos.",
       centerId: "cucosta",
-      website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-turismo"
+      website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/turismo"
     },
     {
       id: "gestion-negocios-gastronomicos",
@@ -1358,7 +1358,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Arquitectura",
       professionalProfile: "Diseño arquitectónico y urbanismo.",
       centerId: "cucosta",
-      website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-arquitectura"
+      website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/arquitectura"
     },
     {
       id: "artes-visuales",
@@ -1370,7 +1370,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Artes",
       professionalProfile: "Creación artística y gestión cultural.",
       centerId: "cucosta",
-      website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-artes-visuales"
+      website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/artes-visuales-para-la-expresion-fotografica"
     },
     {
       id: "ingenieria-sistemas-computacionales",
@@ -1382,7 +1382,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Tecnologías de la Información",
       professionalProfile: "Desarrollo de aplicaciones y administración de sistemas.",
       centerId: "cucosta",
-      website: "https://www.cuc.udg.mx/es/licenciaturas/ingenieria-en-sistemas-computacionales"
+      website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/ingenieria-en-computacion"
     },
     {
       id: "mercadotecnia",
@@ -1466,7 +1466,7 @@ export const universityCenters: UniversityCenter[] = [
       fieldOfStudy: "Salud",
       professionalProfile: "Atención clínica y comunitaria en enfermería.",
       centerId: "cucosta",
-      website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-enfermeria"
+      website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/enfermeria"
     },
     {
       id: "ciencias-ambientales",
