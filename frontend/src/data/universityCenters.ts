@@ -10,7 +10,7 @@ export const universityCenters: UniversityCenter[] = [
   description: "El CUCEI es el centro líder en la formación de profesionales en ciencias exactas e ingenierías, destacando por su infraestructura moderna y programas educativos de excelencia.",
   admissionScoresPdf: {
   label: "Consultar puntajes mínimos de los ciclos escolares recientes",
-  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+  url: "/centers/puntajes_cucei.png"
 },
   address: "Blvd. Marcelino García Barragán 1421, Guadalajara, Jalisco",
   phone: "33 1378 5900",
@@ -301,7 +301,7 @@ export const universityCenters: UniversityCenter[] = [
   description: "El CUCS es reconocido por formar profesionales de la salud con excelencia académica y compromiso social, contando con hospitales escuela de primer nivel.",
     admissionScoresPdf: {
   label: "Consultar puntajes mínimos de los ciclos escolares recientes",
-  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+  url: "/centers/puntajes_cucs.pdf"
 },
 
   address: "Sierra Mojada 950, Guadalajara, Jalisco",
@@ -465,7 +465,7 @@ export const universityCenters: UniversityCenter[] = [
   description: "El CUCEA es líder en la formación de profesionales en áreas económicas y administrativas, con programas innovadores y vinculación con el sector empresarial.",
     admissionScoresPdf: {
   label: "Consultar puntajes mínimos de los ciclos escolares recientes",
-  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+  url: "/centers/puntajes_cucea.pdf"
 },
   address: "Periférico Norte 799, Zapopan, Jalisco",
   phone: "33 3770 3300",
@@ -676,7 +676,7 @@ export const universityCenters: UniversityCenter[] = [
   description: "El CUCSH se distingue por su compromiso con las ciencias sociales y humanidades, formando profesionales críticos y comprometidos con la sociedad.",
     admissionScoresPdf: {
   label: "Consultar puntajes mínimos de los ciclos escolares recientes",
-  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+  url: "/centers/puntajes_cucsh.pdf"
 },
   address: "Av. de los Maestros y Mariano Bárcena, Guadalajara, Jalisco",
   phone: "33 3819 3300",
@@ -904,7 +904,7 @@ export const universityCenters: UniversityCenter[] = [
   description: "El CUCBA se dedica a la formación de profesionales en ciencias biológicas y agropecuarias, enfocado en la investigación y el desarrollo sustentable.",
     admissionScoresPdf: {
   label: "Consultar puntajes mínimos de los ciclos escolares recientes",
-  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+  url: "/centers/puntajes_cucba.pdf"
 },
   address: "Camino Ramón Padilla Sánchez 2100, Zapopan, Jalisco",
   phone: "33 3777 1150",
@@ -988,7 +988,7 @@ export const universityCenters: UniversityCenter[] = [
   "description": "El CUAAD es el centro especializado en la formación de profesionales creativos en las áreas de arte, arquitectura y diseño, destacando por su innovación y vanguardia.",
     admissionScoresPdf: {
   label: "Consultar puntajes mínimos de los ciclos escolares recientes",
-  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+  url: "/centers/puntajes_cuaad.pdf"
 },
   "address": "Calzada Independencia Norte 5075, Huentitán El Bajo, Guadalajara, Jalisco",
   "phone": "33 3202 3000",
@@ -1249,7 +1249,7 @@ export const universityCenters: UniversityCenter[] = [
   description: "El CUCosta ofrece formación universitaria orientada al desarrollo regional y turístico de la costa, con programas en ciencias sociales, empresariales, artes y tecnología.",
     admissionScoresPdf: {
   label: "Consultar puntajes mínimos de los ciclos escolares recientes",
-  url: "https://escolar.udg.mx/sites/default/files/adjuntos/puntajes-minimos-nivel-superior-25b_0.docx"
+  url: "/centers/puntajes_cucosta.pdf"
 },
   address: "Avenida Universidad s/n, Puerto Vallarta, Jalisco",
   phone: "33 1234 5678",
