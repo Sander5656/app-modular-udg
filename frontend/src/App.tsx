@@ -9,7 +9,7 @@ import Index from "./pages/Index";
 import CenterDetail from "./pages/CenterDetail";
 import CareerDetail from "./pages/CareerDetail";
 import NotFound from "./pages/NotFound";
-import Questionnaire from "@/pages/Questionnaire";
+import Location from "@/pages/Location";
 import { Chatbot } from "@/pages/Chatbot";
 
 const queryClient = new QueryClient();
@@ -26,7 +26,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/centro/:id" element={<CenterDetail />} />
             <Route path="/carrera/:id" element={<CareerDetail />} />
-            <Route path="/cuestionario" element={<Questionnaire />} />
+            <Route path="/location" element={<Location />} />
             <Route path="/chat" element={<Chatbot />} /> 
           </Route>
 
