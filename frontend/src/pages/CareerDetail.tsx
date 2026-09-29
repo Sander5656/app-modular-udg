@@ -28,14 +28,14 @@ const CareerDetail = () => {
     }
   }
 
-   // ✅ FIX REAL DEL SCROLL (ESTE SÍ FUNCIONA)
+   //  FIX REAL DEL SCROLL (ESTE SÍ FUNCIONA)
   useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: "auto",
     });
-  }, [id]); // ⬅️ CLAVE ABSOLUTA
+  }, [id]); // ⬅ CLAVE ABSOLUTA
 
   if (!career || !center) {
     return (
