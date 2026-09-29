@@ -35,8 +35,8 @@ const CareerDetail = () => {
       left: 0,
       behavior: "auto",
     });
-  }, [id]); // ⬅ CLAVE ABSOLUTA
-
+  }, [id]);
+  
   if (!career || !center) {
     return (
       <div className="min-h-screen bg-background">
