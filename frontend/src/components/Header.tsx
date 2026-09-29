@@ -35,10 +35,10 @@ export const Header = () => {
             </Link>
 
             <Link
-              to="/cuestionario"
+              to="/location"
               className="text-sm font-medium text-foreground/60 hover:text-foreground"
             >
-              Mi Carrera
+              Centros
             </Link>
           </nav>
 

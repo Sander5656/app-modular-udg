@@ -11,7 +11,7 @@ const CenterDetail = () => {
   const { id } = useParams();
   const center = universityCenters.find((c) => c.id === id);
 
-  // ✅ SCROLL AL INICIO AL ENTRAR
+  // SCROLL AL INICIO AL ENTRAR
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -69,7 +69,7 @@ const CenterDetail = () => {
               Sitio web
             </a>
 
-            {/* ✅ BOTÓN PUNTAJES */}
+            {/*  BOTÓN PUNTAJES */}
             {center.admissionScoresPdf && (
               <div className="pt-4 border-t">
                 <a
