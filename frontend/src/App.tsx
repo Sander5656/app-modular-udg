@@ -12,6 +12,10 @@ import NotFound from "./pages/NotFound";
 import Location from "@/pages/Location";
 import { Chatbot } from "@/pages/Chatbot";
 
+// Importa las nuevas páginas legales
+import Advice from "@/pages/Advice";
+import Policy from "@/pages/Policy";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -21,16 +25,20 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          {/* 🌐 Layout con Header */}
+          {/*  Layout con Header (y ahora Footer) */}
           <Route element={<MainLayout />}>
             <Route path="/" element={<Index />} />
             <Route path="/centro/:id" element={<CenterDetail />} />
             <Route path="/carrera/:id" element={<CareerDetail />} />
             <Route path="/location" element={<Location />} />
             <Route path="/chat" element={<Chatbot />} /> 
+            
+            {/* Nuevas rutas legales */}
+            <Route path="/advice" element={<Advice />} />
+            <Route path="/policy" element={<Policy />} />
           </Route>
 
-          {/* ❌ 404 */}
+          {/*  404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

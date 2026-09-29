@@ -21,7 +21,7 @@ export interface UniversityCenter {
   email: string;
   website: string;
 
-  // 👇 NUEVO CAMPO (OPCIONAL)
+  // NUEVO CAMPO (OPCIONAL)
   admissionScoresPdf?: {
     label: string;
     url: string;
