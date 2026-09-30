@@ -11,6 +11,7 @@ import CareerDetail from "./pages/CareerDetail";
 import NotFound from "./pages/NotFound";
 import Location from "@/pages/Location";
 import { Chatbot } from "@/pages/Chatbot";
+import { HelpChatbot } from "@/pages/HelpChatbot";
 
 // Importa las nuevas páginas legales
 import Advice from "@/pages/Advice";
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/carrera/:id" element={<CareerDetail />} />
             <Route path="/location" element={<Location />} />
             <Route path="/chat" element={<Chatbot />} /> 
+            <Route path="/help" element={<HelpChatbot />} />
             
             {/* Nuevas rutas legales */}
             <Route path="/advice" element={<Advice />} />
