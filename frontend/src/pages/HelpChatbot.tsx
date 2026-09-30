@@ -33,7 +33,7 @@ export const HelpChatbot = () => {
 
     try {
       const response = await fetch(
-        'http://localhost:3001/api/help',
+        'https://udg-backend-api.onrender.com/api/help',
         {
           method: 'POST',
           headers: {
