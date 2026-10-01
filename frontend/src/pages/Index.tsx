@@ -30,10 +30,10 @@ const Index = () => {
         {/* Patrón de fondo */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-[0.05] pointer-events-none" />
         
-        {/* Degradado más extenso y suave */}
-        <div className="absolute bottom-0 left-0 right-0 h-64 md:h-80 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
+        {/* Degradado más extenso y suave (Abarca el 85% de la altura del Hero) */}
+        <div className="absolute bottom-0 left-0 right-0 h-[85%] bg-gradient-to-t from-background via-background/70 to-transparent pointer-events-none" />
 
-        {/* Contenedor Principal (Alineado a la izquierda según el boceto) */}
+        {/* Contenedor Principal */}
         <div className="container relative pt-24 pb-32 md:pt-32 md:pb-48 px-4">
           <div className="max-w-6xl mx-auto flex flex-col items-start text-left">
             
@@ -42,10 +42,10 @@ const Index = () => {
               Guía de Carreras
             </span>
             
-            {/* 2. Título abarcando todo el ancho */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-extrabold tracking-tighter leading-tight w-full mb-12">
-              Universidad de Guadalajara<br className="hidden sm:block" />
-              
+            {/* 2. Título en una sola línea (ajuste de fuentes y whitespace-nowrap en desktop) */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-sans font-extrabold tracking-tighter leading-tight w-full mb-12 lg:whitespace-nowrap">
+              Universidad de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">Guadalajara</span>
+            </h1>
             
             {/* 3. Contenedor dividido: Izquierda (Desc + Botón) / Derecha (Números) */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 w-full items-start">
