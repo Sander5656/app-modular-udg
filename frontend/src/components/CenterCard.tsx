@@ -9,7 +9,6 @@ interface CenterCardProps {
 
 export const CenterCard = ({ center }: CenterCardProps) => {
   return (
-    {/* Contenedor principal con perspectiva 3D. El 'group' detecta el hover */}
     <Link to={`/centro/${center.id}`} className="block h-[340px] group [perspective:1000px]">
       
       {/* Contenedor interno que realiza el giro */}
