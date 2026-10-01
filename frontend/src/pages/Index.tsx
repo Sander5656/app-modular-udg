@@ -37,11 +37,14 @@ const Index = () => {
             <div className="space-y-8 text-center lg:text-left">
               
               <div className="space-y-4">
-                {/* Se aplica font-serif para un estilo más institucional */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight leading-tight">
-                  Guía de <br className="hidden lg:block" />
+                <span className="text-blue-300 font-semibold tracking-widest uppercase text-sm mb-2 block">
+                  Guía de Carreras
+                </span>
+                {/* Título en grande con tipografía moderna y limpia */}
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold tracking-tighter leading-tight">
+                  Universidad de <br className="hidden lg:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
-                    Carreras UdeG
+                    Guadalajara
                   </span>
                 </h1>
                 
@@ -51,7 +54,6 @@ const Index = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                {/* Botón con animación de escala y flecha */}
                 <a 
                   href="#centros" 
                   className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-blue-950 font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
@@ -62,24 +64,24 @@ const Index = () => {
               </div>
             </div>
 
-            {/* --- Columna Derecha: Métricas limpias (Sin contenedores ni iconos) --- */}
-            <div className="flex flex-col sm:flex-row lg:flex-col justify-center items-center lg:items-start gap-12 w-full max-w-lg mx-auto lg:max-w-none lg:pl-20">
+            {/* --- Columna Derecha: Métricas limpias --- */}
+            <div className="flex flex-col sm:flex-row lg:flex-col justify-center items-center lg:items-start gap-10 w-full max-w-lg mx-auto lg:max-w-none lg:pl-20">
               
               <div className="text-center lg:text-left">
-                {/* Números con font-serif para combinar con el título */}
-                <h3 className="text-6xl md:text-7xl font-serif font-bold text-white tracking-tight">
+                {/* Números reducidos de tamaño y con fuente común (sans) */}
+                <h3 className="text-4xl md:text-5xl font-sans font-bold text-white tracking-tight">
                   {universityCenters.length}
                 </h3>
-                <p className="text-xl text-blue-200/90 mt-2 font-light tracking-wide uppercase text-sm">
+                <p className="text-sm md:text-base text-blue-200/90 mt-1 font-medium tracking-wide uppercase">
                   Centros Universitarios
                 </p>
               </div>
 
               <div className="text-center lg:text-left">
-                <h3 className="text-6xl md:text-7xl font-serif font-bold text-white tracking-tight">
+                <h3 className="text-4xl md:text-5xl font-sans font-bold text-white tracking-tight">
                   {totalCareers}
                 </h3>
-                <p className="text-xl text-blue-200/90 mt-2 font-light tracking-wide uppercase text-sm">
+                <p className="text-sm md:text-base text-blue-200/90 mt-1 font-medium tracking-wide uppercase">
                   Programas Académicos
                 </p>
               </div>
@@ -92,7 +94,7 @@ const Index = () => {
       {/* ================= CENTROS ================= */}
       <section id="centros" className="max-w-7xl mx-auto px-4 py-20 md:py-32">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-foreground">
+          <h2 className="text-3xl md:text-4xl font-sans font-bold tracking-tight text-foreground">
             Centros Universitarios
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
