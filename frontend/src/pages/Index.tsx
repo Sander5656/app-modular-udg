@@ -25,7 +25,6 @@ const Index = () => {
       `}</style>
 
       {/* ================= HERO ================= */}
-      {/* Se asegura que no haya márgenes superiores que causen la línea blanca */}
       <section className="relative text-white overflow-hidden animate-shader m-0 border-none">
         
         {/* Patrón de fondo */}
@@ -34,59 +33,64 @@ const Index = () => {
         {/* Degradado más extenso y suave */}
         <div className="absolute bottom-0 left-0 right-0 h-64 md:h-80 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
 
-        {/* Contenedor Principal Centrado */}
+        {/* Contenedor Principal (Alineado a la izquierda según el boceto) */}
         <div className="container relative pt-24 pb-32 md:pt-32 md:pb-48 px-4">
-          <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
+          <div className="max-w-6xl mx-auto flex flex-col items-start text-left">
             
-            {/* --- Textos Superiores --- */}
-            <div className="space-y-6 w-full">
-              <span className="text-blue-300 font-semibold tracking-widest uppercase text-sm block">
-                Guía de Carreras
+            {/* 1. Etiqueta superior */}
+            <span className="text-blue-300 font-semibold tracking-widest uppercase text-sm block mb-6">
+              Guía de Carreras
+            </span>
+            
+            {/* 2. Título abarcando todo el ancho */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-extrabold tracking-tighter leading-tight w-full mb-12">
+              Universidad de <br className="hidden sm:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
+                Guadalajara
               </span>
+            </h1>
+            
+            {/* 3. Contenedor dividido: Izquierda (Desc + Botón) / Derecha (Números) */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 w-full items-start">
               
-              {/* Título extendido de lado a lado */}
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-extrabold tracking-tighter leading-tight w-full">
-                Universidad de <br className="hidden sm:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
-                  Guadalajara
-                </span>
-              </h1>
-              
-              <p className="text-lg md:text-xl text-blue-100/90 max-w-2xl mx-auto font-light leading-relaxed mt-6">
-                Explora nuestra red de centros universitarios y descubre el programa académico diseñado para impulsar tu futuro profesional.
-              </p>
-            </div>
-
-            {/* --- Botón --- */}
-            <div className="mt-10 mb-16">
-              <a 
-                href="#centros" 
-                className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-blue-950 font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
-              >
-                Explorar Centros
-                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
-              </a>
-            </div>
-
-            {/* --- Números / Estadísticas debajo del título --- */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-12 md:gap-24 w-full pt-10 border-t border-white/10">
-              
-              <div className="text-center">
-                <h3 className="text-4xl md:text-5xl font-sans font-bold text-white tracking-tight">
-                  {universityCenters.length}
-                </h3>
-                <p className="text-sm md:text-base text-blue-200/90 mt-1 font-medium tracking-wide uppercase">
-                  Centros Universitarios
+              {/* --- Columna Izquierda --- */}
+              <div className="space-y-8 max-w-xl">
+                <p className="text-lg md:text-xl text-blue-100/90 font-light leading-relaxed">
+                  Explora nuestra red de centros universitarios y descubre el programa académico diseñado para impulsar tu futuro profesional.
                 </p>
+                
+                <div>
+                  <a 
+                    href="#centros" 
+                    className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-blue-950 font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
+                  >
+                    Explorar Centros
+                    <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
+                  </a>
+                </div>
               </div>
 
-              <div className="text-center">
-                <h3 className="text-4xl md:text-5xl font-sans font-bold text-white tracking-tight">
-                  {totalCareers}
-                </h3>
-                <p className="text-sm md:text-base text-blue-200/90 mt-1 font-medium tracking-wide uppercase">
-                  Programas Académicos
-                </p>
+              {/* --- Columna Derecha --- */}
+              <div className="flex flex-row justify-start lg:justify-end gap-16 md:gap-24 lg:pt-4">
+                
+                <div className="text-left">
+                  <h3 className="text-5xl md:text-6xl font-sans font-bold text-white tracking-tight">
+                    {universityCenters.length}
+                  </h3>
+                  <p className="text-sm md:text-base text-blue-200/90 mt-2 font-medium tracking-wide uppercase">
+                    Centros Universitarios
+                  </p>
+                </div>
+
+                <div className="text-left">
+                  <h3 className="text-5xl md:text-6xl font-sans font-bold text-white tracking-tight">
+                    {totalCareers}
+                  </h3>
+                  <p className="text-sm md:text-base text-blue-200/90 mt-2 font-medium tracking-wide uppercase">
+                    Programas Académicos
+                  </p>
+                </div>
+
               </div>
 
             </div>
