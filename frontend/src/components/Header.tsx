@@ -31,7 +31,7 @@ export const Header = () => {
               to="/chat"
               className="text-sm font-medium text-foreground/60 hover:text-foreground"
             >
-              Asistente
+              Conoce tu carrera
             </Link>
 
             <Link

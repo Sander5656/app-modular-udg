@@ -1,6 +1,7 @@
 import { CenterCard } from "@/components/CenterCard";
 import { universityCenters } from "@/data/universityCenters";
-import { GraduationCap, Building2, BookOpen } from "lucide-react";
+// Se agregó el icono Info (o puedes usar HelpCircle) de lucide-react
+import { GraduationCap, Building2, BookOpen, Info } from "lucide-react"; 
 
 const Index = () => {
   const totalCareers = universityCenters.reduce(
@@ -9,7 +10,7 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
 
       {/* ================= HERO ================= */}
       <section className="relative bg-gradient-hero text-primary-foreground overflow-hidden">
@@ -81,20 +82,34 @@ const Index = () => {
           </p>
         </div>
 
-       <div className="
-  grid
-  grid-cols-1
-  sm:grid-cols-2
-  lg:grid-cols-3
-  xl:grid-cols-4
-  gap-6
-  w-full
-">
-  {universityCenters.map((center) => (
-    <CenterCard key={center.id} center={center} />
-  ))}
-</div>
+        <div className="
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-3
+          xl:grid-cols-4
+          gap-6
+          w-full
+        ">
+          {universityCenters.map((center) => (
+            <CenterCard key={center.id} center={center} />
+          ))}
+        </div>
       </section>
+
+      {/* ================= BOTÓN FLOTANTE ================= */}
+      <a
+        href="/help"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center p-4 bg-primary text-primary-foreground rounded-full shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group"
+        title="Acerca de nosotros"
+      >
+        <Info className="h-6 w-6" />
+        {/* Este texto está oculto por defecto y se expande al hacer hover */}
+        <span className="max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-[200px] group-hover:ml-2 font-medium">
+          Acerca de nosotros
+        </span>
+      </a>
+      
     </div>
   );
 };
