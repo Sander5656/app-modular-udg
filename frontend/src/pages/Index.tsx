@@ -27,7 +27,7 @@ const Index = () => {
           100% { background-position: 0% 50%; }
         }
         .animate-shader {
-          background: linear-gradient(-45deg, #020617, #1e3a8a, #0f172a, #312e81);
+          background: linear-gradient(-45deg, #020617, #14348e, #0f172a, #1a169f);
           background-size: 400% 400%;
           animation: shader-movement 15s ease infinite;
         }
