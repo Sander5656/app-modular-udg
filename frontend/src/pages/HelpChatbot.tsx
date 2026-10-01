@@ -33,7 +33,7 @@ export const HelpChatbot = () => {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/help`,
+        `${process.env.VITE_API_KEY}/api/help`,
         {
           method: 'POST',
           headers: {
