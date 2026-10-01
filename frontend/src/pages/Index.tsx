@@ -8,6 +8,15 @@ const Index = () => {
     0
   );
 
+  // Función para hacer el scroll suave hacia la sección de centros
+  const handleScrollToCentros = (e) => {
+    e.preventDefault();
+    const centrosSection = document.getElementById("centros");
+    if (centrosSection) {
+      centrosSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background relative font-sans">
       
@@ -18,7 +27,7 @@ const Index = () => {
           100% { background-position: 0% 50%; }
         }
         .animate-shader {
-          background: linear-gradient(-45deg, #020617, #1e3a8a, #0f172a, #312e81);
+          background: linear-gradient(-45deg, #020617, #1d3699, #0f172a, #231fa1);
           background-size: 400% 400%;
           animation: shader-movement 15s ease infinite;
         }
@@ -27,14 +36,14 @@ const Index = () => {
       {/* ================= HERO ================= */}
       <section className="relative text-white overflow-hidden animate-shader m-0 border-none">
         
-        {/* Patrón de fondo */}
+        {/* Patrón de fondo sutil */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-[0.05] pointer-events-none" />
         
-        {/* Degradado más extenso y suave (Abarca el 85% de la altura del Hero) */}
-        <div className="absolute bottom-0 left-0 right-0 h-[85%] bg-gradient-to-t from-background via-background/70 to-transparent pointer-events-none" />
+        {/* Degradado inferior reducido para que el azul cubra hasta el botón */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
         {/* Contenedor Principal */}
-        <div className="container relative pt-24 pb-32 md:pt-32 md:pb-48 px-4">
+        <div className="container relative pt-24 pb-40 md:pt-32 md:pb-56 px-4">
           <div className="max-w-6xl mx-auto flex flex-col items-start text-left">
             
             {/* 1. Etiqueta superior */}
@@ -42,7 +51,7 @@ const Index = () => {
               Guía de Carreras
             </span>
             
-            {/* 2. Título en una sola línea (ajuste de fuentes y whitespace-nowrap en desktop) */}
+            {/* 2. Título en una sola línea */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-sans font-extrabold tracking-tighter leading-tight w-full mb-12 lg:whitespace-nowrap">
               Universidad de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">Guadalajara</span>
             </h1>
@@ -59,6 +68,7 @@ const Index = () => {
                 <div>
                   <a 
                     href="#centros" 
+                    onClick={handleScrollToCentros}
                     className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-blue-950 font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
                   >
                     Explorar Centros
