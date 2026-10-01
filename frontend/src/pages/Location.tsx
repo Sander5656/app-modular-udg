@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { Search, MapPin, Navigation, Loader2 } from "lucide-react";
 
-// Puedes mover este arreglo a un archivo en "@/data/udg-centers"
+// 1. Datos actualizados con coordenadas (lat y lng)
 const udgCenters = [
   {
     id: "cucea",
@@ -8,7 +9,8 @@ const udgCenters = [
     name: "Centro Universitario de Ciencias Económico Administrativas",
     address: "Periférico Norte 799, Núcleo Universitario Los Belenes, 45100 Zapopan, Jal.",
     mapsQuery: "CUCEA UDG Zapopan",
-    link: "https://maps.app.goo.gl/CUCEA..." 
+    link: "https://maps.app.goo.gl/CUCEA",
+    coordinates: { lat: 20.7411, lng: -103.3801 }
   },
   {
     id: "cucei",
@@ -16,7 +18,8 @@ const udgCenters = [
     name: "Centro Universitario de Ciencias Exactas e Ingenierías",
     address: "Blvd. Marcelino García Barragán 1421, Olímpica, 44430 Guadalajara, Jal.",
     mapsQuery: "CUCEI UDG Guadalajara",
-    link: "https://maps.app.goo.gl/CUCEI..."
+    link: "https://maps.app.goo.gl/CUCEI",
+    coordinates: { lat: 20.6557, lng: -103.3256 }
   },
   {
     id: "cucs",
@@ -24,7 +27,8 @@ const udgCenters = [
     name: "Centro Universitario de Ciencias de la Salud",
     address: "Sierra Mojada 950, Independencia Oriente, 44340 Guadalajara, Jal.",
     mapsQuery: "CUCS UDG Guadalajara",
-    link: "https://maps.app.goo.gl/CUCS..."
+    link: "https://maps.app.goo.gl/CUCS",
+    coordinates: { lat: 20.6739, lng: -103.3478 }
   },
   {
     id: "cuaad",
@@ -32,7 +36,8 @@ const udgCenters = [
     name: "Centro Universitario de Arte, Arquitectura y Diseño",
     address: "Calzada Independencia Norte 5075, Huentitán El Bajo, 44250 Guadalajara, Jal.",
     mapsQuery: "CUAAD UDG Huentitán",
-    link: "https://maps.app.goo.gl/CUAAD..."
+    link: "https://maps.app.goo.gl/CUAAD",
+    coordinates: { lat: 20.7233, lng: -103.3178 }
   },
   {
     id: "cugdl",
@@ -40,7 +45,8 @@ const udgCenters = [
     name: "Centro Universitario de Guadalajara",
     address: "Av. de los Maestros 1060, La Normal, 44260 Guadalajara, Jal.",
     mapsQuery: "CUGDL UDG La Normal",
-    link: "https://maps.app.goo.gl/CUGDL..."
+    link: "https://maps.app.goo.gl/CUGDL",
+    coordinates: { lat: 20.6961, lng: -103.3485 }
   },
   {
     id: "cucsh",
@@ -48,10 +54,160 @@ const udgCenters = [
     name: "Centro Universitario de Ciencias Sociales y Humanidades",
     address: "Prolongación Licenciado José Luis Parres Arias 150, 45100 Zapopan, Jal.",
     mapsQuery: "CUCSH Belenes UDG Zapopan",
-    link: "https://maps.app.goo.gl/CUCSH..."
+    link: "https://maps.app.goo.gl/CUCSH",
+    coordinates: { lat: 20.7385, lng: -103.3815 }
   }
 ];
 
+// 2. Función matemática para calcular distancia en KM (Fórmula de Haversine)
+const calculateDistance = (lat1, lon1, lat2, lon2) => {
+  const R = 6371; // Radio de la Tierra en km
+  const dLat = (lat2 - lat1) * (Math.PI / 180);
+  const dLon = (lon2 - lon1) * (Math.PI / 180);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * (Math.PI / 180)) *
+      Math.cos(lat2 * (Math.PI / 180)) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+};
+
+// 3. Componente Buscador de Rutas
+const RouteFinder = () => {
+  const [zipCode, setZipCode] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [userLocation, setUserLocation] = useState(null);
+  const [closestCenter, setClosestCenter] = useState(null);
+  const [distanceInfo, setDistanceInfo] = useState(0);
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    if (!zipCode.trim() || zipCode.length < 4) {
+      setError("Ingresa un código postal válido.");
+      return;
+    }
+
+    setLoading(true);
+    setError("");
+    setClosestCenter(null);
+
+    try {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?postalcode=${zipCode}&state=Jalisco&country=Mexico&format=json`
+      );
+      const data = await response.json();
+
+      if (!data || data.length === 0) {
+        throw new Error("No pudimos encontrar este Código Postal en Jalisco.");
+      }
+
+      const userLat = parseFloat(data[0].lat);
+      const userLng = parseFloat(data[0].lon);
+      setUserLocation({ lat: userLat, lng: userLng });
+
+      let minDistance = Infinity;
+      let closest = null;
+
+      udgCenters.forEach((center) => {
+        if (center.coordinates) {
+          const distance = calculateDistance(userLat, userLng, center.coordinates.lat, center.coordinates.lng);
+          if (distance < minDistance) {
+            minDistance = distance;
+            closest = center;
+          }
+        }
+      });
+
+      if (closest) {
+        setClosestCenter(closest);
+        setDistanceInfo(minDistance.toFixed(1));
+      } else {
+        throw new Error("Error al calcular la ruta.");
+      }
+    } catch (err) {
+      setError(err.message || "Ocurrió un error inesperado.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="w-full bg-background border border-border rounded-2xl shadow-sm overflow-hidden mb-12">
+      <div className="p-6 bg-primary/5 border-b border-border">
+        <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
+          <Navigation className="h-5 w-5 text-primary" />
+          Encuentra tu centro más cercano
+        </h3>
+        <p className="text-sm text-muted-foreground mb-4">
+          Ingresa tu código postal para trazar la ruta hacia la sede de la UdeG más próxima a ti.
+        </p>
+
+        <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3">
+          <div className="relative flex-1">
+            <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+            <input
+              type="text"
+              placeholder="Ej. 45100"
+              value={zipCode}
+              onChange={(e) => setZipCode(e.target.value.replace(/\D/g, ''))}
+              maxLength={5}
+              className="w-full pl-10 pr-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
+            />
+          </div>
+          <button
+            type="submit"
+            disabled={loading}
+            className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-70"
+          >
+            {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Search className="h-5 w-5" />}
+            Buscar ruta
+          </button>
+        </form>
+        {error && <p className="text-red-500 text-sm mt-3 font-medium">{error}</p>}
+      </div>
+
+      {closestCenter && userLocation && (
+        <div className="p-6 space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 bg-blue-50/50 rounded-xl border border-blue-100">
+            <div>
+              <p className="text-sm text-blue-600 font-semibold mb-1">¡Ruta encontrada!</p>
+              <h4 className="text-lg font-bold text-foreground">
+                {closestCenter.acronym} - {closestCenter.name}
+              </h4>
+              <p className="text-sm text-muted-foreground mt-1">
+                Aproximadamente a <strong>{distanceInfo} km</strong> de distancia en línea recta.
+              </p>
+            </div>
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&origin=${userLocation.lat},${userLocation.lng}&destination=${closestCenter.coordinates.lat},${closestCenter.coordinates.lng}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 px-5 py-2.5 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition shadow-sm text-center"
+            >
+              Abrir en la App
+            </a>
+          </div>
+
+          <div className="w-full h-80 sm:h-[400px] rounded-xl overflow-hidden border border-border bg-muted">
+            <iframe
+              title="Ruta al Centro Universitario"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src={`https://maps.google.com/maps?saddr=${userLocation.lat},${userLocation.lng}&daddr=${closestCenter.coordinates.lat},${closestCenter.coordinates.lng}&output=embed`}
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// 4. Componente Principal
 export default function UdgLocations() {
   return (
     <div className="min-h-screen bg-muted/30">
@@ -67,50 +223,35 @@ export default function UdgLocations() {
           </p>
         </div>
 
-        {/* Lista de Centros */}
-        <div className="space-y-6">
+        {/* Buscador de Rutas (Sustituye a los iframes múltiples) */}
+        <RouteFinder />
+
+        {/* Lista de Centros (Simplificada, sin mapas individuales) */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-bold pt-4">Directorio de Centros</h2>
           {udgCenters.map((center) => (
             <div
               key={center.id}
-              className="bg-background border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4"
+              className="bg-background border rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row sm:items-center justify-between gap-4"
             >
-              {/* Encabezado de la tarjeta */}
               <div>
-                <h2 className="font-semibold text-xl">
-                  {center.acronym} - {center.name}
-                </h2>
-                <div className="flex items-start gap-2 mt-2 text-muted-foreground">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 shrink-0 mt-0.5">
-                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
-                  </svg>
+                <h3 className="font-semibold text-lg">
+                  {center.acronym} <span className="font-normal text-muted-foreground hidden sm:inline">- {center.name}</span>
+                </h3>
+                <div className="flex items-start gap-2 mt-1 text-muted-foreground">
+                  <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
                   <p className="text-sm">{center.address}</p>
                 </div>
               </div>
 
-              {/* Mapa embebido */}
-              <div className="w-full h-64 sm:h-80 border rounded-lg overflow-hidden bg-muted/50">
-                <iframe
-                  title={`Mapa de ${center.acronym}`}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src={`https://maps.google.com/maps?q=${encodeURIComponent(center.mapsQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
-                ></iframe>
-              </div>
-
-              {/* Botón de acción */}
-              <div className="flex justify-end pt-2">
-                <a
-                  href={center.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 text-sm rounded-lg border border-primary text-primary hover:bg-primary/5 font-semibold transition"
-                >
-                  Abrir en Google Maps
-                </a>
-              </div>
+              <a
+                href={center.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 px-4 py-2 text-sm rounded-lg border border-primary text-primary hover:bg-primary/5 font-semibold transition text-center"
+              >
+                Ver en Maps
+              </a>
             </div>
           ))}
         </div>
