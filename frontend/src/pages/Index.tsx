@@ -53,7 +53,7 @@ const Index = () => {
             
             {/* 2. Título en una sola línea */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-sans font-extrabold tracking-tighter leading-tight w-full mb-12 lg:whitespace-nowrap">
-              Universidad de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">Guadalajara</span>
+              Universidad de Guadalajara
             </h1>
             
             {/* 3. Contenedor dividido: Izquierda (Desc + Botón) / Derecha (Números) */}
