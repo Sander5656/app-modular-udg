@@ -8,7 +8,7 @@ const udgCenters = [
     name: "Centro Universitario de Ciencias Económico Administrativas",
     address: "Periférico Norte 799, Núcleo Universitario Los Belenes, 45100 Zapopan, Jal.",
     mapsQuery: "CUCEA UDG Zapopan",
-    link: "https://maps.app.goo.gl/CUCEA..." // Puedes actualizar con el link corto real
+    link: "https://maps.app.goo.gl/CUCEA..." 
   },
   {
     id: "cucei",
@@ -35,11 +35,19 @@ const udgCenters = [
     link: "https://maps.app.goo.gl/CUAAD..."
   },
   {
+    id: "cugdl",
+    acronym: "CUGDL",
+    name: "Centro Universitario de Guadalajara",
+    address: "Av. de los Maestros 1060, La Normal, 44260 Guadalajara, Jal.",
+    mapsQuery: "CUGDL UDG La Normal",
+    link: "https://maps.app.goo.gl/CUGDL..."
+  },
+  {
     id: "cucsh",
     acronym: "CUCSH",
     name: "Centro Universitario de Ciencias Sociales y Humanidades",
-    address: "Av. de los Maestros 1060, La Normal, 44260 Guadalajara, Jal.",
-    mapsQuery: "CUCSH La Normal UDG",
+    address: "Prolongación Licenciado José Luis Parres Arias 150, 45100 Zapopan, Jal.",
+    mapsQuery: "CUCSH Belenes UDG Zapopan",
     link: "https://maps.app.goo.gl/CUCSH..."
   }
 ];
