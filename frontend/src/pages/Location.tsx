@@ -56,6 +56,24 @@ const udgCenters = [
     mapsQuery: "CUCSH Belenes UDG Zapopan",
     link: "https://www.google.com/maps/search/?api=1&query=20.7385,-103.3815",
     coordinates: { lat: 20.7385, lng: -103.3815 }
+  },
+  {
+    id: "cucba",
+    acronym: "CUCBA",
+    name: "Centro Universitario de Ciencias Biológicas y Agropecuarias",
+    address: "Camino Ramón Padilla Sánchez 2100, Nextipac, 45200 Zapopan, Jal.",
+    mapsQuery: "CUCBA UDG Zapopan",
+    link: "https://www.google.com/maps/search/?api=1&query=20.7489,-103.5120",
+    coordinates: { lat: 20.7489, lng: -103.5120 }
+  },
+  {
+    id: "cucosta",
+    acronym: "CUCOSTA",
+    name: "Centro Universitario de la Costa",
+    address: "Av. Universidad 203, Delegación Ixtapa, 48280 Puerto Vallarta, Jal.",
+    mapsQuery: "CUCOSTA UDG Puerto Vallarta",
+    link: "https://www.google.com/maps/search/?api=1&query=20.6534,-105.2253",
+    coordinates: { lat: 20.6534, lng: -105.2253 }
   }
 ];
 
