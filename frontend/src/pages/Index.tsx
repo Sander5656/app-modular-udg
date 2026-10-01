@@ -25,50 +25,53 @@ const Index = () => {
       `}</style>
 
       {/* ================= HERO ================= */}
-      <section className="relative text-white overflow-hidden animate-shader">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-[0.05]" />
+      {/* Se asegura que no haya márgenes superiores que causen la línea blanca */}
+      <section className="relative text-white overflow-hidden animate-shader m-0 border-none">
         
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+        {/* Patrón de fondo */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-[0.05] pointer-events-none" />
+        
+        {/* Degradado más extenso y suave */}
+        <div className="absolute bottom-0 left-0 right-0 h-64 md:h-80 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
 
-        <div className="container relative py-24 md:py-32 lg:py-40">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+        {/* Contenedor Principal Centrado */}
+        <div className="container relative pt-24 pb-32 md:pt-32 md:pb-48 px-4">
+          <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
             
-            {/* --- Columna Izquierda: Textos --- */}
-            <div className="space-y-8 text-center lg:text-left">
+            {/* --- Textos Superiores --- */}
+            <div className="space-y-6 w-full">
+              <span className="text-blue-300 font-semibold tracking-widest uppercase text-sm block">
+                Guía de Carreras
+              </span>
               
-              <div className="space-y-4">
-                <span className="text-blue-300 font-semibold tracking-widest uppercase text-sm mb-2 block">
-                  Guía de Carreras
+              {/* Título extendido de lado a lado */}
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-extrabold tracking-tighter leading-tight w-full">
+                Universidad de <br className="hidden sm:block" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
+                  Guadalajara
                 </span>
-                {/* Título en grande con tipografía moderna y limpia */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold tracking-tighter leading-tight">
-                  Universidad de <br className="hidden lg:block" />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
-                    Guadalajara
-                  </span>
-                </h1>
-                
-                <p className="text-lg md:text-xl text-blue-100/90 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-                  Explora nuestra red de centros universitarios y descubre el programa académico diseñado para impulsar tu futuro profesional.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                <a 
-                  href="#centros" 
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-blue-950 font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
-                >
-                  Explorar Centros
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
-                </a>
-              </div>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-blue-100/90 max-w-2xl mx-auto font-light leading-relaxed mt-6">
+                Explora nuestra red de centros universitarios y descubre el programa académico diseñado para impulsar tu futuro profesional.
+              </p>
             </div>
 
-            {/* --- Columna Derecha: Métricas limpias --- */}
-            <div className="flex flex-col sm:flex-row lg:flex-col justify-center items-center lg:items-start gap-10 w-full max-w-lg mx-auto lg:max-w-none lg:pl-20">
+            {/* --- Botón --- */}
+            <div className="mt-10 mb-16">
+              <a 
+                href="#centros" 
+                className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-blue-950 font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
+              >
+                Explorar Centros
+                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
+              </a>
+            </div>
+
+            {/* --- Números / Estadísticas debajo del título --- */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-12 md:gap-24 w-full pt-10 border-t border-white/10">
               
-              <div className="text-center lg:text-left">
-                {/* Números reducidos de tamaño y con fuente común (sans) */}
+              <div className="text-center">
                 <h3 className="text-4xl md:text-5xl font-sans font-bold text-white tracking-tight">
                   {universityCenters.length}
                 </h3>
@@ -77,7 +80,7 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="text-center lg:text-left">
+              <div className="text-center">
                 <h3 className="text-4xl md:text-5xl font-sans font-bold text-white tracking-tight">
                   {totalCareers}
                 </h3>
@@ -87,12 +90,13 @@ const Index = () => {
               </div>
 
             </div>
+
           </div>
         </div>
       </section>
 
       {/* ================= CENTROS ================= */}
-      <section id="centros" className="max-w-7xl mx-auto px-4 py-20 md:py-32">
+      <section id="centros" className="max-w-7xl mx-auto px-4 py-20 md:py-32 relative z-10">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-sans font-bold tracking-tight text-foreground">
             Centros Universitarios
