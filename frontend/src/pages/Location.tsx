@@ -94,15 +94,26 @@ const RouteFinder = () => {
     setClosestCenter(null);
 
     try {
-      const response = await fetch(
-        `https://nominatim.openstreetmap.org/search?postalcode=${zipCode}&state=Jalisco&country=Mexico&format=json`
+      // Intento 1: Búsqueda estricta por CP en México (sin forzar el estado para evitar bloqueos de la API)
+      let response = await fetch(
+        `https://nominatim.openstreetmap.org/search?postalcode=${zipCode}&country=Mexico&format=json`
       );
-      const data = await response.json();
+      let data = await response.json();
 
+      // Intento 2: Si el Intento 1 falla (arreglo vacío), probamos con una búsqueda de texto libre
       if (!data || data.length === 0) {
-        throw new Error("No pudimos encontrar este Código Postal en Jalisco.");
+        response = await fetch(
+          `https://nominatim.openstreetmap.org/search?q=${zipCode},+Jalisco,+Mexico&format=json`
+        );
+        data = await response.json();
       }
 
+      // Si después de ambos intentos no hay nada, entonces sí lanzamos el error
+      if (!data || data.length === 0) {
+        throw new Error("No pudimos ubicar este Código Postal. Verifica que sea correcto.");
+      }
+
+      // Tomamos el primer resultado (el más relevante)
       const userLat = parseFloat(data[0].lat);
       const userLng = parseFloat(data[0].lon);
       setUserLocation({ lat: userLat, lng: userLng });
@@ -110,6 +121,7 @@ const RouteFinder = () => {
       let minDistance = Infinity;
       let closest = null;
 
+      // Calculamos la distancia contra todos los centros
       udgCenters.forEach((center) => {
         if (center.coordinates) {
           const distance = calculateDistance(userLat, userLng, center.coordinates.lat, center.coordinates.lng);
