@@ -9,7 +9,7 @@ const udgCenters = [
     name: "Centro Universitario de Ciencias Económico Administrativas",
     address: "Periférico Norte 799, Núcleo Universitario Los Belenes, 45100 Zapopan, Jal.",
     mapsQuery: "CUCEA UDG Zapopan",
-    link: "https://maps.app.goo.gl/CUCEA",
+    link: "https://www.google.com/maps/search/?api=1&query=20.7411,-103.3801",
     coordinates: { lat: 20.7411, lng: -103.3801 }
   },
   {
@@ -18,7 +18,7 @@ const udgCenters = [
     name: "Centro Universitario de Ciencias Exactas e Ingenierías",
     address: "Blvd. Marcelino García Barragán 1421, Olímpica, 44430 Guadalajara, Jal.",
     mapsQuery: "CUCEI UDG Guadalajara",
-    link: "https://maps.app.goo.gl/CUCEI",
+    link: "https://www.google.com/maps/search/?api=1&query=20.6557,-103.3256",
     coordinates: { lat: 20.6557, lng: -103.3256 }
   },
   {
@@ -27,7 +27,7 @@ const udgCenters = [
     name: "Centro Universitario de Ciencias de la Salud",
     address: "Sierra Mojada 950, Independencia Oriente, 44340 Guadalajara, Jal.",
     mapsQuery: "CUCS UDG Guadalajara",
-    link: "https://maps.app.goo.gl/CUCS",
+    link: "https://www.google.com/maps/search/?api=1&query=20.6739,-103.3478",
     coordinates: { lat: 20.6739, lng: -103.3478 }
   },
   {
@@ -36,7 +36,7 @@ const udgCenters = [
     name: "Centro Universitario de Arte, Arquitectura y Diseño",
     address: "Calzada Independencia Norte 5075, Huentitán El Bajo, 44250 Guadalajara, Jal.",
     mapsQuery: "CUAAD UDG Huentitán",
-    link: "https://maps.app.goo.gl/CUAAD",
+    link: "https://www.google.com/maps/search/?api=1&query=20.7233,-103.3178",
     coordinates: { lat: 20.7233, lng: -103.3178 }
   },
   {
@@ -45,7 +45,7 @@ const udgCenters = [
     name: "Centro Universitario de Guadalajara",
     address: "Av. de los Maestros 1060, La Normal, 44260 Guadalajara, Jal.",
     mapsQuery: "CUGDL UDG La Normal",
-    link: "https://maps.app.goo.gl/CUGDL",
+    link: "https://www.google.com/maps/search/?api=1&query=20.6961,-103.3485",
     coordinates: { lat: 20.6961, lng: -103.3485 }
   },
   {
@@ -54,7 +54,7 @@ const udgCenters = [
     name: "Centro Universitario de Ciencias Sociales y Humanidades",
     address: "Prolongación Licenciado José Luis Parres Arias 150, 45100 Zapopan, Jal.",
     mapsQuery: "CUCSH Belenes UDG Zapopan",
-    link: "https://maps.app.goo.gl/CUCSH",
+    link: "https://www.google.com/maps/search/?api=1&query=20.7385,-103.3815",
     coordinates: { lat: 20.7385, lng: -103.3815 }
   }
 ];
