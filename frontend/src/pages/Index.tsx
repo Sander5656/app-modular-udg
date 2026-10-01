@@ -44,11 +44,8 @@ const Index = () => {
             
             {/* 2. Título abarcando todo el ancho */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-extrabold tracking-tighter leading-tight w-full mb-12">
-              Universidad de <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
-                Guadalajara
-              </span>
-            </h1>
+              Universidad de Guadalajara<br className="hidden sm:block" />
+              
             
             {/* 3. Contenedor dividido: Izquierda (Desc + Botón) / Derecha (Números) */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 w-full items-start">
