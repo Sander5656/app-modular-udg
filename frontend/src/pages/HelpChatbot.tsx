@@ -33,7 +33,7 @@ export const HelpChatbot = () => {
 
     try {
       const response = await fetch(
-        'https://udg-backend-api.onrender.com/api/help',
+        '${import.meta.env.VITE_API_URL}/api/help',
         {
           method: 'POST',
           headers: {
