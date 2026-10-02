@@ -52,8 +52,8 @@ const Index = () => {
         {/* Patrón de fondo sutil */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-[0.05] pointer-events-none" />
         
-        {/* Degradado inferior para fusionar con la siguiente sección */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
+        {/* Degradado inferior reducido para que el azul llegue más abajo */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
 
         {/* LOGO 3D EN EL CENTRO (Absoluto para no interferir con la estructura) */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
@@ -64,8 +64,8 @@ const Index = () => {
           />
         </div>
 
-        {/* Contenedor Principal con estructura del boceto */}
-        <div className="container relative z-20 flex-1 flex flex-col justify-between pt-24 pb-20 md:pt-32 md:pb-24 px-4 mx-auto max-w-7xl">
+        {/* Contenedor Principal: Se incrementó el padding-bottom (pb-32 md:pb-40) para empujar todo el contenido hacia arriba alejándolo del degradado inferior */}
+        <div className="container relative z-20 flex-1 flex flex-col justify-between pt-24 pb-32 md:pt-32 md:pb-40 px-4 mx-auto max-w-7xl">
           
           {/* Superior Izquierda: Título */}
           <div className="w-full text-left">
