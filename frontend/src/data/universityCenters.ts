@@ -24,7 +24,7 @@ export const universityCenters: UniversityCenter[] = [
     image: "/centers/cucei.jpg",
     careers: [
       {
-        id: "lic-fisica",
+        id: "lic-fisica_cucei",
         name: "Licenciatura en Física",
         description: "Formación en física teórica y experimental.",
         duration: "Consultar plan de estudios",
@@ -36,7 +36,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-fisica"
       },
       {
-        id: "lic-matematicas",
+        id: "lic-matematicas_cucei",
         name: "Licenciatura en Matemáticas",
         description: "Formación en matemáticas puras y aplicadas.",
         duration: "Consultar plan de estudios",
@@ -48,7 +48,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-matematicas"
       },
       {
-        id: "lic-quimica",
+        id: "lic-quimica_cucei",
         name: "Licenciatura en Química",
         description: "Formación en química analítica, orgánica e inorgánica.",
         duration: "Consultar plan de estudios",
@@ -60,7 +60,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-quimica"
       },
       {
-        id: "qfb",
+        id: "qfb_cucei",
         name: "Químico Farmacéutico Biólogo",
         description: "Formación en salud, farmacéutica y biología.",
         duration: "Consultar plan de estudios",
@@ -72,7 +72,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-quimico-farmaceutico-biologo"
       },
       {
-        id: "ing-ciencia-materiales",
+        id: "ing-ciencia-materiales_cucei",
         name: "Ingeniería en Ciencia de Materiales",
         description: "Estudio de materiales y sus aplicaciones.",
         duration: "Consultar plan de estudios",
@@ -84,7 +84,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/ingenieria-en-ciencia-de-materiales"
       },
       {
-        id: "ing-civil",
+        id: "ing-civil_cucei",
         name: "Ingeniería Civil",
         description: "Diseño y construcción de infraestructura.",
         duration: "Consultar plan de estudios",
@@ -96,7 +96,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-civil"
       },
       {
-        id: "ing-alimentos-biotec",
+        id: "ing-alimentos-biotec_cucei",
         name: "Ingeniería en Alimentos y Biotecnología",
         description: "Procesos alimentarios y biotecnológicos.",
         duration: "Consultar plan de estudios",
@@ -108,7 +108,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-en-alimentos-y-biotecnologia"
       },
       {
-        id: "ing-topografia-geomatica",
+        id: "ing-topografia-geomatica_cucei",
         name: "Ingeniería en Topografía Geomática",
         description: "Levantamientos y sistemas geoespaciales.",
         duration: "Consultar plan de estudios",
@@ -120,7 +120,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/es/oferta-academica/licenciaturas/licenciatura-en-ingenieria-topografica"
       },
       {
-        id: "ing-industrial",
+        id: "ing-industrial_cucei",
         name: "Ingeniería Industrial",
         description: "Optimización de procesos y sistemas productivos.",
         duration: "Consultar plan de estudios",
@@ -132,7 +132,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-industrial"
       },
       {
-        id: "ing-mecanica-electrica",
+        id: "ing-mecanica-electrica_cucei",
         name: "Ingeniería Mecánica Eléctrica",
         description: "Sistemas mecánicos y eléctricos integrados.",
         duration: "Consultar plan de estudios",
@@ -144,7 +144,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-mecanica-electrica"
       },
       {
-        id: "ing-quimica",
+        id: "ing-quimica_cucei",
         name: "Ingeniería Química",
         description: "Procesos químicos industriales.",
         duration: "Consultar plan de estudios",
@@ -156,7 +156,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-quimica"
       },
       {
-        id: "ing-logistica-transporte",
+        id: "ing-logistica-transporte_cucei",
         name: "Ingeniería en Logística y Transporte",
         description: "Gestión de cadenas de suministro y transporte.",
         duration: "Consultar plan de estudios",
@@ -168,7 +168,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/ingenieria-en-logistica-y-transporte"
       },
       {
-        id: "ing-informatica",
+        id: "ing-informatica_cucei",
         name: "Ingeniería Informática",
         description: "Sistemas de información y software.",
         duration: "Consultar plan de estudios",
@@ -180,7 +180,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-informatica"
       },
       {
-        id: "ing-biomédica",
+        id: "ing-biomédica_cucei",
         name: "Ingeniería Biomédica",
         description: "Tecnología aplicada a la salud.",
         duration: "Consultar plan de estudios",
@@ -192,7 +192,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-biomedica"
       },
       {
-        id: "ing-computacion",
+        id: "ing-computacion_cucei",
         name: "Ingeniería en Computación",
         description: "Diseño y desarrollo de sistemas computacionales.",
         duration: "Consultar plan de estudios",
@@ -204,7 +204,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-en-computacion"
       },
       {
-        id: "ing-electromovilidad-autotronica",
+        id: "ing-electromovilidad-autotronica_cucei",
         name: "Ingeniería en Electromovilidad y Autotrónica",
         description: "Sistemas eléctricos para movilidad y control vehicular.",
         duration: "Consultar plan de estudios",
@@ -216,7 +216,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/ingenieria-en-electromovilidad-y-autotronica"
       },
       {
-        id: "ing-electronica-sistemas-inteligentes",
+        id: "ing-electronica-sistemas-inteligentes_cucei",
         name: "Ingeniería en Electrónica y Sistemas Inteligentes",
         description: "Electrónica aplicada e inteligencia embebida.",
         duration: "Consultar plan de estudios",
@@ -228,7 +228,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/ingenieria-en-electronica-y-sistemas-inteligentes"
       },
       {
-        id: "ing-fotonica",
+        id: "ing-fotonica_cucei",
         name: "Ingeniería Fotónica",
         description: "Tecnologías basadas en luz y fotónica.",
         duration: "Consultar plan de estudios",
@@ -240,7 +240,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-fotonica"
       },
       {
-        id: "ing-mecatronica-inteligente",
+        id: "ing-mecatronica-inteligente_cucei",
         name: "Ingeniería en Mecatrónica Inteligente",
         description: "Integración mecánica, electrónica y control.",
         duration: "Consultar plan de estudios",
@@ -252,7 +252,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/ingenieria-en-mecatronica-inteligente"
       },
       {
-        id: "ing-robotica",
+        id: "ing-robotica_cucei",
         name: "Ingeniería Robótica",
         description: "Diseño y control de robots y sistemas autónomos.",
         duration: "Consultar plan de estudios",
@@ -264,7 +264,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ingenieria-robotica"
       },
       {
-        id: "lic-desarrollo-sistemas-web",
+        id: "lic-desarrollo-sistemas-web_cucei",
         name: "Licenciatura en Desarrollo de Sistemas Web",
         description: "Desarrollo web; modalidad virtual.",
         duration: "Consultar plan de estudios",
@@ -276,7 +276,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucei.udg.mx/carreras/desarrolloweb/"
       },
       {
-        id: "lic-tecnologias-informacion",
+        id: "lic-tecnologias-informacion_cucei",
         name: "Licenciatura en Tecnologías e Información",
         description: "Tecnologías de la información; modalidad virtual.",
         duration: "Consultar plan de estudios",
@@ -307,7 +307,7 @@ export const universityCenters: UniversityCenter[] = [
     image: "/centers/cucs.jpeg",
     careers: [
       {
-        id: "medicina",
+        id: "medicina_cucs",
         name: "Médico Cirujano y Partero",
         description: "Forma médicos competentes para prevenir, diagnosticar y tratar enfermedades con un enfoque humanista.",
         duration: "13 semestres",
@@ -319,7 +319,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "http://pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCS/licenciatura-en-medico-cirujano-y-partero"
       },
       {
-        id: "enfermeria",
+        id: "enfermeria_cucs",
         name: "Licenciatura en Enfermería",
         description: "Prepara profesionales del cuidado de la salud con enfoque integral y humanista.",
         duration: "8 semestres",
@@ -331,7 +331,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "http://pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCS/enfermeria-cucs"
       },
       {
-        id: "enfermeria-distancia",
+        id: "enfermeria-distancia_cucs",
         name: "Licenciatura en Enfermería (Modalidad a Distancia)",
         description: "Programa de enfermería en modalidad a distancia con prácticas presenciales programadas.",
         duration: "Consultar plan de estudios",
@@ -343,7 +343,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "http://pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCS/licenciatura-en-enfermeria-modalidad-distancia"
       },
       {
-        id: "nutricion",
+        id: "nutricion_cucs",
         name: "Licenciatura en Nutrición",
         description: "Forma especialistas en nutrición humana y salud alimentaria.",
         duration: "8 semestres",
@@ -355,7 +355,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "http://pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCS/licenciatura-en-nutricion"
       },
       {
-        id: "psicologia",
+        id: "psicologia_cucs",
         name: "Licenciatura en Psicología",
         description: "Formación en evaluación, intervención y promoción de la salud mental.",
         duration: "Consultar plan de estudios",
@@ -367,7 +367,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "http://pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCS/psicologia-0"
       },
       {
-        id: "cirujano-dentista",
+        id: "cirujano-dentista_cucs",
         name: "Licenciatura en Cirujano Dentista",
         description: "Formación en prevención, diagnóstico y tratamiento odontológico.",
         duration: "Consultar plan de estudios",
@@ -379,7 +379,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "http://pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCS/cirujano-dentista-cucs"
       },
       {
-        id: "bioquimica-clinica",
+        id: "bioquimica-clinica_cucs",
         name: "Licenciatura en Bioquímica Clínica y Medicina de Laboratorio",
         description: "Formación en análisis clínicos y diagnóstico de laboratorio.",
         duration: "Consultar plan de estudios",
@@ -391,7 +391,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucs.udg.mx/lbcml"
       },
       {
-        id: "ciencias-biomédicas",
+        id: "ciencias-biomédicas_cucs",
         name: "Licenciatura en Ciencias Biomédicas",
         description: "Formación en investigación biomédica y biociencias aplicadas.",
         duration: "Consultar plan de estudios",
@@ -403,7 +403,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucs.udg.mx/lcb"
       },
       {
-        id: "ciencias-forenses",
+        id: "ciencias-forenses_cucs",
         name: "Licenciatura en Ciencias Forenses",
         description: "Formación en técnicas forenses y peritaje científico.",
         duration: "Consultar plan de estudios",
@@ -415,7 +415,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "http://pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCS/ciencias-forenses"
       },
       {
-        id: "podologia",
+        id: "podologia_cucs",
         name: "Licenciatura en Podología",
         description: "Atención y tratamiento de afecciones del pie y la marcha.",
         duration: "Consultar plan de estudios",
@@ -427,7 +427,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "http://pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCS/podologia"
       },
       {
-        id: "terapia-fisica",
+        id: "terapia-fisica_cucs",
         name: "Licenciatura en Terapia Física",
         description: "Formación en rehabilitación física y terapia manual.",
         duration: "Consultar plan de estudios",
@@ -439,7 +439,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "http://www.pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCS/terapia-fisica-lic/"
       },
       {
-        id: "cultura-fisica-deportes",
+        id: "cultura-fisica-deportes_cucs",
         name: "Licenciatura en Cultura Física y Deportes",
         description: "Formación en entrenamiento, promoción deportiva y salud física.",
         duration: "Consultar plan de estudios",
@@ -470,7 +470,7 @@ export const universityCenters: UniversityCenter[] = [
     image: "/centers/cucea.jpeg",
     careers: [
       {
-        id: "administracion",
+        id: "administracion_cucea",
         name: "Licenciatura en Administración",
         description: "Forma líderes empresariales capaces de gestionar organizaciones de manera eficiente y estratégica.",
         duration: "8 semestres",
@@ -482,7 +482,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-administracion"
       },
       {
-        id: "administracion-financiera-sistemas",
+        id: "administracion-financiera-sistemas_cucea",
         name: "Licenciatura en Administración Financiera y Sistemas",
         description: "Formación en finanzas y sistemas de información aplicados a la gestión empresarial.",
         duration: "Consultar plan de estudios",
@@ -494,7 +494,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-administracion-financiera-y-sistemas"
       },
       {
-        id: "administracion-gubernamental-politicas-publicas",
+        id: "administracion-gubernamental-politicas-publicas_cucea",
         name: "Licenciatura en Administración Gubernamental y Políticas Públicas",
         description: "Formación orientada a la gestión pública y diseño de políticas.",
         duration: "Consultar plan de estudios",
@@ -506,7 +506,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-administracion-gubernamental-y-politicas-publicas"
       },
       {
-        id: "auditoria-contabilidad-gubernamental",
+        id: "auditoria-contabilidad-gubernamental_cucea",
         name: "Licenciatura en Auditoría y Contabilidad Gubernamental",
         description: "Formación en auditoría y control para el sector público.",
         duration: "Consultar plan de estudios",
@@ -518,7 +518,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-auditoria-y-contabilidad-gubernamental"
       },
       {
-        id: "contaduria-publica",
+        id: "contaduria-publica_cucea",
         name: "Licenciatura en Contaduría Pública",
         description: "Prepara profesionales expertos en contabilidad, finanzas y auditoría.",
         duration: "8 semestres",
@@ -530,7 +530,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-contaduria-publica"
       },
       {
-        id: "economia",
+        id: "economia_cucea",
         name: "Licenciatura en Economía",
         description: "Formación en teoría y análisis económico para la toma de decisiones.",
         duration: "Consultar plan de estudios",
@@ -542,7 +542,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-economia"
       },
       {
-        id: "gestion-negocios-gastronomicos",
+        id: "gestion-negocios-gastronomicos_cucea",
         name: "Licenciatura en Gestión de Negocios Gastronómicos",
         description: "Formación en administración y operación de empresas del sector gastronómico.",
         duration: "Consultar plan de estudios",
@@ -554,7 +554,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-gestion-de-negocios-gastronomicos"
       },
       {
-        id: "gestion-economia-ambiental",
+        id: "gestion-economia-ambiental_cucea",
         name: "Licenciatura en Gestión y Economía Ambiental",
         description: "Formación en gestión sostenible y economía aplicada al medio ambiente.",
         duration: "Consultar plan de estudios",
@@ -566,7 +566,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-gestion-y-economia-ambiental"
       },
       {
-        id: "ingenieria-en-negocios",
+        id: "ingenieria-en-negocios_cucea",
         name: "Licenciatura en Ingeniería en Negocios",
         description: "Combina fundamentos de ingeniería y gestión para optimizar procesos empresariales.",
         duration: "Consultar plan de estudios",
@@ -578,7 +578,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-ingenieria-en-negocios"
       },
       {
-        id: "mercadotecnia",
+        id: "mercadotecnia_cucea",
         name: "Licenciatura en Mercadotecnia",
         description: "Forma estrategas de marketing capaces de crear valor para las marcas y los consumidores.",
         duration: "8 semestres",
@@ -590,7 +590,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-mercadotecnia"
       },
       {
-        id: "mercadotecnia-digital",
+        id: "mercadotecnia-digital_cucea",
         name: "Licenciatura en Mercadotecnia Digital",
         description: "Especialización en estrategias digitales, analítica y comercio electrónico.",
         duration: "Consultar plan de estudios",
@@ -602,7 +602,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-mercadotecnia-digital"
       },
       {
-        id: "negocios-internacionales",
+        id: "negocios-internacionales_cucea",
         name: "Licenciatura en Negocios Internacionales",
         description: "Formación en comercio exterior, logística y relaciones económicas internacionales.",
         duration: "Consultar plan de estudios",
@@ -614,7 +614,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-negocios-internacionales"
       },
       {
-        id: "recursos-humanos",
+        id: "recursos-humanos_cucea",
         name: "Licenciatura en Recursos Humanos",
         description: "Formación en gestión del talento, desarrollo organizacional y relaciones laborales.",
         duration: "Consultar plan de estudios",
@@ -626,7 +626,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-recursos-humanos"
       },
       {
-        id: "relaciones-publicas-comunicacion",
+        id: "relaciones-publicas-comunicacion_cucea",
         name: "Licenciatura en Relaciones Públicas y Comunicación",
         description: "Formación en comunicación organizacional, imagen pública y gestión de medios.",
         duration: "Consultar plan de estudios",
@@ -638,7 +638,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-relaciones-publicas-y-comunicacion"
       },
       {
-        id: "tecnologias-informacion",
+        id: "tecnologias-informacion_cucea",
         name: "Licenciatura en Tecnologías de la Información",
         description: "Formación en desarrollo, administración y seguridad de sistemas de información.",
         duration: "Consultar plan de estudios",
@@ -650,7 +650,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucea.udg.mx/oferta-academica/licenciatura-en-tecnologias-de-la-informacion"
       },
       {
-        id: "turismo",
+        id: "turismo_cucea",
         name: "Licenciatura en Turismo",
         description: "Formación en gestión turística, planificación de destinos y servicios turísticos.",
         duration: "Consultar plan de estudios",
@@ -686,7 +686,7 @@ export const universityCenters: UniversityCenter[] = [
     image: "/centers/cugdl.jpeg",
     careers: [
       {
-        id: "inteligencia-artificial",
+        id: "inteligencia-artificial_cugdl",
         name: "Licenciatura en Inteligencia Artificial",
         description: "Formación en el desarrollo de sistemas inteligentes, aprendizaje automático y análisis avanzado de datos.",
         duration: "Consultar plan de estudios",
@@ -698,7 +698,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cugdl.udg.mx/"
       },
       {
-        id: "ciberseguridad",
+        id: "ciberseguridad_cugdl",
         name: "Licenciatura en Ciberseguridad",
         description: "Protección de infraestructura digital, redes y sistemas de información.",
         duration: "Consultar plan de estudios",
@@ -734,7 +734,7 @@ export const universityCenters: UniversityCenter[] = [
     image: "/centers/cucsh.jpeg",
     careers: [
       {
-        id: "derecho",
+        id: "derecho_cucsh",
         name: "Licenciatura en Derecho",
         description: "Forma abogados con sólidos conocimientos jurídicos y compromiso con la justicia social.",
         duration: "10 semestres",
@@ -746,7 +746,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-derecho"
       },
       {
-        id: "derecho-semiescolarizado",
+        id: "derecho-semiescolarizado_cucsh",
         name: "Carrera de Abogado Semiescolarizado",
         description: "Modalidad semiescolarizada de la carrera de Abogado.",
         duration: "Consultar plan de estudios",
@@ -758,7 +758,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/carrera-de-abogado-semiescolarizado"
       },
       {
-        id: "antropologia",
+        id: "antropologia_cucsh",
         name: "Licenciatura en Antropología",
         description: "Estudio de culturas, sociedades y procesos sociales.",
         duration: "Consultar plan de estudios",
@@ -770,7 +770,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-antropologia"
       },
       {
-        id: "comunicacion-publica",
+        id: "comunicacion-publica_cucsh",
         name: "Licenciatura en Comunicación Pública",
         description: "Formación en comunicación, medios y gestión de información pública.",
         duration: "Consultar plan de estudios",
@@ -782,7 +782,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-comunicacion-publica"
       },
       {
-        id: "criminologia",
+        id: "criminologia_cucsh",
         name: "Licenciatura en Criminología",
         description: "Estudio del delito, la victimología y sistemas de justicia.",
         duration: "Consultar plan de estudios",
@@ -794,7 +794,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-criminologia"
       },
       {
-        id: "didactica-frances",
+        id: "didactica-frances_cucsh",
         name: "Licenciatura en Didáctica del Francés como Lengua Extranjera",
         description: "Formación en enseñanza del francés como lengua extranjera.",
         duration: "Consultar plan de estudios",
@@ -806,7 +806,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/Licenciatura%20en%20Did%C3%A1ctica%20del%20Franc%C3%A9s%20como%20Lengua%20Extranjera"
       },
       {
-        id: "docencia-ingles",
+        id: "docencia-ingles_cucsh",
         name: "Licenciatura en Docencia del Inglés como Lengua Extranjera",
         description: "Formación para la enseñanza del inglés en contextos educativos.",
         duration: "Consultar plan de estudios",
@@ -818,7 +818,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/Licenciatura%20en%20Docencia%20del%20Ingl%C3%A9s%20%28Modalidad%20Semiescolarizada%20Abierta%20y%20a%20Distancia%29"
       },
       {
-        id: "escritura-creativa",
+        id: "escritura-creativa_cucsh",
         name: "Licenciatura en Escritura Creativa",
         description: "Formación en técnicas de creación literaria y escritura profesional.",
         duration: "Consultar plan de estudios",
@@ -830,7 +830,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-escritura-creativa"
       },
       {
-        id: "estudios-politicos",
+        id: "estudios-politicos_cucsh",
         name: "Licenciatura en Estudios Políticos y Gobierno",
         description: "Análisis de sistemas políticos, políticas públicas y gobernanza.",
         duration: "Consultar plan de estudios",
@@ -842,7 +842,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-estudios-politicos-y-gobierno"
       },
       {
-        id: "filosofia",
+        id: "filosofia_cucsh",
         name: "Licenciatura en Filosofía",
         description: "Formación en pensamiento crítico, ética y teoría del conocimiento.",
         duration: "Consultar plan de estudios",
@@ -854,7 +854,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-filosofia"
       },
       {
-        id: "geografia",
+        id: "geografia_cucsh",
         name: "Licenciatura en Geografía",
         description: "Estudio del espacio, territorio y procesos geográficos.",
         duration: "Consultar plan de estudios",
@@ -866,8 +866,8 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-geografia"
       },
       {
-        id: "historia",
-        name: "Licenciatura en Historia",
+        id: "historia_cucsh",
+        name: "Licenciatura en History",
         description: "Formación en investigación histórica y patrimonio cultural.",
         duration: "Consultar plan de estudios",
         modality: "Presencial",
@@ -878,7 +878,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-historia"
       },
       {
-        id: "letras-hispanicas",
+        id: "letras-hispanicas_cucsh",
         name: "Licenciatura en Letras Hispánicas",
         description: "Estudio de la lengua y literatura en español.",
         duration: "Consultar plan de estudios",
@@ -890,7 +890,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-letras-hispanicas"
       },
       {
-        id: "relaciones-internacionales",
+        id: "relaciones-internacionales_cucsh",
         name: "Licenciatura en Relaciones Internacionales",
         description: "Formación en relaciones exteriores, comercio y diplomacia.",
         duration: "Consultar plan de estudios",
@@ -902,7 +902,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-relaciones-internacionales"
       },
       {
-        id: "sociologia",
+        id: "sociologia_cucsh",
         name: "Licenciatura en Sociología",
         description: "Análisis de estructuras sociales, procesos y desigualdades.",
         duration: "Consultar plan de estudios",
@@ -914,7 +914,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-sociologia"
       },
       {
-        id: "trabajo-social",
+        id: "trabajo-social_cucsh",
         name: "Licenciatura en Trabajo Social",
         description: "Forma profesionales comprometidos con el desarrollo social y el bienestar comunitario.",
         duration: "8 semestres",
@@ -926,7 +926,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-trabajo-social"
       },
       {
-        id: "nilits",
+        id: "nilits_cucsh",
         name: "Nivelación a la Licenciatura en Trabajo Social (NiLiTS)",
         description: "Programa de nivelación para ingreso a Trabajo Social.",
         duration: "Consultar plan de estudios",
@@ -962,7 +962,7 @@ export const universityCenters: UniversityCenter[] = [
     image: "/centers/cucba.jpeg",
     careers: [
       {
-        id: "ing-agronomia",
+        id: "ing-agronomia_cucba",
         name: "Ingeniería Agronómica",
         description: "Forma profesionales capaces de desarrollar sistemas de producción agrícola sustentable.",
         duration: "Consultar plan de estudios",
@@ -974,7 +974,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cucba.udg.mx/oferta-academica/licenciaturas/ingeniero-agronomo"
       },
       {
-        id: "medicina-veterinaria-y-zootecnia",
+        id: "medicina-veterinaria-y-zootecnia_cucba",
         name: "Medicina Veterinaria y Zootecnia",
         description: "Prepara profesionales para el cuidado de la salud animal y la producción pecuaria.",
         duration: "Consultar plan de estudios",
@@ -986,7 +986,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cucba.udg.mx/contenido/licenciatura-en-medicina-veterinaria-y-zootecnia-0"
       },
       {
-        id: "lic-biologia",
+        id: "lic-biologia_cucba",
         name: "Licenciatura en Biología",
         description: "Forma científicos dedicados al estudio de los seres vivos y su entorno.",
         duration: "Consultar plan de estudios",
@@ -998,7 +998,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cucba.udg.mx/oferta-academica/licenciaturas/licenciatura-en-biologia"
       },
       {
-        id: "lic-ciencia-alimentos",
+        id: "lic-ciencia-alimentos_cucba",
         name: "Licenciatura en Ciencia de los Alimentos",
         description: "Formación en procesos y control de calidad de alimentos.",
         duration: "Consultar plan de estudios",
@@ -1010,7 +1010,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cucba.udg.mx/oferta-academica/licenciaturas/licenciatura-en-ciencias-de-los-alimentos"
       },
       {
-        id: "lic-agronegocios",
+        id: "lic-agronegocios_cucba",
         name: "Licenciatura en Agronegocios",
         description: "Formación en gestión y comercialización de productos agropecuarios.",
         duration: "Consultar plan de estudios",
@@ -1046,7 +1046,7 @@ export const universityCenters: UniversityCenter[] = [
     image: "/centers/cuaad.jpg",
     careers: [
       {
-        id: "arquitectura",
+        id: "arquitectura_cuaad",
         name: "Arquitectura",
         description: "Forma arquitectos capaces de diseñar espacios funcionales, estéticos y sustentables.",
         duration: "10 semestres",
@@ -1063,7 +1063,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciaturas/la/presentacion"
       },
       {
-        id: "diseno-para-la-comunicacion-grafica",
+        id: "diseno-para-la-comunicacion-grafica_cuaad",
         name: "Diseño para la Comunicación Gráfica",
         description: "Prepara diseñadores capaces de crear soluciones visuales efectivas para la comunicación.",
         duration: "8 semestres",
@@ -1080,7 +1080,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciatura/ldcg/perfil-del-aspirante"
       },
       {
-        id: "artes-visuales-fotografia",
+        id: "artes-visuales-fotografia_cuaad",
         name: "Artes Visuales para la Expresión Fotográfica",
         description: "Forma artistas especializados en fotografía y expression visual contemporánea.",
         duration: "8 semestres",
@@ -1097,7 +1097,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciatura/lavef/presentacion"
       },
       {
-        id: "artes-audiovisuales",
+        id: "artes-audiovisuales_cuaad",
         name: "Artes Audiovisuales",
         description: "Formación en producción audiovisual, cine y medios digitales.",
         duration: "Consultar plan de estudios",
@@ -1114,7 +1114,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciaturas/laa/presentacion"
       },
       {
-        id: "artes-escenicas-dancistica",
+        id: "artes-escenicas-dancistica_cuaad",
         name: "Artes Escénicas para la Expresión Dancística",
         description: "Formación en danza, técnica y creación escénica.",
         duration: "Consultar plan de estudios",
@@ -1131,7 +1131,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciatura/laeed/perfil-del-aspirante"
       },
       {
-        id: "artes-escenicas-teatral",
+        id: "artes-escenicas-teatral_cuaad",
         name: "Artes Escénicas para la Expresión Teatral",
         description: "Formación en actuación, dirección y producción teatral.",
         duration: "Consultar plan de estudios",
@@ -1148,7 +1148,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciaturas/laeet/presentacion"
       },
       {
-        id: "artes-visuales-plastica",
+        id: "artes-visuales-plastica_cuaad",
         name: "Artes Visuales para la Expresión Plástica",
         description: "Formación en prácticas plásticas, teoría y crítica del arte.",
         duration: "Consultar plan de estudios",
@@ -1165,7 +1165,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciatura/lavep/presentacion"
       },
       {
-        id: "diseno-de-interiores",
+        id: "diseno-de-interiores_cuaad",
         name: "Diseño de Interiores y Ambientación",
         description: "Diseño de espacios interiores funcionales y estéticos.",
         duration: "Consultar plan de estudios",
@@ -1182,7 +1182,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciatura/ldia/perfil-de-aspirante"
       },
       {
-        id: "diseno-de-modas",
+        id: "diseno-de-modas_cuaad",
         name: "Diseño de Modas",
         description: "Formación en diseño, producción y gestión de moda.",
         duration: "Consultar plan de estudios",
@@ -1199,7 +1199,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciatura/ldm/presentacion"
       },
       {
-        id: "diseno-industrial",
+        id: "diseno-industrial_cuaad",
         name: "Diseño Industrial",
         description: "Diseño de productos, procesos y sistemas de producción.",
         duration: "Consultar plan de estudios",
@@ -1216,7 +1216,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciatura/ldi/presentacion"
       },
       {
-        id: "diseno-arte-tecnologias-interactivas",
+        id: "diseno-arte-tecnologias-interactivas_cuaad",
         name: "Diseño, Arte y Tecnologías Interactivas",
         description: "Intersección entre diseño, arte y tecnologías interactivas.",
         duration: "Consultar plan de estudios",
@@ -1233,7 +1233,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciatura/ldati/presentacion"
       },
       {
-        id: "musica",
+        id: "musica_cuaad",
         name: "Música",
         description: "Formación en interpretación, composición y gestión musical.",
         duration: "Consultar plan de estudios",
@@ -1250,7 +1250,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciaturas/lm/presentacion"
       },
       {
-        id: "urbanistica-y-medio-ambiente",
+        id: "urbanistica-y-medio-ambiente_cuaad",
         name: "Urbanística y Medio Ambiente",
         description: "Estudio de planificación urbana y sostenibilidad ambiental.",
         duration: "Consultar plan de estudios",
@@ -1266,7 +1266,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://cuaad.udg.mx/oferta/licenciatura/luma/perfil-de-aspirante"
       },
       {
-        id: "nivelacion-a-licenciatura-artes",
+        id: "nivelacion-a-licenciatura-artes_cuaad",
         name: "Nivelación a Licenciatura Artes",
         description: "Programa de nivelación para ingreso a licenciaturas en artes.",
         duration: "Consultar plan de estudios",
@@ -1307,7 +1307,7 @@ export const universityCenters: UniversityCenter[] = [
     image: "/centers/cucosta.jpeg",
     careers: [
       {
-        id: "administracion",
+        id: "administracion_cucosta",
         name: "Licenciatura en Administración",
         description: "Formación en gestión y dirección de organizaciones.",
         duration: "Consultar plan de estudios",
@@ -1319,7 +1319,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/licenciatura-en-administracion"
       },
       {
-        id: "contaduria-publica",
+        id: "contaduria-publica_cucosta",
         name: "Licenciatura en Contaduría Pública",
         description: "Formación en contabilidad, auditoría y finanzas.",
         duration: "Consultar plan de estudios",
@@ -1331,7 +1331,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/contaduria-publica"
       },
       {
-        id: "derecho",
+        id: "derecho_cucosta",
         name: "Licenciatura en Derecho",
         description: "Formación jurídica orientada a la práctica y la investigación.",
         duration: "Consultar plan de estudios",
@@ -1343,7 +1343,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/abogado"
       },
       {
-        id: "psicologia",
+        id: "psicologia_cucosta",
         name: "Licenciatura en Psicología",
         description: "Formación en evaluación e intervención psicológica.",
         duration: "Consultar plan de estudios",
@@ -1355,7 +1355,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/licenciatura-en-psicologia"
       },
       {
-        id: "trabajo-social",
+        id: "trabajo-social_cucosta",
         name: "Licenciatura en Trabajo Social",
         description: "Formación para la intervención y desarrollo comunitario.",
         duration: "Consultar plan de estudios",
@@ -1367,7 +1367,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-trabajo-social"
       },
       {
-        id: "turismo",
+        id: "turismo_cucosta",
         name: "Licenciatura en Turismo",
         description: "Gestión turística y desarrollo de destinos.",
         duration: "Consultar plan de estudios",
@@ -1379,7 +1379,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/turismo"
       },
       {
-        id: "gestion-negocios-gastronomicos",
+        id: "gestion-negocios-gastronomicos_cucosta",
         name: "Licenciatura en Gestión de Negocios Gastronómicos",
         description: "Administración de empresas del sector gastronómico.",
         duration: "Consultar plan de estudios",
@@ -1391,7 +1391,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-gestion-de-negocios-gastronomicos"
       },
       {
-        id: "arquitectura",
+        id: "arquitectura_cucosta",
         name: "Licenciatura en Arquitectura",
         description: "Diseño y construcción arquitectónica.",
         duration: "Consultar plan de estudios",
@@ -1403,7 +1403,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/arquitectura"
       },
       {
-        id: "artes-visuales",
+        id: "artes-visuales_cucosta",
         name: "Licenciatura en Artes Visuales",
         description: "Prácticas artísticas y teoría del arte.",
         duration: "Consultar plan de estudios",
@@ -1415,7 +1415,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/artes-visuales-para-la-expresion-fotografica"
       },
       {
-        id: "ingenieria-sistemas-computacionales",
+        id: "ingenieria-sistemas-computacionales_cucosta",
         name: "Ingeniería en Sistemas Computacionales",
         description: "Desarrollo de software y sistemas.",
         duration: "Consultar plan de estudios",
@@ -1427,7 +1427,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/ingenieria-en-computacion"
       },
       {
-        id: "mercadotecnia",
+        id: "mercadotecnia_cucosta",
         name: "Licenciatura en Mercadotecnia",
         description: "Estrategias de mercado y gestión de marcas.",
         duration: "Consultar plan de estudios",
@@ -1439,7 +1439,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-mercadotecnia"
       },
       {
-        id: "negocios-internacionales",
+        id: "negocios-internacionales_cucosta",
         name: "Licenciatura en Negocios Internacionales",
         description: "Comercio exterior y relaciones económicas internacionales.",
         duration: "Consultar plan de estudios",
@@ -1451,7 +1451,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-negocios-internacionales"
       },
       {
-        id: "ciencias-de-la-comunicacion",
+        id: "ciencias-de-la-comunicacion_cucosta",
         name: "Licenciatura en Ciencias de la Comunicación",
         description: "Medios, comunicación y producción de contenidos.",
         duration: "Consultar plan de estudios",
@@ -1463,7 +1463,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-ciencias-de-la-comunicacion"
       },
       {
-        id: "gestion-cultural",
+        id: "gestion-cultural_cucosta",
         name: "Licenciatura en Gestión Cultural",
         description: "Gestión de proyectos culturales y patrimonio.",
         duration: "Consultar plan de estudios",
@@ -1475,7 +1475,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-gestion-cultural"
       },
       {
-        id: "diseno-grafico",
+        id: "diseno-grafico_cucosta",
         name: "Licenciatura en Diseño Gráfico",
         description: "Diseño visual y comunicación gráfica.",
         duration: "Consultar plan de estudios",
@@ -1487,7 +1487,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-diseno-grafico"
       },
       {
-        id: "educacion",
+        id: "educacion_cucosta",
         name: "Licenciatura en Educación",
         description: "Formación docente y pedagogía.",
         duration: "Consultar plan de estudios",
@@ -1499,7 +1499,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-educacion"
       },
       {
-        id: "enfermeria",
+        id: "enfermeria_cucosta",
         name: "Licenciatura en Enfermería",
         description: "Formación en cuidados de salud y atención clínica.",
         duration: "Consultar plan de estudios",
@@ -1511,7 +1511,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/oferta-academica/licenciatura/enfermeria"
       },
       {
-        id: "ciencias-ambientales",
+        id: "ciencias-ambientales_cucosta",
         name: "Licenciatura en Ciencias Ambientales",
         description: "Estudio y gestión del medio ambiente y recursos naturales.",
         duration: "Consultar plan de estudios",
@@ -1523,7 +1523,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-ciencias-ambientales"
       },
       {
-        id: "tecnologias-de-la-informacion",
+        id: "tecnologias-de-la-informacion_cucosta",
         name: "Licenciatura en Tecnologías de la Información",
         description: "Desarrollo y administración de sistemas y servicios TI.",
         duration: "Consultar plan de estudios",
@@ -1535,7 +1535,7 @@ export const universityCenters: UniversityCenter[] = [
         website: "https://www.cuc.udg.mx/es/licenciaturas/licenciatura-en-tecnologias-de-la-informacion"
       },
       {
-        id: "desarrollo-sistemas-web",
+        id: "desarrollo-sistemas-web_cucosta",
         name: "Licenciatura en Desarrollo de Sistemas Web",
         description: "Desarrollo y mantenimiento de aplicaciones web.",
         duration: "Consultar plan de estudios",
