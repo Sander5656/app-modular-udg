@@ -39,11 +39,11 @@ const CareerDetail = () => {
   
   if (!career || !center) {
     return (
-      <div className="min-h-screen bg-background">
-        <div className="container py-12 text-center">
-          <h1 className="text-2xl font-bold">Carrera no encontrada</h1>
+      <div className="min-h-[100dvh] bg-background">
+        <div className="container px-4 py-12 text-center flex flex-col items-center justify-center min-h-[50vh]">
+          <h1 className="text-xl sm:text-2xl font-bold mb-4">Carrera no encontrada</h1>
           <Link to="/">
-            <Button className="mt-4">Volver al inicio</Button>
+            <Button>Volver al inicio</Button>
           </Link>
         </div>
       </div>
@@ -51,29 +51,37 @@ const CareerDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    // Se usa 100dvh para respetar las barras de navegación en móviles
+    <div className="min-h-[100dvh] bg-background">
+      
       {/* ===== HEADER ===== */}
       <div className="relative bg-gradient-hero text-primary-foreground">
-        <div className="container py-12 space-y-6">
+        <div className="container px-4 sm:px-6 py-8 md:py-12 space-y-5 sm:space-y-6">
           <Link to={`/centro/${center.id}`}>
-            <Button variant="secondary" size="sm">
+            <Button variant="secondary" size="sm" className="transition-transform hover:-translate-x-1">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Volver al {center.acronym}
             </Button>
           </Link>
 
-          <div>
-            <div className="flex flex-wrap gap-3 mb-3">
-              <Badge variant="secondary">{career.fieldOfStudy}</Badge>
-              <Badge variant="secondary" className="flex items-center gap-1">
-                <Clock className="h-3 w-3" />
+          <div className="space-y-4">
+            {/* Badges con flex-wrap para que bajen de línea si no caben */}
+            <div className="flex flex-wrap gap-2 sm:gap-3">
+              <Badge variant="secondary" className="text-xs sm:text-sm px-2.5 py-0.5">{career.fieldOfStudy}</Badge>
+              <Badge variant="secondary" className="flex items-center gap-1 text-xs sm:text-sm px-2.5 py-0.5">
+                <Clock className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                 {career.duration}
               </Badge>
-              <Badge variant="secondary">{career.modality}</Badge>
+              <Badge variant="secondary" className="text-xs sm:text-sm px-2.5 py-0.5">{career.modality}</Badge>
             </div>
 
-            <h1 className="text-4xl font-bold mb-4">{career.name}</h1>
-            <p className="text-lg opacity-90 max-w-3xl">
+            {/* Título adaptable */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+              {career.name}
+            </h1>
+            
+            {/* Texto descriptivo adaptable */}
+            <p className="text-sm sm:text-base md:text-lg opacity-90 max-w-3xl leading-relaxed">
               {career.description}
             </p>
           </div>
@@ -81,80 +89,86 @@ const CareerDetail = () => {
       </div>
 
       {/* ===== CONTENIDO ===== */}
-      <div className="container py-12 space-y-10">
+      <div className="container px-4 sm:px-6 py-8 md:py-12 space-y-6 sm:space-y-8 md:space-y-10">
+        
         {/* PERFIL */}
-        <Card className="p-8">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 rounded-lg bg-primary/10">
-              <User className="h-6 w-6 text-primary" />
+        <Card className="p-5 sm:p-6 md:p-8 shadow-sm">
+          <div className="flex items-center gap-3 mb-4 sm:mb-6">
+            <div className="p-2.5 sm:p-3 rounded-lg bg-primary/10">
+              <User className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
             </div>
-            <h2 className="text-2xl font-bold">Perfil Profesional</h2>
+            <h2 className="text-xl sm:text-2xl font-bold">Perfil Profesional</h2>
           </div>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             {career.professionalProfile}
           </p>
         </Card>
 
         {/* REQUISITOS + INFO */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-lg bg-accent/10">
-                <CheckCircle2 className="h-6 w-6 text-accent" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+          
+          <Card className="p-5 sm:p-6 md:p-8 shadow-sm">
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <div className="p-2.5 sm:p-3 rounded-lg bg-accent/10">
+                <CheckCircle2 className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
               </div>
-              <h2 className="text-2xl font-bold">Requisitos de Admisión</h2>
+              <h2 className="text-xl sm:text-2xl font-bold">Requisitos de Admisión</h2>
             </div>
-            <ul className="space-y-3">
+            <ul className="space-y-3 sm:space-y-4">
               {career.admissionRequirements.map((req, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent mt-0.5" />
+                <li key={index} className="flex items-start gap-3 text-sm sm:text-base">
+                  <CheckCircle2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">{req}</span>
                 </li>
               ))}
             </ul>
           </Card>
 
-          <Card className="p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-lg bg-primary/10">
-                <BookOpen className="h-6 w-6 text-primary" />
+          <Card className="p-5 sm:p-6 md:p-8 shadow-sm">
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <div className="p-2.5 sm:p-3 rounded-lg bg-primary/10">
+                <BookOpen className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
               </div>
-              <h2 className="text-2xl font-bold">Información General</h2>
+              <h2 className="text-xl sm:text-2xl font-bold">Información General</h2>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 text-sm sm:text-base">
               <p className="text-muted-foreground">
-                <strong>Centro:</strong> {center.acronym} – {center.name}
+                <strong className="text-foreground">Centro:</strong> {center.acronym} – {center.name}
               </p>
               <p className="text-muted-foreground">
-                <strong>Duración:</strong> {career.duration}
+                <strong className="text-foreground">Duración:</strong> {career.duration}
               </p>
               <p className="text-muted-foreground">
-                <strong>Modalidad:</strong> {career.modality}
+                <strong className="text-foreground">Modalidad:</strong> {career.modality}
               </p>
               <p className="text-muted-foreground">
-                <strong>Área:</strong> {career.fieldOfStudy}
+                <strong className="text-foreground">Área:</strong> {career.fieldOfStudy}
               </p>
             </div>
           </Card>
         </div>
 
         {/* CTA */}
-        <Card className="p-8 bg-gradient-card border-primary/20">
-          <div className="flex items-center gap-3 mb-4">
-            <GraduationCap className="h-6 w-6 text-primary" />
-            <h2 className="text-2xl font-bold">
+        <Card className="p-5 sm:p-6 md:p-8 bg-gradient-card border-primary/20 shadow-sm">
+          <div className="flex items-center gap-3 mb-3 sm:mb-4">
+            <GraduationCap className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
+            <h2 className="text-xl sm:text-2xl font-bold">
               ¿Interesado en esta carrera?
             </h2>
           </div>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-2xl">
             Consulta el sitio oficial del {center.acronym} para conocer el plan
             de estudios y el proceso de admisión.
           </p>
-          <a href={career.website} target="_blank" rel="noopener noreferrer">
-            <Button size="lg">Visitar {center.acronym}</Button>
+          <a href={career.website} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
+            {/* Botón full-width en móviles, auto en pantallas grandes */}
+            <Button size="lg" className="w-full sm:w-auto text-base">
+              Visitar {center.acronym}
+            </Button>
           </a>
         </Card>
+        
       </div>
     </div>
   );
