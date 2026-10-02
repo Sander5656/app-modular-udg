@@ -26,78 +26,101 @@ const Index = () => {
           50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
         }
+        
+        @keyframes float-3d {
+          0% { transform: perspective(1000px) rotateY(-10deg) rotateX(5deg) translateY(0px); }
+          50% { transform: perspective(1000px) rotateY(5deg) rotateX(-5deg) translateY(-20px); }
+          100% { transform: perspective(1000px) rotateY(-10deg) rotateX(5deg) translateY(0px); }
+        }
+
         .animate-shader {
           background: linear-gradient(-45deg, #020617, #14348e, #0f172a, #1a169f);
           background-size: 400% 400%;
           animation: shader-movement 15s ease infinite;
         }
+
+        .logo-3d {
+          animation: float-3d 6s ease-in-out infinite;
+          /* Sombra paralela para darle volumen y efecto de que flota frente al fondo */
+          filter: drop-shadow(0 30px 30px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(59,130,246,0.4)) brightness(0) invert(1);
+        }
       `}</style>
 
       {/* ================= HERO ================= */}
-      <section className="relative text-white overflow-hidden animate-shader m-0 border-none">
+      <section className="relative text-white overflow-hidden animate-shader m-0 border-none min-h-screen flex flex-col">
         
         {/* Patrón de fondo sutil */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-[0.05] pointer-events-none" />
         
-        {/* Degradado inferior más pequeño para que el desvanecimiento comience más abajo */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 md:h-40 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        {/* Degradado inferior para fusionar con la siguiente sección */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
 
-        {/* Contenedor Principal: Se aumentó el pb (padding-bottom) para extender el azul */}
-        <div className="container relative pt-24 pb-64 md:pt-32 md:pb-80 px-4">
-          <div className="max-w-6xl mx-auto flex flex-col items-start text-left">
-            
-            {/* 1. Etiqueta superior */}
-            <span className="text-blue-300 font-semibold tracking-widest uppercase text-sm block mb-6">
+        {/* LOGO 3D EN EL CENTRO (Absoluto para no interferir con la estructura) */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+          <img 
+            src="image_4a80f4.png" 
+            alt="Logo UDG" 
+            className="w-64 md:w-96 lg:w-[480px] object-contain logo-3d opacity-20 lg:opacity-90 mt-20 lg:mt-0"
+          />
+        </div>
+
+        {/* Contenedor Principal con estructura del boceto */}
+        <div className="container relative z-20 flex-1 flex flex-col justify-between pt-24 pb-20 md:pt-32 md:pb-24 px-4 mx-auto max-w-7xl">
+          
+          {/* Superior Izquierda: Título */}
+          <div className="w-full text-left">
+            <span className="text-blue-300 font-semibold tracking-widest uppercase text-sm md:text-base block mb-4 lg:mb-6">
               Guía de Carreras
             </span>
-            
-            {/* 2. Título en una sola línea */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-sans font-extrabold tracking-tighter leading-tight w-full mb-12 lg:whitespace-nowrap">
-              Universidad de Guadalajara
+            <h1 className="text-5xl md:text-6xl lg:text-[6rem] font-sans font-extrabold tracking-tighter leading-none w-full max-w-3xl">
+              Universidad de<br />Guadalajara
             </h1>
+          </div>
+          
+          {/* Inferior: Descripción/Botón (Izquierda) y Estadísticas (Derecha) */}
+          <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 lg:gap-8 mt-40 lg:mt-0">
             
-            {/* 3. Contenedor dividido: Izquierda (Desc + Botón) / Derecha (Números) */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 w-full items-start">
+            {/* --- Columna Inferior Izquierda --- */}
+            <div className="space-y-8 max-w-xl">
+              <p className="text-lg md:text-xl text-blue-100/90 font-light leading-relaxed">
+                Explora nuestra red de centros universitarios y descubre el programa académico diseñado para impulsar tu futuro profesional.
+              </p>
               
-              {/* --- Columna Izquierda --- */}
-              <div className="space-y-8 max-w-xl">
-                <p className="text-lg md:text-xl text-blue-100/90 font-light leading-relaxed">
-                  Explora nuestra red de centros universitarios y descubre el programa académico diseñado para impulsar tu futuro profesional.
-                </p>
-                
-                <div>
-                  <a 
-                    href="#centros" 
-                    onClick={handleScrollToCentros}
-                    className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-blue-950 font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
-                  >
-                    Explorar Centros
-                    <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
-                  </a>
-                </div>
+              <div>
+                <a 
+                  href="#centros" 
+                  onClick={handleScrollToCentros}
+                  className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-blue-950 font-bold rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] w-full sm:w-auto"
+                >
+                  Explorar Centros
+                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
+                </a>
               </div>
+            </div>
 
-              {/* --- Columna Derecha --- */}
-              <div className="flex flex-row justify-start lg:justify-end gap-16 md:gap-24 lg:pt-4">
-                
-                <div className="text-left">
-                  <h3 className="text-5xl md:text-6xl font-sans font-bold text-white tracking-tight">
+            {/* --- Columna Inferior Derecha (Estadísticas tipo boceto) --- */}
+            <div className="flex flex-row justify-start lg:justify-end gap-12 md:gap-20">
+              
+              <div className="text-left flex flex-col items-start">
+                <div className="border-b-4 border-blue-400 pb-2 mb-3">
+                  <h3 className="text-5xl md:text-7xl font-sans font-bold text-white tracking-tight leading-none">
                     {universityCenters.length}
                   </h3>
-                  <p className="text-sm md:text-base text-blue-200/90 mt-2 font-medium tracking-wide uppercase">
-                    Centros Universitarios
-                  </p>
                 </div>
+                <p className="text-xs md:text-sm text-blue-200/90 font-medium tracking-widest uppercase">
+                  Centros Universitarios
+                </p>
+              </div>
 
-                <div className="text-left">
-                  <h3 className="text-5xl md:text-6xl font-sans font-bold text-white tracking-tight">
+              <div className="text-left flex flex-col items-start">
+                <div className="border-b-4 border-blue-400 pb-2 mb-3">
+                  <h3 className="text-5xl md:text-7xl font-sans font-bold text-white tracking-tight leading-none">
                     {totalCareers}
                   </h3>
-                  <p className="text-sm md:text-base text-blue-200/90 mt-2 font-medium tracking-wide uppercase">
-                    Programas Académicos
-                  </p>
                 </div>
-
+                <p className="text-xs md:text-sm text-blue-200/90 font-medium tracking-widest uppercase">
+                  Programas Académicos
+                </p>
               </div>
 
             </div>
