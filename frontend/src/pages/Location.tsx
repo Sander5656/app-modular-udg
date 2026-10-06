@@ -72,7 +72,7 @@ const udgCenters = [
     name: "Centro Universitario de la Costa",
     address: "Av. Universidad 203, Delegación Ixtapa, 48280 Puerto Vallarta, Jal.",
     mapsQuery: "CUCOSTA UDG Puerto Vallarta",
-    link: "https://www.google.com/maps/search/?api=1&query=20.6534,-105.2253",
+    link: "https://www.google.com/maps/search/?api=1&query=20.7048328,-105.2243686",
     coordinates: { lat: 20.6534, lng: -105.2253 }
   }
 ];
