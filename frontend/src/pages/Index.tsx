@@ -1,6 +1,8 @@
 import { CenterCard } from "@/components/CenterCard";
 import { universityCenters } from "@/data/universityCenters";
 import { Info, ArrowRight } from "lucide-react"; 
+import Logo from "../images/UDG"
+
 
 const Index = () => {
   const totalCareers = universityCenters.reduce(
@@ -56,7 +58,7 @@ const Index = () => {
         {/* LOGO MEJORADO: Ahora de gran tamaño y ubicado estrictamente a la derecha del Hero */}
         <div className="absolute inset-y-0 right-0 w-full lg:w-[45%] flex items-center justify-center lg:justify-end pointer-events-none z-10 px-4 sm:px-12 lg:pr-16 xl:pr-28">
           <img 
-            src="/images/UDG.png" 
+            src={Logo}
             alt="Logo UDG" 
             className="w-72 sm:w-[400px] md:w-[500px] lg:w-[580px] xl:w-[680px] object-contain logo-3d opacity-20 lg:opacity-90 mt-10 lg:-mt-10"
           />
