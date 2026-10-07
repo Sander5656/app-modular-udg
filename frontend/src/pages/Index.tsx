@@ -1,7 +1,7 @@
 import { CenterCard } from "@/components/CenterCard";
 import { universityCenters } from "@/data/universityCenters";
 import { Info, ArrowRight } from "lucide-react"; 
-import Logo from "../images/UDG";
+import Logo from "../images/UDG.png";
 
 
 const Index = () => {
