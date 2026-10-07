@@ -52,8 +52,8 @@ const Index = () => {
         
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
 
-        {/* LOGO AJUSTADO: Se ancló a la parte superior (top-15%) en lugar de centrarlo verticalmente */}
-        <div className="absolute top-[15%] lg:top-[12%] right-0 w-full lg:w-[45%] flex justify-center lg:justify-end pointer-events-none z-10 px-4 sm:px-12 lg:pr-16 xl:pr-28">
+        {/* LOGO AJUSTADO: Se empujó considerablemente hacia arriba (top-4 lg:-top-4 xl:-top-8) para evitar superposiciones */}
+        <div className="absolute top-4 lg:-top-4 xl:-top-8 right-0 w-full lg:w-[45%] flex justify-center lg:justify-end pointer-events-none z-10 px-4 sm:px-12 lg:pr-16 xl:pr-28">
           <img 
             src={Logo}
             alt="Logo UDG" 
