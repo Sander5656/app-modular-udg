@@ -18,7 +18,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-[100dvh] bg-background relative font-sans">
+    // AGREGADO: -mt-16 md:-mt-24 para subir el Hero y cubrir el espacio de la barra de navegación
+    <div className="min-h-[100dvh] bg-background relative font-sans -mt-16 md:-mt-24">
       
       <style>{`
         @keyframes shader-movement {
@@ -52,7 +53,6 @@ const Index = () => {
         
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
 
-        {/* LOGO AJUSTADO: Se posiciona en el 35% de la pantalla para quedar exactamente "en medio" del espacio visual libre */}
         <div className="absolute top-[35%] -translate-y-1/2 right-0 w-full lg:w-[45%] flex justify-center lg:justify-end pointer-events-none z-10 px-4 sm:px-12 lg:pr-16 xl:pr-28">
           <img 
             src={Logo}
@@ -61,7 +61,8 @@ const Index = () => {
           />
         </div>
 
-        <div className="container relative z-20 flex-1 flex flex-col justify-between pt-16 pb-24 md:pt-32 md:pb-40 px-4 sm:px-6 mx-auto max-w-7xl">
+        {/* AJUSTADO: Se incrementó el padding top (pt-32 md:pt-48) para compensar el margen negativo y evitar que el texto se esconda */}
+        <div className="container relative z-20 flex-1 flex flex-col justify-between pt-32 pb-24 md:pt-48 md:pb-40 px-4 sm:px-6 mx-auto max-w-7xl">
           
           <div className="w-full text-left mt-4 md:mt-0 max-w-4xl">
             <span className="text-blue-300 font-semibold tracking-widest uppercase text-xs sm:text-sm md:text-base block mb-3 lg:mb-6">
