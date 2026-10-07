@@ -29,9 +29,9 @@ const Index = () => {
         }
         
         @keyframes float-3d {
-          0% { transform: perspective(1000px) rotateY(-10deg) rotateX(5deg) translateY(0px); }
-          50% { transform: perspective(1000px) rotateY(5deg) rotateX(-5deg) translateY(-20px); }
-          100% { transform: perspective(1000px) rotateY(-10deg) rotateX(5deg) translateY(0px); }
+          0% { transform: perspective(1000px) rotateY(-12deg) rotateX(6deg) translateY(0px); }
+          50% { transform: perspective(1000px) rotateY(6deg) rotateX(-6deg) translateY(-20px); }
+          100% { transform: perspective(1000px) rotateY(-12deg) rotateX(6deg) translateY(0px); }
         }
 
         .animate-shader {
@@ -42,7 +42,7 @@ const Index = () => {
 
         .logo-3d {
           animation: float-3d 6s ease-in-out infinite;
-          filter: drop-shadow(0 30px 30px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(59,130,246,0.4)) brightness(0) invert(1);
+          filter: drop-shadow(0 30px 30px rgba(0,0,0,0.6)) drop-shadow(0 0 50px rgba(59,130,246,0.55)) brightness(0) invert(1);
         }
       `}</style>
 
@@ -53,30 +53,30 @@ const Index = () => {
         
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
 
-        {/* LOGO MODIFICADO: Alineado a la derecha y con mayor tamaño */}
-        <div className="absolute inset-y-0 right-0 w-full lg:w-1/2 flex items-center justify-center lg:justify-end pointer-events-none z-10 lg:pr-12 xl:pr-24">
+        {/* LOGO MEJORADO: Ahora de gran tamaño y ubicado estrictamente a la derecha del Hero */}
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[45%] flex items-center justify-center lg:justify-end pointer-events-none z-10 px-4 sm:px-12 lg:pr-16 xl:pr-28">
           <img 
             src="image_4a80f4.png" 
             alt="Logo UDG" 
-            className="w-64 sm:w-80 md:w-[450px] lg:w-[650px] xl:w-[800px] object-contain logo-3d opacity-15 sm:opacity-20 lg:opacity-90 mt-10 lg:mt-0"
+            className="w-72 sm:w-[400px] md:w-[500px] lg:w-[580px] xl:w-[680px] object-contain logo-3d opacity-20 lg:opacity-90 mt-10 lg:-mt-10"
           />
         </div>
 
         {/* Padding ajustado para móviles: pt-16 pb-24 */}
         <div className="container relative z-20 flex-1 flex flex-col justify-between pt-16 pb-24 md:pt-32 md:pb-40 px-4 sm:px-6 mx-auto max-w-7xl">
           
-          <div className="w-full text-left mt-4 md:mt-0">
+          <div className="w-full text-left mt-4 md:mt-0 max-w-4xl">
             <span className="text-blue-300 font-semibold tracking-widest uppercase text-xs sm:text-sm md:text-base block mb-3 lg:mb-6">
               Guía de Carreras
             </span>
             {/* Tamaños de fuente escalonados para evitar desbordes */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[6rem] font-sans font-extrabold tracking-tighter leading-none w-full max-w-3xl relative z-20">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6rem] font-sans font-extrabold tracking-tighter leading-none w-full max-w-3xl">
               Universidad de<br />Guadalajara
             </h1>
           </div>
           
-          {/* Margen superior reducido en móviles (mt-16 en lugar de mt-40) */}
-          <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 lg:gap-8 mt-16 sm:mt-24 lg:mt-0 relative z-20">
+          {/* Margen superior y flex-row con gap optimizado */}
+          <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 lg:gap-8 mt-16 sm:mt-24 lg:mt-0">
             
             <div className="space-y-6 md:space-y-8 max-w-xl">
               <p className="text-base sm:text-lg md:text-xl text-blue-100/90 font-light leading-relaxed">
@@ -95,8 +95,8 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Gap reducido y flex-wrap añadido para evitar colisiones en pantallas muy chicas */}
-            <div className="flex flex-row flex-wrap sm:flex-nowrap justify-start lg:justify-end gap-6 sm:gap-12 md:gap-20 w-full lg:w-auto">
+            {/* Estadísticas de centros y programas académicos */}
+            <div className="flex flex-row flex-wrap sm:flex-nowrap justify-start lg:justify-end gap-6 sm:gap-12 md:gap-20 w-full lg:w-auto z-20">
               
               <div className="text-left flex flex-col items-start min-w-[120px]">
                 <div className="border-b-2 sm:border-b-4 border-blue-400 pb-1 sm:pb-2 mb-2 sm:mb-3">
