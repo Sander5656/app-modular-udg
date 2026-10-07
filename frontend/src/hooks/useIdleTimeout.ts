@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "@/lib/supabase"; // Ajusta la ruta a tu cliente de Supabase
+import { supabase } from "@/lib/db"; // Ajusta la ruta a tu cliente de Supabase
 
 export const useIdleTimeout = (timeoutMinutes: number = 15) => {
   const navigate = useNavigate();
