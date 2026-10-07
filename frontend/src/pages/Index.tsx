@@ -53,11 +53,12 @@ const Index = () => {
         
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
 
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+        {/* LOGO MODIFICADO: Alineado a la derecha y con mayor tamaño */}
+        <div className="absolute inset-y-0 right-0 w-full lg:w-1/2 flex items-center justify-center lg:justify-end pointer-events-none z-10 lg:pr-12 xl:pr-24">
           <img 
             src="image_4a80f4.png" 
             alt="Logo UDG" 
-            className="w-48 sm:w-64 md:w-96 lg:w-[480px] object-contain logo-3d opacity-15 sm:opacity-20 lg:opacity-90 mt-10 lg:mt-0"
+            className="w-64 sm:w-80 md:w-[450px] lg:w-[650px] xl:w-[800px] object-contain logo-3d opacity-15 sm:opacity-20 lg:opacity-90 mt-10 lg:mt-0"
           />
         </div>
 
@@ -69,13 +70,13 @@ const Index = () => {
               Guía de Carreras
             </span>
             {/* Tamaños de fuente escalonados para evitar desbordes */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[6rem] font-sans font-extrabold tracking-tighter leading-none w-full max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[6rem] font-sans font-extrabold tracking-tighter leading-none w-full max-w-3xl relative z-20">
               Universidad de<br />Guadalajara
             </h1>
           </div>
           
           {/* Margen superior reducido en móviles (mt-16 en lugar de mt-40) */}
-          <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 lg:gap-8 mt-16 sm:mt-24 lg:mt-0">
+          <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 lg:gap-8 mt-16 sm:mt-24 lg:mt-0 relative z-20">
             
             <div className="space-y-6 md:space-y-8 max-w-xl">
               <p className="text-base sm:text-lg md:text-xl text-blue-100/90 font-light leading-relaxed">
