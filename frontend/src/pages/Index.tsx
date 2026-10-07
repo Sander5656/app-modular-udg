@@ -1,8 +1,7 @@
 import { CenterCard } from "@/components/CenterCard";
 import { universityCenters } from "@/data/universityCenters";
 import { Info, ArrowRight } from "lucide-react"; 
-import Logo from "../images/UDG.png";
-
+import Logo from "../images/UDG.png"; // Asegúrate de tener la extensión correcta (.png, .svg, etc.)
 
 const Index = () => {
   const totalCareers = universityCenters.reduce(
@@ -10,7 +9,6 @@ const Index = () => {
     0
   );
 
-  // Función para hacer el scroll suave hacia la sección de centros
   const handleScrollToCentros = (e) => {
     e.preventDefault();
     const centrosSection = document.getElementById("centros");
@@ -20,7 +18,6 @@ const Index = () => {
   };
 
   return (
-    // Se usa 100dvh para respetar las barras de navegación en móviles
     <div className="min-h-[100dvh] bg-background relative font-sans">
       
       <style>{`
@@ -55,29 +52,26 @@ const Index = () => {
         
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
 
-        {/* LOGO MEJORADO: Ahora de gran tamaño y ubicado estrictamente a la derecha del Hero */}
+        {/* LOGO AJUSTADO: Tamaños w-[...] más pequeños y proporcionados */}
         <div className="absolute inset-y-0 right-0 w-full lg:w-[45%] flex items-center justify-center lg:justify-end pointer-events-none z-10 px-4 sm:px-12 lg:pr-16 xl:pr-28">
           <img 
             src={Logo}
             alt="Logo UDG" 
-            className="w-72 sm:w-[400px] md:w-[500px] lg:w-[580px] xl:w-[680px] object-contain logo-3d opacity-20 lg:opacity-90 mt-10 lg:-mt-10"
+            className="w-56 sm:w-72 md:w-[350px] lg:w-[420px] xl:w-[500px] object-contain logo-3d opacity-20 lg:opacity-90 mt-10 lg:mt-0"
           />
         </div>
 
-        {/* Padding ajustado para móviles: pt-16 pb-24 */}
         <div className="container relative z-20 flex-1 flex flex-col justify-between pt-16 pb-24 md:pt-32 md:pb-40 px-4 sm:px-6 mx-auto max-w-7xl">
           
           <div className="w-full text-left mt-4 md:mt-0 max-w-4xl">
             <span className="text-blue-300 font-semibold tracking-widest uppercase text-xs sm:text-sm md:text-base block mb-3 lg:mb-6">
               Guía de Carreras
             </span>
-            {/* Tamaños de fuente escalonados para evitar desbordes */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6rem] font-sans font-extrabold tracking-tighter leading-none w-full max-w-3xl">
               Universidad de<br />Guadalajara
             </h1>
           </div>
           
-          {/* Margen superior y flex-row con gap optimizado */}
           <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 lg:gap-8 mt-16 sm:mt-24 lg:mt-0">
             
             <div className="space-y-6 md:space-y-8 max-w-xl">
@@ -97,7 +91,6 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Estadísticas de centros y programas académicos */}
             <div className="flex flex-row flex-wrap sm:flex-nowrap justify-start lg:justify-end gap-6 sm:gap-12 md:gap-20 w-full lg:w-auto z-20">
               
               <div className="text-left flex flex-col items-start min-w-[120px]">
