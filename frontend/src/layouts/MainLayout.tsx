@@ -1,8 +1,12 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "@/components/Header";
 import Footer from "@/components/Footer"; // Asegúrate de que la ruta coincida con donde guardaste el Footer
+import { useIdleTimeout } from "@/hooks/useIdleTimeout"; // Importa el nuevo hook
 
 export default function MainLayout() {
+  // Inicializa el temporizador de inactividad (ej. 15 minutos)
+  useIdleTimeout(30);
+
   return (
     // Agregamos un div contenedor con flexbox que ocupe al menos toda la pantalla
     <div className="min-h-screen flex flex-col">
