@@ -47,12 +47,12 @@ const App = () => (
         <Routes>
           
           {/* 3. Agrega las rutas públicas para el Login y Registro */}
-       
+        <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
           {/* Layout con Header y Footer */}
           <Route element={<MainLayout />}>
-             <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+            
             <Route path="/" element={<Index />} />
             <Route path="/centro/:id" element={<CenterDetail />} />
             <Route path="/carrera/:id" element={<CareerDetail />} />
