@@ -52,12 +52,12 @@ const Index = () => {
         
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
 
-        {/* LOGO AJUSTADO: Se aumentó el padding derecho (pr-24, xl:pr-40) para moverlo a la izquierda y se redujo el w-[...] */}
-        <div className="absolute top-[40%] -translate-y-1/2 right-0 w-full lg:w-[45%] flex justify-center lg:justify-end pointer-events-none z-10 px-4 sm:px-12 lg:pr-24 xl:pr-40">
+        {/* LOGO AJUSTADO Y A PRUEBA DE PANTALLAS: Se usa inset-0 con max-w-7xl para alinear perfectamente con el texto */}
+        <div className="absolute inset-0 pointer-events-none z-10 flex items-center justify-center lg:justify-end max-w-7xl mx-auto px-4 sm:px-6 pt-20 lg:pt-0">
           <img 
             src={Logo}
             alt="Logo UDG" 
-            className="w-48 sm:w-60 md:w-[280px] lg:w-[340px] xl:w-[380px] object-contain logo-3d opacity-20 lg:opacity-90"
+            className="w-56 sm:w-72 md:w-[320px] lg:w-[380px] xl:w-[460px] object-contain logo-3d opacity-20 lg:opacity-90 lg:-translate-y-12 xl:-translate-x-12"
           />
         </div>
 
