@@ -34,7 +34,7 @@ const Login = () => {
     <div className="min-h-[100dvh] bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-8">
         
-        {/* Botón para regresar a la página principal */}
+        {/* BOTON AGREGADO POR QUE ME AOTRE JAJAJA */}
         <Link
           to="/"
           className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors mb-6 group"

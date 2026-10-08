@@ -51,13 +51,13 @@ const Index = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-[0.05] pointer-events-none" />
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
 
-        {/* CONTENEDOR PRINCIPAL: Padding optimizado para encajar exactamente en el viewport */}
+        {/* CONTENEDOR PRINCIPAL*/}
         <div className="container relative z-20 flex-1 flex flex-col justify-between pt-24 pb-8 sm:pt-28 sm:pb-10 lg:pt-28 lg:pb-12 px-4 sm:px-6 mx-auto max-w-7xl h-full">
           
-          {/* SECCIÓN SUPERIOR/MEDIA: GRID 2 COLUMNAS (TÍTULO Y LOGO) */}
+          {/* SECCIÓN SUPERIOR/MEDIA AHI PARA MEDIO EMPAREJAR POR QUE SE VEIA BIEN CHUECO*/}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-1 my-auto w-full">
             
-            {/* Columna Izquierda: Título */}
+            {/* PUES AHI EL CONTENIDO DEL TITULO */}
             <div className="lg:col-span-7 xl:col-span-7 text-left">
               <span className="text-blue-300 font-semibold tracking-widest uppercase text-xs sm:text-sm md:text-base block mb-2 lg:mb-4">
                 Guía de Carreras
@@ -67,7 +67,7 @@ const Index = () => {
               </h1>
             </div>
 
-            {/* Columna Derecha: Logo en el flujo natural con altura auto-escalable */}
+            {/*LOGO AHI MEDIO QUE FLOTA MEDIO QUE NO PERO SE VE BIEN BONITO */}
             <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end items-center">
               <img 
                 src={Logo} 
@@ -78,7 +78,7 @@ const Index = () => {
 
           </div>
           
-          {/* SECCIÓN INFERIOR: DESCRIPCIÓN/BOTÓN A LA IZQUIERDA Y STATS A LA DERECHA */}
+          {/* BOTON Y CONTENIDO PUES DE RELLENO NOMAS PARA DARLE CONTENIDO A LA PAGINA */}
           <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 lg:gap-8 pt-4">
             
             <div className="space-y-4 md:space-y-6 max-w-xl">
@@ -98,7 +98,7 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Estadísticas de centros y carreras */}
+            {/* DATOS X */}
             <div className="flex flex-row flex-wrap sm:flex-nowrap justify-start lg:justify-end gap-6 sm:gap-12 md:gap-16 w-full lg:w-auto">
               
               <div className="text-left flex flex-col items-start min-w-[110px]">

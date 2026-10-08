@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Search, MapPin, Navigation, Loader2 } from "lucide-react";
 
-// 1. Datos actualizados con coordenadas (lat y lng)
+
 const udgCenters = [
   {
     id: "cucea",
@@ -131,7 +131,7 @@ const RouteFinder = () => {
         throw new Error("No pudimos ubicar este Código Postal. Verifica que sea correcto.");
       }
 
-      // Tomamos el primer resultado (el más relevante)
+      // PRIMERO
       const userLat = parseFloat(data[0].lat);
       const userLng = parseFloat(data[0].lon);
       setUserLocation({ lat: userLat, lng: userLng });
@@ -139,7 +139,7 @@ const RouteFinder = () => {
       let minDistance = Infinity;
       let closest = null;
 
-      // Calculamos la distancia contra todos los centros
+      // SE CALCULA
       udgCenters.forEach((center) => {
         if (center.coordinates) {
           const distance = calculateDistance(userLat, userLng, center.coordinates.lat, center.coordinates.lng);
