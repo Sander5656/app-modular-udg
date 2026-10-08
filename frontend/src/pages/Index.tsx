@@ -1,7 +1,7 @@
 import { CenterCard } from "@/components/CenterCard";
 import { universityCenters } from "@/data/universityCenters";
 import { Info, ArrowRight } from "lucide-react"; 
-import Logo from "../images/UDG.png"; // Asegúrate de tener la extensión correcta (.png, .svg, etc.)
+import Logo from "../images/UDG.png";
 
 const Index = () => {
   const totalCareers = universityCenters.reduce(
@@ -41,41 +41,48 @@ const Index = () => {
 
         .logo-3d {
           animation: float-3d 6s ease-in-out infinite;
-          filter: drop-shadow(0 30px 30px rgba(0,0,0,0.6)) drop-shadow(0 0 50px rgba(59,130,246,0.55)) brightness(0) invert(1);
+          filter: drop-shadow(0 25px 25px rgba(0,0,0,0.6)) drop-shadow(0 0 45px rgba(59,130,246,0.5)) brightness(0) invert(1);
         }
       `}</style>
 
       {/* ================= HERO ================= */}
-      <section className="relative text-white overflow-hidden animate-shader m-0 border-none min-h-[100dvh] flex flex-col">
+      <section className="relative text-white overflow-hidden animate-shader m-0 border-none min-h-[100dvh] lg:h-[100dvh] flex flex-col justify-between">
         
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-[0.05] pointer-events-none" />
-        
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
 
-        {/* LOGO AJUSTADO Y A PRUEBA DE PANTALLAS: Se usa inset-0 con max-w-7xl para alinear perfectamente con el texto */}
-        <div className="absolute inset-0 pointer-events-none z-10 flex items-center justify-center lg:justify-end max-w-7xl mx-auto px-4 sm:px-6 pt-20 lg:pt-0">
-          <img 
-            src={Logo}
-            alt="Logo UDG" 
-            className="w-56 sm:w-72 md:w-[320px] lg:w-[380px] xl:w-[460px] object-contain logo-3d opacity-20 lg:opacity-90 lg:-translate-y-12 xl:-translate-x-12"
-          />
-        </div>
-
-        <div className="container relative z-20 flex-1 flex flex-col justify-between pt-32 pb-24 md:pt-48 md:pb-40 px-4 sm:px-6 mx-auto max-w-7xl">
+        {/* CONTENEDOR PRINCIPAL: Padding optimizado para encajar exactamente en el viewport */}
+        <div className="container relative z-20 flex-1 flex flex-col justify-between pt-24 pb-8 sm:pt-28 sm:pb-10 lg:pt-28 lg:pb-12 px-4 sm:px-6 mx-auto max-w-7xl h-full">
           
-          <div className="w-full text-left mt-4 md:mt-0 max-w-4xl">
-            <span className="text-blue-300 font-semibold tracking-widest uppercase text-xs sm:text-sm md:text-base block mb-3 lg:mb-6">
-              Guía de Carreras
-            </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6rem] font-sans font-extrabold tracking-tighter leading-none w-full max-w-3xl">
-              Universidad de<br />Guadalajara
-            </h1>
+          {/* SECCIÓN SUPERIOR/MEDIA: GRID 2 COLUMNAS (TÍTULO Y LOGO) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-1 my-auto w-full">
+            
+            {/* Columna Izquierda: Título */}
+            <div className="lg:col-span-7 xl:col-span-7 text-left">
+              <span className="text-blue-300 font-semibold tracking-widest uppercase text-xs sm:text-sm md:text-base block mb-2 lg:mb-4">
+                Guía de Carreras
+              </span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-sans font-extrabold tracking-tighter leading-none w-full">
+                Universidad de<br />Guadalajara
+              </h1>
+            </div>
+
+            {/* Columna Derecha: Logo en el flujo natural con altura auto-escalable */}
+            <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end items-center">
+              <img 
+                src={Logo} 
+                alt="Logo UDG" 
+                className="w-44 sm:w-56 md:w-64 lg:w-full max-w-[260px] lg:max-w-[340px] xl:max-w-[400px] max-h-[25vh] sm:max-h-[30vh] lg:max-h-[38vh] object-contain logo-3d"
+              />
+            </div>
+
           </div>
           
-          <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 lg:gap-8 mt-16 sm:mt-24 lg:mt-0">
+          {/* SECCIÓN INFERIOR: DESCRIPCIÓN/BOTÓN A LA IZQUIERDA Y STATS A LA DERECHA */}
+          <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 lg:gap-8 pt-4">
             
-            <div className="space-y-6 md:space-y-8 max-w-xl">
-              <p className="text-base sm:text-lg md:text-xl text-blue-100/90 font-light leading-relaxed">
+            <div className="space-y-4 md:space-y-6 max-w-xl">
+              <p className="text-sm sm:text-base md:text-lg text-blue-100/90 font-light leading-relaxed">
                 Explora nuestra red de centros universitarios y descubre el programa académico diseñado para impulsar tu futuro profesional.
               </p>
               
@@ -83,7 +90,7 @@ const Index = () => {
                 <a 
                   href="#centros" 
                   onClick={handleScrollToCentros}
-                  className="group flex items-center justify-center gap-3 px-8 py-4 md:px-10 bg-white text-blue-950 font-bold rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] w-full sm:w-auto"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-3.5 md:px-10 bg-white text-blue-950 font-bold rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] w-full sm:w-auto"
                 >
                   Explorar Centros
                   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
@@ -91,11 +98,12 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="flex flex-row flex-wrap sm:flex-nowrap justify-start lg:justify-end gap-6 sm:gap-12 md:gap-20 w-full lg:w-auto z-20">
+            {/* Estadísticas de centros y carreras */}
+            <div className="flex flex-row flex-wrap sm:flex-nowrap justify-start lg:justify-end gap-6 sm:gap-12 md:gap-16 w-full lg:w-auto">
               
-              <div className="text-left flex flex-col items-start min-w-[120px]">
-                <div className="border-b-2 sm:border-b-4 border-blue-400 pb-1 sm:pb-2 mb-2 sm:mb-3">
-                  <h3 className="text-4xl sm:text-5xl md:text-7xl font-sans font-bold text-white tracking-tight leading-none">
+              <div className="text-left flex flex-col items-start min-w-[110px]">
+                <div className="border-b-2 sm:border-b-4 border-blue-400 pb-1 sm:pb-2 mb-2">
+                  <h3 className="text-3xl sm:text-4xl md:text-6xl font-sans font-bold text-white tracking-tight leading-none">
                     {universityCenters.length}
                   </h3>
                 </div>
@@ -104,9 +112,9 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="text-left flex flex-col items-start min-w-[120px]">
-                <div className="border-b-2 sm:border-b-4 border-blue-400 pb-1 sm:pb-2 mb-2 sm:mb-3">
-                  <h3 className="text-4xl sm:text-5xl md:text-7xl font-sans font-bold text-white tracking-tight leading-none">
+              <div className="text-left flex flex-col items-start min-w-[110px]">
+                <div className="border-b-2 sm:border-b-4 border-blue-400 pb-1 sm:pb-2 mb-2">
+                  <h3 className="text-3xl sm:text-4xl md:text-6xl font-sans font-bold text-white tracking-tight leading-none">
                     {totalCareers}
                   </h3>
                 </div>
@@ -118,6 +126,7 @@ const Index = () => {
             </div>
 
           </div>
+
         </div>
       </section>
 
