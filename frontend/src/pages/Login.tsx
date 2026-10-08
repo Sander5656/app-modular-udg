@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/db";
-import { ArrowRight, Mail, Lock } from "lucide-react";
+import { ArrowRight, ArrowLeft, Mail, Lock } from "lucide-react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -23,7 +23,6 @@ const Login = () => {
     if (error) {
       setError("Credenciales incorrectas. Intenta de nuevo.");
     } else if (data.session) {
-      // Guardamos el token en localStorage para que tu ProtectedRoute lo apruebe
       localStorage.setItem("authToken", data.session.access_token);
       navigate("/chat");
     }
@@ -34,6 +33,16 @@ const Login = () => {
   return (
     <div className="min-h-[100dvh] bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-8">
+        
+        {/* Botón para regresar a la página principal */}
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors mb-6 group"
+        >
+          <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+          Volver al inicio
+        </Link>
+
         <h2 className="text-3xl font-bold text-slate-800 text-center mb-2">Bienvenido</h2>
         <p className="text-gray-500 text-center mb-8">Inicia sesión para continuar</p>
 
