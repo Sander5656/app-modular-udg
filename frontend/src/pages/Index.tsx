@@ -9,7 +9,7 @@ const Index = () => {
     0
   );
 
-  const handleScrollToCentros = (e) => {
+  const handleScrollToCentros = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const centrosSection = document.getElementById("centros");
     if (centrosSection) {
@@ -46,18 +46,21 @@ const Index = () => {
       `}</style>
 
       {/* ================= HERO ================= */}
-      <section className="relative text-white overflow-hidden animate-shader m-0 border-none min-h-[100dvh] lg:h-[100dvh] flex flex-col justify-between">
+      {/* Se amplió a min-h-[105dvh] para que el azul baje más y deje respirar al degradado inferior */}
+      <section className="relative text-white overflow-hidden animate-shader m-0 border-none min-h-[105dvh] flex flex-col justify-between">
         
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-[0.05] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
+        
+        {/* DEGRADADO INFERIOR: Bajamos a z-10 para que quede detrás del texto y se funde más abajo */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 md:h-40 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-10" />
 
-        {/* CONTENEDOR PRINCIPAL*/}
-        <div className="container relative z-20 flex-1 flex flex-col justify-between pt-24 pb-8 sm:pt-28 sm:pb-10 lg:pt-28 lg:pb-12 px-4 sm:px-6 mx-auto max-w-7xl h-full">
+        {/* CONTENEDOR PRINCIPAL: pb-28 / lg:pb-36 asegura que toda la información quede arriba del degradado */}
+        <div className="container relative z-20 flex-1 flex flex-col justify-between pt-24 pb-28 sm:pt-28 sm:pb-32 lg:pt-32 lg:pb-36 px-4 sm:px-6 mx-auto max-w-7xl">
           
-          {/* SECCIÓN SUPERIOR/MEDIA AHI PARA MEDIO EMPAREJAR POR QUE SE VEIA BIEN CHUECO*/}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-1 my-auto w-full">
+          {/* SECCIÓN SUPERIOR/MEDIA */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-1 my-auto w-full py-6 lg:py-10">
             
-            {/* PUES AHI EL CONTENIDO DEL TITULO */}
+            {/* CONTENIDO DEL TÍTULO */}
             <div className="lg:col-span-7 xl:col-span-7 text-left">
               <span className="text-blue-300 font-semibold tracking-widest uppercase text-xs sm:text-sm md:text-base block mb-2 lg:mb-4">
                 Guía de Carreras
@@ -67,7 +70,7 @@ const Index = () => {
               </h1>
             </div>
 
-            {/*LOGO AHI MEDIO QUE FLOTA MEDIO QUE NO PERO SE VE BIEN BONITO */}
+            {/* LOGO FLOTANTE 3D */}
             <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end items-center">
               <img 
                 src={Logo} 
@@ -78,11 +81,11 @@ const Index = () => {
 
           </div>
           
-          {/* BOTON Y CONTENIDO PUES DE RELLENO NOMAS PARA DARLE CONTENIDO A LA PAGINA */}
-          <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 lg:gap-8 pt-4">
+          {/* BOTÓN Y ESTADÍSTICAS (Completamente libres del degradado) */}
+          <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 pt-6">
             
             <div className="space-y-4 md:space-y-6 max-w-xl">
-              <p className="text-sm sm:text-base md:text-lg text-blue-100/90 font-light leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-blue-100/95 font-light leading-relaxed">
                 Explora nuestra red de centros universitarios y descubre el programa académico diseñado para impulsar tu futuro profesional.
               </p>
               
@@ -98,7 +101,7 @@ const Index = () => {
               </div>
             </div>
 
-            {/* DATOS X */}
+            {/* DATOS ESTADÍSTICOS */}
             <div className="flex flex-row flex-wrap sm:flex-nowrap justify-start lg:justify-end gap-6 sm:gap-12 md:gap-16 w-full lg:w-auto">
               
               <div className="text-left flex flex-col items-start min-w-[110px]">
@@ -107,7 +110,7 @@ const Index = () => {
                     {universityCenters.length}
                   </h3>
                 </div>
-                <p className="text-[10px] sm:text-xs md:text-sm text-blue-200/90 font-medium tracking-widest uppercase">
+                <p className="text-[10px] sm:text-xs md:text-sm text-blue-200 font-medium tracking-widest uppercase">
                   Centros<br className="sm:hidden"/> Universitarios
                 </p>
               </div>
@@ -118,7 +121,7 @@ const Index = () => {
                     {totalCareers}
                   </h3>
                 </div>
-                <p className="text-[10px] sm:text-xs md:text-sm text-blue-200/90 font-medium tracking-widest uppercase">
+                <p className="text-[10px] sm:text-xs md:text-sm text-blue-200 font-medium tracking-widest uppercase">
                   Programas<br className="sm:hidden"/> Académicos
                 </p>
               </div>
@@ -131,7 +134,7 @@ const Index = () => {
       </section>
 
       {/* ================= CENTROS ================= */}
-      <section id="centros" className="max-w-7xl mx-auto px-4 py-16 md:py-32 relative z-10">
+      <section id="centros" className="max-w-7xl mx-auto px-4 pt-12 pb-16 md:pt-20 md:pb-32 relative z-20">
         <div className="text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-sans font-bold tracking-tight text-foreground">
             Centros Universitarios

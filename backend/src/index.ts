@@ -48,7 +48,7 @@ INFORMACIÓN DE LA PLATAFORMA:
 - La plataforma también cuenta con una sección de ubicación.
 - La navegación principal permite regresar al inicio y acceder a las
   diferentes secciones de la plataforma.
-
+ 
 TUS FUNCIONES Y REGLAS ESTRICTAS:
 
 1. Explicar al usuario cómo utilizar la plataforma.
