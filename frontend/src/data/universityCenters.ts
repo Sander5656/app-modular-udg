@@ -1821,7 +1821,7 @@ export const universityCenters: UniversityCenter[] = [
   {
     id: "cutlajomulco",
     name: "Centro Universitario de Tlajomulco",
-    acronym: "CUTLAJOMULCO",
+    acronym: "CUTLAJO",
     description: "El CUTlajomulco impulsa el desarrollo del sur del Área Metropolitana de Guadalajara con programas enfocados en salud, biotecnología, negocios e ingeniería aeroportuaria y mecatrónica.",
     admissionScoresPdf: {
       label: "Consultar puntajes mínimos de los ciclos escolares recientes",
@@ -1989,7 +1989,7 @@ export const universityCenters: UniversityCenter[] = [
   {
     id: "cutlaquepaque",
     name: "Centro Universitario de Tlaquepaque",
-    acronym: "CUTLAQUEPAQUE",
+    acronym: "CUTLAQUE",
     description: "El CUTlaquepaque es un centro multitemático de reciente creación ubicado en el Cerro del Cuatro, enfocado en tecnología, medio ambiente, salud y desarrollo económico-social.",
     admissionScoresPdf: {
       label: "Consultar puntajes mínimos de los ciclos escolares recientes",
