@@ -5,6 +5,7 @@ export interface Career {
   duration: string;
   modality: string;
   admissionRequirements: string[];
+  minScore?: string; // <-- Agrega esta línea
   fieldOfStudy: string;
   professionalProfile: string;
   centerId: string;
