@@ -87,7 +87,7 @@ def predecir_vocacion(perfil: PerfilRIASEC):
                 "y": round(float(coords_usuario[1]), 4),
                 "cluster": cluster_usuario
             },
-            "mapa_carreras": centroides_carreras
+            "mapa_carreras": centroides_carreras,
             "metricas": metricas_modelo
         }
 
