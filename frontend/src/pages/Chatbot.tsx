@@ -99,7 +99,6 @@ interface ResultadoVocacional {
   };
 }
 
-// Métricas de respaldo por si el backend aún no exporta metricas_modelo.pkl
 const DEFAULT_METRICS: Record<string, AreaMetrics> = {
   'Ciencias Económico Administrativas': { precision: 0.91, recall: 0.90, 'f1-score': 0.90 },
   'Ciencias Exactas e Ingenierías': { precision: 0.93, recall: 0.92, 'f1-score': 0.92 },
@@ -209,134 +208,137 @@ export const Chatbot = () => {
   const top3Acc = resultados?.metricas?.top3_acc ?? 88.20;
 
   return (
-    <div className="min-h-[100dvh] lg:h-[100dvh] lg:overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 flex flex-col justify-between p-3 sm:p-5 lg:px-8 lg:pb-5 font-sans -mt-16 md:-mt-24 pt-20 sm:pt-24 lg:pt-24">
+    /* Contenedor externo: En móvil/tablet crece libremente; en escritorio calcula exactamente el alto libre bajo el Header */
+    <div className="-mt-6 min-h-[calc(100dvh-4rem)] lg:h-[calc(100dvh-4.25rem)] w-full bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 flex flex-col justify-center p-2.5 sm:p-4 lg:px-6 lg:py-3 font-sans lg:overflow-hidden">
       
-      {/* Contenedor Panorámico Full-Viewport */}
-      <div className="w-full max-w-7xl mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-blue-100/20 flex-1 flex flex-col lg:overflow-hidden">
+      {/* Tarjeta principal adaptable */}
+      <div className="w-full max-w-7xl mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-blue-100/20 flex-1 flex flex-col lg:min-h-0 lg:overflow-hidden">
         
         {/* ================= ETAPA 1: INTRODUCCIÓN Y EXPLICACIÓN DEL MODELO ================= */}
         {stage === 'intro' && (
-          <div className="flex-1 flex flex-col justify-between p-5 sm:p-8 lg:p-10 bg-slate-50/40">
-            <div>
-              <span className="inline-block bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">
+          <div className="flex-1 flex flex-col justify-between p-4 sm:p-6 lg:px-8 lg:py-5 bg-slate-50/40 gap-4 lg:gap-2 lg:min-h-0">
+            
+            {/* Encabezado compacto */}
+            <div className="shrink-0">
+              <span className="inline-block bg-blue-100 text-blue-800 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full mb-1.5">
                 Sistema Inteligente de Orientación Vocacional UdeG
               </span>
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-800">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-800 leading-tight">
                 ¿Cómo funciona nuestro Modelo de Inteligencia Artificial?
               </h1>
               <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-4xl">
-                Antes de comenzar, conoce la arquitectura matemática y de Machine Learning que procesará tus respuestas para encontrar tu carrera ideal dentro de la Red Universitaria.
+                Conoce la arquitectura matemática y de Machine Learning que procesará tus respuestas para encontrar tu carrera ideal en la Red Universitaria.
               </p>
             </div>
 
-            {/* 4 Tarjetas Explicativas en Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-auto py-4">
-              <div className="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
+            {/* 4 Tarjetas Explicativas: 1 col en móvil, 2 en tablet, 4 en escritorio */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 my-auto">
+              <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
-                    <Layers className="w-5 h-5" />
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-2">
+                    <Layers className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <h3 className="font-bold text-slate-800 text-base mb-1.5">
+                  <h3 className="font-bold text-slate-800 text-sm sm:text-base mb-1">
                     1. Perfilamiento RIASEC
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Evaluamos <strong>24 reactivos</strong> (4 por cada dimensión de Holland: Realista, Investigador, Artístico, Social, Emprendedor y Convencional) en escala del <strong>1 al 10</strong>, promediando cada vector y normalizándolo a escala 1-7.
+                    Evaluamos <strong>24 reactivos</strong> (4 por cada dimensión de Holland: Realista, Investigador, Artístico, Social, Emprendedor y Convencional) del <strong>1 al 10</strong>, promediando cada vector y escalándolo de 1 a 7.
                   </p>
                 </div>
-                <div className="mt-3 pt-2 border-t border-gray-100 text-[11px] font-semibold text-blue-600">
+                <div className="mt-2.5 pt-2 border-t border-gray-100 text-[11px] font-semibold text-blue-600">
                   Fórmula: ((x - 1) / 9) × 6 + 1
                 </div>
               </div>
 
-              <div className="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
+              <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
-                    <GitBranch className="w-5 h-5" />
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-2">
+                    <GitBranch className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <h3 className="font-bold text-slate-800 text-base mb-1.5">
+                  <h3 className="font-bold text-slate-800 text-sm sm:text-base mb-1">
                     2. Random Forest Jerárquico
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    <strong>Nivel 1:</strong> Un clasificador Random Forest balanceado predice tu Área/Centro Universitario (CUCEA, CUCEI, CUCS, etc.).<br />
-                    <strong>Nivel 2:</strong> Un sub-modelo especialista exclusivo de esa área calcula las probabilidades de cada carrera.
+                    <strong>Nivel 1:</strong> Clasifica tu Área/Centro Universitario (CUCEA, CUCEI, CUCS, etc.).<br />
+                    <strong>Nivel 2:</strong> Un sub-modelo especialista exclusivo de esa área calcula la probabilidad de cada carrera.
                   </p>
                 </div>
-                <div className="mt-3 pt-2 border-t border-gray-100 text-[11px] font-semibold text-indigo-600">
+                <div className="mt-2.5 pt-2 border-t border-gray-100 text-[11px] font-semibold text-indigo-600">
                   100 a 150 árboles de decisión
                 </div>
               </div>
 
-              <div className="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
+              <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
-                    <Cpu className="w-5 h-5" />
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-2">
+                    <Cpu className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <h3 className="font-bold text-slate-800 text-base mb-1.5">
+                  <h3 className="font-bold text-slate-800 text-sm sm:text-base mb-1">
                     3. Reducción PCA y K-Means
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Reducimos tus 6 dimensiones vocacionales a un plano cartesiano 2D mediante <strong>Análisis de Componentes Principales (PCA)</strong> y agrupamos las carreras en <strong>5 Clusters con K-Means</strong> para ubicar tu cercanía exacta.
+                    Reducimos tus 6 dimensiones a un plano 2D mediante <strong>Análisis de Componentes Principales (PCA)</strong> y agrupamos las carreras en <strong>5 Clusters con K-Means</strong> para ubicar tu cercanía.
                   </p>
                 </div>
-                <div className="mt-3 pt-2 border-t border-gray-100 text-[11px] font-semibold text-emerald-600">
+                <div className="mt-2.5 pt-2 border-t border-gray-100 text-[11px] font-semibold text-emerald-600">
                   Proyección espacial 6D → 2D
                 </div>
               </div>
 
-              <div className="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
+              <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-3">
-                    <BarChart3 className="w-5 h-5" />
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-2">
+                    <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <h3 className="font-bold text-slate-800 text-base mb-1.5">
+                  <h3 className="font-bold text-slate-800 text-sm sm:text-base mb-1">
                     4. Métricas de Validación
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Al finalizar, además de tu Top 3 de carreras con afinidad relativa, podrás inspeccionar las métricas científicas del entrenamiento: <strong>Exactitud Nivel 1, Top-3 Accuracy, Precision, Recall y F1-Score</strong>.
+                    Al finalizar, además de tu Top 3 de carreras, podrás inspeccionar las métricas científicas del modelo: <strong>Exactitud Nivel 1, Top-3 Accuracy, Precision, Recall y F1-Score</strong>.
                   </p>
                 </div>
-                <div className="mt-3 pt-2 border-t border-gray-100 text-[11px] font-semibold text-amber-600">
+                <div className="mt-2.5 pt-2 border-t border-gray-100 text-[11px] font-semibold text-amber-600">
                   Validación estratificada 80/20
                 </div>
               </div>
             </div>
 
-            {/* Pie de inicio */}
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-gray-200">
-              <p className="text-xs sm:text-sm text-slate-500">
-                ⏱️ Tiempo estimado: <strong>3 minutos</strong> · Responde cada pregunta seleccionando un valor del <strong>1 (Nada)</strong> al <strong>10 (Totalmente)</strong>.
+            {/* Pie de inicio siempre visible */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-gray-200 shrink-0">
+              <p className="text-xs text-slate-500 text-center sm:text-left">
+                ⏱️ Tiempo estimado: <strong>3 minutos</strong> · Selecciona un valor del <strong>1 (Nada)</strong> al <strong>10 (Totalmente)</strong> en cada pregunta.
               </p>
               <button
                 onClick={() => setStage('quiz')}
-                className="w-full sm:w-auto px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all"
+                className="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md flex items-center justify-center gap-2 transition-all shrink-0"
               >
-                Comenzar Cuestionario (24 preguntas) <ArrowRight className="w-5 h-5" />
+                Comenzar Cuestionario (24 preguntas) <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
         )}
 
-        {/* ================= ETAPA 2: CUESTIONARIO 1-10 SIN SCROLL ================= */}
+        {/* ================= ETAPA 2: CUESTIONARIO 1-10 ADAPTABLE ================= */}
         {stage === 'quiz' && (
-          <div className="flex-1 flex flex-col justify-between p-5 sm:p-8 lg:p-10 bg-slate-50/40">
+          <div className="flex-1 flex flex-col justify-between p-4 sm:p-6 lg:px-10 lg:py-6 bg-slate-50/40 gap-4 lg:min-h-0">
             
             {/* Barra superior de progreso */}
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-3">
+            <div className="shrink-0">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2.5">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block">
+                  <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-blue-600 block">
                     {currentQuestion.categoryLabel}
                   </span>
-                  <h2 className="text-base sm:text-lg font-bold text-slate-700">
-                    Evalúa del 1 al 10 tu nivel de interés o afinidad
+                  <h2 className="text-sm sm:text-base font-bold text-slate-700">
+                    Selecciona del 1 al 10 tu nivel de interés o afinidad
                   </h2>
                 </div>
-                <span className="bg-blue-600 text-white text-xs sm:text-sm font-extrabold px-4 py-1.5 rounded-full shrink-0 shadow-sm">
+                <span className="self-start sm:self-auto bg-blue-600 text-white text-xs font-extrabold px-3.5 py-1 rounded-full shrink-0 shadow-sm">
                   Pregunta {currentIndex + 1} de {QUESTIONS.length}
                 </span>
               </div>
 
-              <div className="w-full bg-gray-200 h-2.5 rounded-full overflow-hidden">
+              <div className="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
                 <div
                   className="bg-blue-600 h-full rounded-full transition-all duration-300"
                   style={{ width: `${progressPercentage}%` }}
@@ -345,13 +347,13 @@ export const Chatbot = () => {
             </div>
 
             {/* Centro: Pregunta + Botonera del 1 al 10 */}
-            <div className="my-auto py-6 max-w-4xl mx-auto w-full text-center">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-800 mb-8 leading-snug">
+            <div className="my-auto py-2 sm:py-4 max-w-4xl mx-auto w-full text-center">
+              <h3 className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-slate-800 mb-6 sm:mb-8 leading-snug px-1">
                 {currentQuestion.text}
               </h3>
 
-              {/* Escala numérica del 1 al 10 */}
-              <div className="grid grid-cols-5 sm:grid-cols-10 gap-2.5 sm:gap-3">
+              {/* En móvil: 5 columnas x 2 filas; en tablet/desktop: 10 columnas en 1 fila */}
+              <div className="grid grid-cols-5 sm:grid-cols-10 gap-2 sm:gap-3">
                 {SCALE_1_TO_10.map((num) => {
                   const isSelected = selectedValue === num;
                   return (
@@ -359,9 +361,9 @@ export const Chatbot = () => {
                       key={num}
                       type="button"
                       onClick={() => handleSelectOption(num)}
-                      className={`h-14 sm:h-16 rounded-2xl font-extrabold text-lg sm:text-xl border-2 transition-all flex flex-col items-center justify-center ${
+                      className={`h-12 sm:h-14 lg:h-16 rounded-xl sm:rounded-2xl font-extrabold text-base sm:text-lg lg:text-xl border-2 transition-all flex items-center justify-center ${
                         isSelected
-                          ? 'bg-blue-600 text-white border-blue-600 shadow-lg scale-105'
+                          ? 'bg-blue-600 text-white border-blue-600 shadow-md scale-105'
                           : 'bg-white text-slate-700 border-gray-200 hover:border-blue-400 hover:bg-blue-50/50'
                       }`}
                     >
@@ -372,26 +374,26 @@ export const Chatbot = () => {
               </div>
 
               {/* Etiquetas guía debajo de los números */}
-              <div className="flex justify-between text-xs sm:text-sm font-semibold text-slate-500 mt-3 px-1">
-                <span>1 = Nada interesado / Nula afinidad</span>
+              <div className="flex justify-between text-[11px] sm:text-xs font-semibold text-slate-500 mt-3 px-1">
+                <span>1 = Nada interesado</span>
                 <span>5 = Neutral</span>
-                <span>10 = Totalmente apasionado</span>
+                <span>10 = Muy apasionado</span>
               </div>
 
               {errorMsg && (
-                <div className="mt-4 p-3 bg-red-50 border border-red-200 text-red-600 text-xs sm:text-sm rounded-xl">
+                <div className="mt-4 p-3 bg-red-50 border border-red-200 text-red-600 text-xs rounded-xl">
                   {errorMsg}
                 </div>
               )}
             </div>
 
             {/* Navegación inferior */}
-            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+            <div className="flex items-center justify-between pt-3 border-t border-gray-200 shrink-0 gap-3">
               <button
                 type="button"
                 onClick={handlePrevious}
                 disabled={currentIndex === 0 || isSubmitting}
-                className="px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm text-slate-600 bg-white border border-gray-200 hover:bg-gray-100 disabled:opacity-40 flex items-center gap-2"
+                className="px-4 sm:px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-slate-600 bg-white border border-gray-200 hover:bg-gray-100 disabled:opacity-40 flex items-center gap-1.5"
               >
                 <ArrowLeft className="w-4 h-4" /> Anterior
               </button>
@@ -400,15 +402,15 @@ export const Chatbot = () => {
                 type="button"
                 onClick={handleNext}
                 disabled={!selectedValue || isSubmitting}
-                className="px-8 py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-blue-600 hover:bg-blue-700 disabled:opacity-50 flex items-center gap-2 shadow-md"
+                className="px-6 sm:px-8 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-blue-600 hover:bg-blue-700 disabled:opacity-50 flex items-center gap-2 shadow-md"
               >
                 {isSubmitting ? (
                   <>
-                    <Loader2 className="w-4 h-4 animate-spin" /> Procesando en IA...
+                    <Loader2 className="w-4 h-4 animate-spin" /> Calculando...
                   </>
                 ) : currentIndex === QUESTIONS.length - 1 ? (
                   <>
-                    Finalizar y Calcular <CheckCircle2 className="w-4 h-4" />
+                    Ver Resultados <CheckCircle2 className="w-4 h-4" />
                   </>
                 ) : (
                   <>
@@ -420,56 +422,56 @@ export const Chatbot = () => {
           </div>
         )}
 
-        {/* ================= ETAPA 3: DASHBOARD PANORÁMICO DE RESULTADOS SIN SCROLL ================= */}
+        {/* ================= ETAPA 3: DASHBOARD DE RESULTADOS RESPONSIVO ================= */}
         {stage === 'results' && resultados && (
-          <div className="flex-1 flex flex-col justify-between p-4 sm:p-6 bg-slate-50 lg:overflow-hidden">
+          <div className="flex-1 flex flex-col justify-between p-3.5 sm:p-5 lg:px-6 lg:py-4 bg-slate-50 lg:min-h-0 lg:overflow-hidden gap-3">
             
             {/* Fila Superior Compacta */}
-            <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-gray-200 shrink-0">
-              <div className="flex items-center gap-3">
-                <div className="px-3 py-1 bg-blue-900 text-white rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-gray-200 shrink-0">
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="px-2.5 py-1 bg-blue-900 text-white rounded-lg text-[11px] font-bold uppercase tracking-wider flex items-center gap-1">
                   <Compass className="w-3.5 h-3.5 text-blue-300" /> Área Predicha
                 </div>
-                <h2 className="text-lg sm:text-2xl font-extrabold text-slate-800">
+                <h2 className="text-base sm:text-xl font-extrabold text-slate-800">
                   {resultados.area_recomendada}
                 </h2>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-lg text-xs font-bold text-emerald-800">
-                  🎯 Exactitud Nivel 1 (Área): {accArea}%
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-lg text-[11px] font-bold text-emerald-800">
+                  🎯 Exactitud Nivel 1: {accArea}%
                 </div>
-                <div className="bg-indigo-50 border border-indigo-200 px-3 py-1 rounded-lg text-xs font-bold text-indigo-800">
-                  🏆 Exactitud Top-3 Global: {top3Acc}%
+                <div className="bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-lg text-[11px] font-bold text-indigo-800">
+                  🏆 Exactitud Top-3: {top3Acc}%
                 </div>
                 <button
                   onClick={handleReiniciar}
-                  className="px-3 py-1.5 bg-white border border-gray-300 hover:bg-gray-100 text-slate-700 font-semibold rounded-lg text-xs flex items-center gap-1.5 shadow-sm"
+                  className="px-2.5 py-1 bg-white border border-gray-300 hover:bg-gray-100 text-slate-700 font-semibold rounded-lg text-[11px] flex items-center gap-1 shadow-sm ml-auto sm:ml-0"
                 >
-                  <RefreshCw className="w-3.5 h-3.5" /> Repetir Test
+                  <RefreshCw className="w-3 h-3" /> Repetir
                 </button>
               </div>
             </div>
 
-            {/* Grid Central en 12 Columnas que llena el resto de la pantalla */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 min-h-0 pt-3">
+            {/* Grid Central: Apilado en móvil/tablet, 12 columnas sin scroll en escritorio */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 flex-1 lg:min-h-0">
               
-              {/* COLUMNA IZQUIERDA (5 cols): Top 3 Carreras + Promedios RIASEC + Tabla Recall/Precision */}
-              <div className="lg:col-span-5 flex flex-col justify-between gap-3 min-h-0">
+              {/* COLUMNA IZQUIERDA (5 cols): Top 3 + Vector RIASEC + Tabla Recall/Precision */}
+              <div className="lg:col-span-5 flex flex-col justify-between gap-2.5 lg:min-h-0">
                 
                 {/* Top 3 Carreras */}
-                <div className="bg-white p-3.5 rounded-xl border border-gray-200 shadow-sm">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 flex items-center gap-1.5">
-                    <Award className="w-4 h-4 text-blue-600" /> Top 3 Carreras Recomendadas
+                <div className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm shrink-0">
+                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5 flex items-center gap-1.5">
+                    <Award className="w-3.5 h-3.5 text-blue-600" /> Top 3 Carreras Recomendadas
                   </h4>
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     {resultados.top_carreras.map((item, idx) => (
                       <div key={idx}>
                         <div className="flex justify-between text-xs font-bold text-slate-800 mb-0.5">
                           <span className="truncate pr-2">{idx + 1}. {item.carrera}</span>
                           <span className="text-blue-600 shrink-0">{item.afinidad}%</span>
                         </div>
-                        <div className="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                        <div className="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
                           <div
                             className="bg-blue-600 h-full rounded-full"
                             style={{ width: `${item.afinidad}%` }}
@@ -482,14 +484,14 @@ export const Chatbot = () => {
 
                 {/* Puntajes RIASEC del Estudiante */}
                 {promediosUsuario && (
-                  <div className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm">
-                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">
-                      Tu Vector RIASEC Promedio (Escala 1-10 → 1-7)
+                  <div className="bg-white p-2.5 rounded-xl border border-gray-200 shadow-sm shrink-0">
+                    <h4 className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+                      Promedios RIASEC (Escala 1-10 → 1-7)
                     </h4>
-                    <div className="grid grid-cols-6 gap-1.5 text-center">
+                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5 text-center">
                       {Object.entries(promediosUsuario).map(([key, val]) => (
-                        <div key={key} className="bg-slate-50 p-1.5 rounded-lg border border-gray-100">
-                          <span className="text-[10px] font-bold text-slate-500 block">{key.slice(0, 3).toUpperCase()}</span>
+                        <div key={key} className="bg-slate-50 p-1 rounded-lg border border-gray-100">
+                          <span className="text-[9px] font-bold text-slate-500 block">{key.slice(0, 3).toUpperCase()}</span>
                           <span className="text-xs font-extrabold text-blue-700">{val}</span>
                           <span className="text-[9px] text-gray-400 block">({convertirEscala(val).toFixed(1)})</span>
                         </div>
@@ -499,21 +501,21 @@ export const Chatbot = () => {
                 )}
 
                 {/* Tabla de Métricas del Modelo (Precision, Recall, F1-Score) */}
-                <div className="bg-white p-3.5 rounded-xl border border-gray-200 shadow-sm flex-1 flex flex-col justify-between min-h-0">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                      <Activity className="w-4 h-4 text-indigo-600" /> Métricas del Clasificador por Área
+                <div className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex-1 flex flex-col justify-between lg:min-h-0">
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1">
+                      <Activity className="w-3.5 h-3.5 text-indigo-600" /> Métricas por Área (Recall / F1)
                     </h4>
-                    <span className="text-[10px] text-gray-400 font-medium">Test Split 20%</span>
+                    <span className="text-[9px] text-gray-400 font-medium">Test Split 20%</span>
                   </div>
                   <div className="overflow-x-auto">
-                    <table className="w-full text-left border-collapse text-[11px]">
+                    <table className="w-full text-left border-collapse text-[10.5px]">
                       <thead>
                         <tr className="border-b border-gray-200 text-slate-500">
                           <th className="py-1 font-bold">Área UdeG</th>
-                          <th className="py-1 text-center font-bold">Precision</th>
+                          <th className="py-1 text-center font-bold">Prec.</th>
                           <th className="py-1 text-center font-bold">Recall</th>
-                          <th className="py-1 text-center font-bold">F1-Score</th>
+                          <th className="py-1 text-center font-bold">F1</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-100">
@@ -524,14 +526,14 @@ export const Chatbot = () => {
                             return (
                               <tr
                                 key={areaName}
-                                className={isUserArea ? 'bg-blue-50/80 font-bold text-blue-900' : 'text-slate-700'}
+                                className={isUserArea ? 'bg-blue-50/90 font-bold text-blue-900' : 'text-slate-700'}
                               >
-                                <td className="py-1 pr-2 truncate max-w-[170px]" title={areaName}>
+                                <td className="py-0.5 pr-1 truncate max-w-[145px] sm:max-w-[180px]" title={areaName}>
                                   {areaName}
                                 </td>
-                                <td className="py-1 text-center">{(m.precision * 100).toFixed(0)}%</td>
-                                <td className="py-1 text-center text-emerald-700 font-semibold">{(m.recall * 100).toFixed(0)}%</td>
-                                <td className="py-1 text-center text-indigo-700 font-semibold">{(m['f1-score'] * 100).toFixed(0)}%</td>
+                                <td className="py-0.5 text-center">{(m.precision * 100).toFixed(0)}%</td>
+                                <td className="py-0.5 text-center text-emerald-700 font-semibold">{(m.recall * 100).toFixed(0)}%</td>
+                                <td className="py-0.5 text-center text-indigo-700 font-semibold">{(m['f1-score'] * 100).toFixed(0)}%</td>
                               </tr>
                             );
                           })}
@@ -543,31 +545,31 @@ export const Chatbot = () => {
               </div>
 
               {/* COLUMNA DERECHA (7 cols): Mapa de Similitud PCA + K-Means */}
-              <div className="lg:col-span-7 bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex flex-col min-h-[280px] lg:min-h-0">
+              <div className="lg:col-span-7 bg-white p-3.5 rounded-xl border border-gray-200 shadow-sm flex flex-col h-[320px] sm:h-[380px] lg:h-auto lg:min-h-0">
                 <div className="flex items-center justify-between mb-1 shrink-0">
                   <div>
-                    <h4 className="text-sm font-bold text-slate-800">
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-800">
                       Mapa de Similitud de Carreras (PCA 2D + K-Means)
                     </h4>
-                    <p className="text-[11px] text-gray-500">
-                      Estrella roja: Tu ubicación ({resultados.posicion_estudiante.x}, {resultados.posicion_estudiante.y}) · Cluster asignado: #{resultados.posicion_estudiante.cluster + 1}
+                    <p className="text-[10px] sm:text-[11px] text-gray-500">
+                      Estrella roja: Tu ubicación ({resultados.posicion_estudiante.x}, {resultados.posicion_estudiante.y}) · Cluster #{resultados.posicion_estudiante.cluster + 1}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex-1 w-full min-h-0">
                   <ResponsiveContainer width="100%" height="100%">
-                    <ScatterChart margin={{ top: 10, right: 15, bottom: 5, left: -15 }}>
+                    <ScatterChart margin={{ top: 8, right: 12, bottom: 4, left: -18 }}>
                       <XAxis type="number" dataKey="PCA_X" name="PCA X" tick={{ fontSize: 10 }} />
                       <YAxis type="number" dataKey="PCA_Y" name="PCA Y" tick={{ fontSize: 10 }} />
-                      <ZAxis range={[50, 50]} />
+                      <ZAxis range={[45, 45]} />
                       <Tooltip
                         cursor={{ strokeDasharray: '3 3' }}
                         content={({ active, payload }) => {
                           if (active && payload && payload.length) {
                             const d = payload[0].payload;
                             return (
-                              <div className="bg-slate-900 text-white text-xs p-2.5 rounded-lg shadow-lg">
+                              <div className="bg-slate-900 text-white text-xs p-2 rounded-lg shadow-lg">
                                 <p className="font-bold">{d.Title}</p>
                                 {d.Cluster !== undefined && (
                                   <p className="text-blue-300">Cluster K-Means: {d.Cluster + 1}</p>
@@ -578,8 +580,8 @@ export const Chatbot = () => {
                           return null;
                         }}
                       />
-                      <Legend wrapperStyle={{ fontSize: '11px' }} />
-                      <Scatter name="Carreras UdeG (Clusters)" data={resultados.mapa_carreras} fill="#3b82f6">
+                      <Legend wrapperStyle={{ fontSize: '10px' }} />
+                      <Scatter name="Carreras UdeG" data={resultados.mapa_carreras} fill="#3b82f6">
                         {resultados.mapa_carreras.map((entry, index) => (
                           <Cell
                             key={`cell-${index}`}
@@ -591,7 +593,7 @@ export const Chatbot = () => {
                         name="Tu Estudiante"
                         data={[
                           {
-                            Title: 'Tu Perfil Vocacional',
+                            Title: '⭐ Tu Perfil Vocacional',
                             PCA_X: resultados.posicion_estudiante.x,
                             PCA_Y: resultados.posicion_estudiante.y,
                           },
