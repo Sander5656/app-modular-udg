@@ -21,6 +21,8 @@ modelos_por_area = joblib.load("modelos_rf_carreras.pkl")
 pca = joblib.load("modelo_pca.pkl")
 kmeans = joblib.load("modelo_kmeans.pkl")
 centroides_carreras = joblib.load("centroides_carreras.pkl")
+metricas_modelo = joblib.load("metricas_modelo.pkl")
+
 
 COLUMNAS_RIASEC = ['Realistic', 'Investigative', 'Artistic', 'Social', 'Enterprising', 'Conventional']
 
@@ -86,6 +88,7 @@ def predecir_vocacion(perfil: PerfilRIASEC):
                 "cluster": cluster_usuario
             },
             "mapa_carreras": centroides_carreras
+            "metricas": metricas_modelo
         }
 
     except Exception as e:
