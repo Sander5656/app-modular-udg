@@ -10,6 +10,7 @@ import CenterDetail from "./pages/CenterDetail";
 import CareerDetail from "./pages/CareerDetail";
 import NotFound from "./pages/NotFound";
 import Location from "@/pages/Location";
+import HelpInfo from "@/pages/HelpInfo";
 import { Chatbot } from "@/pages/Chatbot";
 import { HelpChatbot } from "@/pages/HelpChatbot";
 
@@ -58,7 +59,7 @@ const App = () => (
             <Route path="/carrera/:id" element={<CareerDetail />} />
             <Route path="/location" element={<Location />} />
             <Route path="/help" element={<HelpChatbot />} />
-            
+            <Route path="/helpinfo" element={<HelpInfo />} />
             {/* Nuevas rutas legales */}
             <Route path="/advice" element={<Advice />} />
             <Route path="/policy" element={<Policy />} />
