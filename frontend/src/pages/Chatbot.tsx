@@ -234,7 +234,6 @@ export const Chatbot = () => {
     setStage('intro');
   };
 
-  // Leemos directamente las métricas enviadas por el modelo en el backend (sin constantes hardcodeadas)
   const areaReport = resultados?.metricas?.reporte_areas || null;
   const afinidadAreas = resultados?.afinidad_areas || null;
 
@@ -338,7 +337,7 @@ export const Chatbot = () => {
           </div>
         )}
 
-{/* ================= ETAPA 3: DASHBOARD DE RESULTADOS (GRID 2x2 SIN CORTES) ================= */}
+        {/* ================= ETAPA 3: DASHBOARD DE RESULTADOS (GRID 2x2 SIN CORTES) ================= */}
         {stage === 'results' && resultados && (
           <div className="flex-1 flex flex-col justify-between p-3 sm:p-4 lg:px-6 lg:py-3.5 bg-slate-50 lg:min-h-0 lg:overflow-hidden gap-2.5">
             
@@ -559,3 +558,7 @@ export const Chatbot = () => {
             </div>
           </div>
         )}
+      </div>
+    </div>
+  );
+};
