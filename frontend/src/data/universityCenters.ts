@@ -3883,7 +3883,7 @@ export const universityCenters: UniversityCenter[] = [
       "Sus programas han sido integrados gradualmente a los centros temáticos para fortalecer la multimodalidad",
       "Cuenta con una sólida red de investigación en gestión del conocimiento y educación virtual"
     ],
-    coordinates: { lat: 20.6720, lng: -103.3812 },
+    coordinates: { lat: 0, lng: 0 },
     image: "/centers/suv.jpg",
     careers: [
       {
