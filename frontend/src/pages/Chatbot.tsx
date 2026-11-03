@@ -338,169 +338,224 @@ export const Chatbot = () => {
           </div>
         )}
 
-        {/* ================= ETAPA 3: DASHBOARD DE RESULTADOS ================= */}
+{/* ================= ETAPA 3: DASHBOARD DE RESULTADOS (GRID 2x2 SIN CORTES) ================= */}
         {stage === 'results' && resultados && (
-          <div className="flex-1 flex flex-col justify-between p-3.5 sm:p-5 lg:px-6 lg:py-4 bg-slate-50 lg:min-h-0 lg:overflow-hidden gap-3">
+          <div className="flex-1 flex flex-col justify-between p-3 sm:p-4 lg:px-6 lg:py-3.5 bg-slate-50 lg:min-h-0 lg:overflow-hidden gap-2.5">
             
-            {/* Header de Resultados */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-gray-200 shrink-0">
+            {/* Header de Resultados Compacto */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-gray-200 shrink-0">
               <div className="flex flex-wrap items-center gap-2">
-                <div className="px-2.5 py-1 bg-blue-900 text-white rounded-lg text-[11px] font-bold uppercase tracking-wider flex items-center gap-1"><Compass className="w-3.5 h-3.5 text-blue-300" /> Área Predicha</div>
-                <h2 className="text-base sm:text-xl font-extrabold text-slate-800">{resultados.area_recomendada}</h2>
+                <div className="px-2.5 py-1 bg-blue-900 text-white rounded-lg text-[11px] font-bold uppercase tracking-wider flex items-center gap-1">
+                  <Compass className="w-3.5 h-3.5 text-blue-300" /> Área Predicha
+                </div>
+                <h2 className="text-base sm:text-lg lg:text-xl font-extrabold text-slate-800">
+                  {resultados.area_recomendada}
+                </h2>
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 {resultados.metricas?.acc_area !== undefined && (
                   <div className="bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-lg text-[11px] font-bold text-emerald-800">
-                     Exactitud Nivel 1: {resultados.metricas.acc_area}%
+                    Exactitud Nivel 1: {resultados.metricas.acc_area}%
                   </div>
                 )}
                 {resultados.metricas?.top3_acc !== undefined && (
                   <div className="bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-lg text-[11px] font-bold text-indigo-800">
-                     Exactitud Top-3: {resultados.metricas.top3_acc}%
+                    Exactitud Top-3: {resultados.metricas.top3_acc}%
                   </div>
                 )}
-                <button onClick={handleReiniciar} className="px-2.5 py-1 bg-white border border-gray-300 hover:bg-gray-100 text-slate-700 font-semibold rounded-lg text-[11px] flex items-center gap-1 shadow-sm ml-auto sm:ml-0"><RefreshCw className="w-3 h-3" /> Repetir</button>
+                <button
+                  onClick={handleReiniciar}
+                  className="px-2.5 py-1 bg-white border border-gray-300 hover:bg-gray-100 text-slate-700 font-semibold rounded-lg text-[11px] flex items-center gap-1 shadow-sm ml-auto sm:ml-0"
+                >
+                  <RefreshCw className="w-3 h-3" /> Repetir
+                </button>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 flex-1 lg:min-h-0">
+            {/* Grid 12 Columnas dividido en 2 filas balanceadas */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 lg:grid-rows-2 gap-3 flex-1 lg:min-h-0">
               
-              {/* COLUMNA IZQUIERDA (5 cols): Top 3 + Huella RIASEC + Métricas del Modelo */}
-              <div className="lg:col-span-5 flex flex-col justify-between gap-2.5 lg:min-h-0 overflow-y-auto lg:overflow-visible">
-                
-                {/* Top 3 Carreras Clickables */}
-                <div className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm shrink-0">
-                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-2 flex items-center gap-1.5"><Award className="w-3.5 h-3.5 text-blue-600" /> Top 3 Carreras (Haz clic para ver detalles)</h4>
-                  <div className="space-y-1.5">
-                    {resultados.top_carreras.map((item, idx) => {
-                      const careerInfo = findCareerInfo(item.carrera);
-                      const LinkWrapper: any = careerInfo ? Link : 'div';
-                      const linkProps = careerInfo ? { to: `/carrera/${careerInfo.careerId}` } : {};
+              {/* 1. ARRIBA IZQUIERDA (5 cols): Top 3 Carreras Clickables */}
+              <div className="lg:col-span-5 bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between lg:min-h-0">
+                <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5 flex items-center gap-1.5 shrink-0">
+                  <Award className="w-3.5 h-3.5 text-blue-600" /> Top 3 Carreras (Haz clic para ver detalles)
+                </h4>
+                <div className="space-y-1.5 my-auto">
+                  {resultados.top_carreras.map((item, idx) => {
+                    const careerInfo = findCareerInfo(item.carrera);
+                    const LinkWrapper: any = careerInfo ? Link : 'div';
+                    const linkProps = careerInfo ? { to: `/carrera/${careerInfo.careerId}` } : {};
 
-                      return (
-                        <LinkWrapper key={idx} {...linkProps} className={`block p-2 rounded-lg border border-gray-100 ${careerInfo ? 'hover:bg-blue-50/50 hover:border-blue-300 transition-colors cursor-pointer group' : ''}`}>
-                          <div className="flex justify-between items-center text-xs font-bold text-slate-800 mb-1">
-                            <span className="truncate pr-2 flex items-center gap-1.5">
-                              {idx + 1}. {item.carrera}
-                              {careerInfo && <span className="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded text-[9px] font-black">{careerInfo.centerAcronym}</span>}
-                            </span>
-                            <div className="flex items-center gap-1.5">
-                              <span className="text-blue-600 shrink-0">{item.afinidad}%</span>
-                              {careerInfo && <ArrowUpRight className="w-3.5 h-3.5 text-blue-400 group-hover:text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />}
-                            </div>
+                    return (
+                      <LinkWrapper
+                        key={idx}
+                        {...linkProps}
+                        className={`block px-2.5 py-1.5 rounded-lg border border-gray-100 ${
+                          careerInfo ? 'hover:bg-blue-50/50 hover:border-blue-300 transition-colors cursor-pointer group' : ''
+                        }`}
+                      >
+                        <div className="flex justify-between items-center text-xs font-bold text-slate-800 mb-1">
+                          <span className="truncate pr-2 flex items-center gap-1.5">
+                            {idx + 1}. {item.carrera}
+                            {careerInfo && (
+                              <span className="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded text-[9px] font-black">
+                                {careerInfo.centerAcronym}
+                              </span>
+                            )}
+                          </span>
+                          <div className="flex items-center gap-1">
+                            <span className="text-blue-600 shrink-0">{item.afinidad}%</span>
+                            {careerInfo && (
+                              <ArrowUpRight className="w-3.5 h-3.5 text-blue-400 group-hover:text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            )}
                           </div>
-                          <div className="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
-                            <div className="bg-blue-600 h-full rounded-full" style={{ width: `${item.afinidad}%` }} />
-                          </div>
-                        </LinkWrapper>
-                      );
-                    })}
-                  </div>
+                        </div>
+                        <div className="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+                          <div className="bg-blue-600 h-full rounded-full" style={{ width: `${item.afinidad}%` }} />
+                        </div>
+                      </LinkWrapper>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* 2. ABAJO IZQUIERDA (5 cols): Tabla de Métricas y Afinidad por Área */}
+              <div className="lg:col-span-5 lg:row-start-2 bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between lg:min-h-0">
+                <div className="flex items-center justify-between mb-1 shrink-0">
+                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1">
+                    <Activity className="w-3.5 h-3.5 text-indigo-600" /> Métricas del Modelo y Afinidad por Área
+                  </h4>
                 </div>
 
-                {/* Gráfica de Radar RIASEC */}
-                <div className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm shrink-0 flex flex-col items-center">
-                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1 self-start">Huella Vocacional RIASEC</h4>
-                  <div className="w-full h-[170px] sm:h-[200px] lg:h-[185px]">
+                {areaReport ? (
+                  <div className="overflow-x-auto my-auto">
+                    <table className="w-full text-left border-collapse text-[10.5px]">
+                      <thead>
+                        <tr className="border-b border-gray-200 text-slate-500">
+                          <th className="py-1 font-bold">Área UdeG</th>
+                          {afinidadAreas && <th className="py-1 text-center font-bold text-blue-600">Afinidad</th>}
+                          <th className="py-1 text-center font-bold">Prec.</th>
+                          <th className="py-1 text-center font-bold">Recall</th>
+                          <th className="py-1 text-center font-bold">F1</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        {Object.entries(areaReport)
+                          .filter(([key]) => !['accuracy', 'macro avg', 'weighted avg'].includes(key))
+                          .map(([areaName, m]) => (
+                            <tr
+                              key={areaName}
+                              className={
+                                areaName === resultados.area_recomendada
+                                  ? 'bg-blue-50/90 font-bold text-blue-900'
+                                  : 'text-slate-700'
+                              }
+                            >
+                              <td className="py-1 pr-1 truncate max-w-[130px] sm:max-w-[160px]" title={areaName}>
+                                {areaName}
+                              </td>
+                              {afinidadAreas && (
+                                <td className="py-1 text-center font-bold text-blue-600">
+                                  {afinidadAreas[areaName] !== undefined ? `${afinidadAreas[areaName]}%` : '-'}
+                                </td>
+                              )}
+                              <td className="py-1 text-center">{(m.precision * 100).toFixed(0)}%</td>
+                              <td className="py-1 text-center text-emerald-700 font-semibold">
+                                {(m.recall * 100).toFixed(0)}%
+                              </td>
+                              <td className="py-1 text-center text-indigo-700 font-semibold">
+                                {(m['f1-score'] * 100).toFixed(0)}%
+                              </td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ) : (
+                  <p className="text-[11px] text-slate-500 my-auto">
+                    Sube <strong>metricas_modelo.pkl</strong> a tu servicio en Render para visualizar Precision, Recall y F1-Score directos del modelo.
+                  </p>
+                )}
+              </div>
+
+              {/* 3. COLUMNA DERECHA (7 cols, ocupa las 2 filas): Huella RIASEC + Mapa PCA lado a lado */}
+              <div className="lg:col-span-7 lg:row-span-2 grid grid-cols-1 md:grid-cols-12 gap-3 lg:min-h-0">
+                
+                {/* Sub-columna: Gráfica de Radar RIASEC (5 de 12 cols) */}
+                <div className="md:col-span-5 bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between h-[260px] lg:h-auto lg:min-h-0">
+                  <div className="shrink-0">
+                    <h4 className="text-xs font-bold text-slate-800">Huella Vocacional RIASEC</h4>
+                    <p className="text-[10px] text-gray-500">Puntaje promedio (Escala 1 a 10)</p>
+                  </div>
+                  <div className="flex-1 w-full min-h-0">
                     <ResponsiveContainer width="100%" height="100%">
-                      <RadarChart cx="50%" cy="50%" outerRadius="75%" data={radarData}>
+                      <RadarChart cx="50%" cy="50%" outerRadius="70%" data={radarData}>
                         <PolarGrid stroke="#e2e8f0" />
-                        <PolarAngleAxis dataKey="subject" tick={{ fill: '#64748b', fontSize: 9.5, fontWeight: 'bold' }} />
+                        <PolarAngleAxis dataKey="subject" tick={{ fill: '#475569', fontSize: 10, fontWeight: 'bold' }} />
                         <PolarRadiusAxis angle={30} domain={[0, 10]} tick={false} axisLine={false} />
-                        <Radar name="Promedio (1-10)" dataKey="A" stroke="#2563eb" fill="#3b82f6" fillOpacity={0.4} />
+                        <Radar name="Promedio (1-10)" dataKey="A" stroke="#2563eb" fill="#3b82f6" fillOpacity={0.45} />
                         <Tooltip wrapperStyle={{ fontSize: '11px' }} />
                       </RadarChart>
                     </ResponsiveContainer>
                   </div>
                 </div>
 
-                {/* Tabla de Métricas Directas del Backend */}
-                <div className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex-1 flex flex-col justify-between lg:min-h-0">
-                  <div className="flex items-center justify-between mb-1">
-                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1">
-                      <Activity className="w-3.5 h-3.5 text-indigo-600" /> Métricas del Modelo y Afinidad por Área
-                    </h4>
-                  </div>
-
-                  {areaReport ? (
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-left border-collapse text-[10.5px]">
-                        <thead>
-                          <tr className="border-b border-gray-200 text-slate-500">
-                            <th className="py-1 font-bold">Área UdeG</th>
-                            {afinidadAreas && <th className="py-1 text-center font-bold text-blue-600">Tu Afinidad</th>}
-                            <th className="py-1 text-center font-bold">Prec.</th>
-                            <th className="py-1 text-center font-bold">Recall</th>
-                            <th className="py-1 text-center font-bold">F1</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-100">
-                          {Object.entries(areaReport)
-                            .filter(([key]) => !['accuracy', 'macro avg', 'weighted avg'].includes(key))
-                            .map(([areaName, m]) => (
-                              <tr key={areaName} className={areaName === resultados.area_recomendada ? 'bg-blue-50/90 font-bold text-blue-900' : 'text-slate-700'}>
-                                <td className="py-0.5 pr-1 truncate max-w-[135px] sm:max-w-[165px]" title={areaName}>{areaName}</td>
-                                {afinidadAreas && (
-                                  <td className="py-0.5 text-center font-bold text-blue-600">
-                                    {afinidadAreas[areaName] !== undefined ? `${afinidadAreas[areaName]}%` : '-'}
-                                  </td>
-                                )}
-                                <td className="py-0.5 text-center">{(m.precision * 100).toFixed(0)}%</td>
-                                <td className="py-0.5 text-center text-emerald-700 font-semibold">{(m.recall * 100).toFixed(0)}%</td>
-                                <td className="py-0.5 text-center text-indigo-700 font-semibold">{(m['f1-score'] * 100).toFixed(0)}%</td>
-                              </tr>
-                            ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  ) : (
-                    <p className="text-[11px] text-slate-500 my-auto">
-                      Sube <strong>metricas_modelo.pkl</strong> a tu servicio en Render para visualizar Precision, Recall y F1-Score directos del modelo.
+                {/* Sub-columna: Mapa PCA + K-Means (7 de 12 cols) */}
+                <div className="md:col-span-7 bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between h-[300px] lg:h-auto lg:min-h-0">
+                  <div className="shrink-0 mb-1">
+                    <h4 className="text-xs font-bold text-slate-800">Mapa de Similitud (PCA 2D + K-Means)</h4>
+                    <p className="text-[10px] text-gray-500">
+                      Estrella roja: ({resultados.posicion_estudiante.x}, {resultados.posicion_estudiante.y}) · Cluster #{resultados.posicion_estudiante.cluster + 1}
                     </p>
-                  )}
-                </div>
-              </div>
-
-              {/* COLUMNA DERECHA (7 cols): Mapa PCA */}
-              <div className="lg:col-span-7 bg-white p-3.5 rounded-xl border border-gray-200 shadow-sm flex flex-col h-[350px] sm:h-[400px] lg:h-auto lg:min-h-0">
-                <div className="flex items-center justify-between mb-1 shrink-0">
-                  <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-slate-800">Mapa de Similitud de Carreras (PCA 2D + K-Means)</h4>
-                    <p className="text-[10px] sm:text-[11px] text-gray-500">Estrella roja: Tu ubicación ({resultados.posicion_estudiante.x}, {resultados.posicion_estudiante.y}) · Cluster #{resultados.posicion_estudiante.cluster + 1}</p>
+                  </div>
+                  <div className="flex-1 w-full min-h-0">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <ScatterChart margin={{ top: 8, right: 10, bottom: 4, left: -20 }}>
+                        <XAxis type="number" dataKey="PCA_X" name="PCA X" tick={{ fontSize: 9.5 }} />
+                        <YAxis type="number" dataKey="PCA_Y" name="PCA Y" tick={{ fontSize: 9.5 }} />
+                        <ZAxis range={[40, 40]} />
+                        <Tooltip
+                          cursor={{ strokeDasharray: '3 3' }}
+                          content={({ active, payload }) => {
+                            if (active && payload && payload.length) {
+                              const d = payload[0].payload;
+                              return (
+                                <div className="bg-slate-900 text-white text-xs p-2 rounded-lg shadow-lg">
+                                  <p className="font-bold">{d.Title}</p>
+                                  {d.Cluster !== undefined && (
+                                    <p className="text-blue-300">Cluster K-Means: {d.Cluster + 1}</p>
+                                  )}
+                                </div>
+                              );
+                            }
+                            return null;
+                          }}
+                        />
+                        <Legend wrapperStyle={{ fontSize: '10px' }} />
+                        <Scatter name="Carreras UdeG" data={resultados.mapa_carreras} fill="#3b82f6">
+                          {resultados.mapa_carreras.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={CLUSTER_COLORS[entry.Cluster % CLUSTER_COLORS.length]} />
+                          ))}
+                        </Scatter>
+                        <Scatter
+                          name="Tu Estudiante"
+                          data={[
+                            {
+                              Title: 'Tu Perfil Vocacional',
+                              PCA_X: resultados.posicion_estudiante.x,
+                              PCA_Y: resultados.posicion_estudiante.y
+                            }
+                          ]}
+                          fill="#ef4444"
+                          shape="star"
+                        />
+                      </ScatterChart>
+                    </ResponsiveContainer>
                   </div>
                 </div>
-                <div className="flex-1 w-full min-h-0">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <ScatterChart margin={{ top: 8, right: 12, bottom: 4, left: -18 }}>
-                      <XAxis type="number" dataKey="PCA_X" name="PCA X" tick={{ fontSize: 10 }} />
-                      <YAxis type="number" dataKey="PCA_Y" name="PCA Y" tick={{ fontSize: 10 }} />
-                      <ZAxis range={[45, 45]} />
-                      <Tooltip cursor={{ strokeDasharray: '3 3' }} content={({ active, payload }) => {
-                        if (active && payload && payload.length) {
-                          const d = payload[0].payload;
-                          return (
-                            <div className="bg-slate-900 text-white text-xs p-2 rounded-lg shadow-lg">
-                              <p className="font-bold">{d.Title}</p>
-                              {d.Cluster !== undefined && <p className="text-blue-300">Cluster K-Means: {d.Cluster + 1}</p>}
-                            </div>
-                          );
-                        }
-                        return null;
-                      }} />
-                      <Legend wrapperStyle={{ fontSize: '10px' }} />
-                      <Scatter name="Carreras UdeG" data={resultados.mapa_carreras} fill="#3b82f6">
-                        {resultados.mapa_carreras.map((entry, index) => <Cell key={`cell-${index}`} fill={CLUSTER_COLORS[entry.Cluster % CLUSTER_COLORS.length]} />)}
-                      </Scatter>
-                      <Scatter name="Tu Estudiante" data={[{ Title: 'Tu Perfil Vocacional', PCA_X: resultados.posicion_estudiante.x, PCA_Y: resultados.posicion_estudiante.y }]} fill="#ef4444" shape="star" />
-                    </ScatterChart>
-                  </ResponsiveContainer>
-                </div>
+
               </div>
 
             </div>
           </div>
         )}
-      </div>
-    </div>
-  );
-};
