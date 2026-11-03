@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 import joblib
 import pandas as pd
+import os
 
 app = FastAPI(title="API Vocacional UdeG - RIASEC")
 
