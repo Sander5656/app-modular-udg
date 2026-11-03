@@ -233,7 +233,7 @@ export const ProjectPresentation = () => {
                   <div className="text-2xl sm:text-3xl font-bold text-white/40 mt-1">03</div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2">Especialistas (N2)</h3>
-                    <p className="text-xs sm:text-sm text-white/80">Un bosque aleatorio independiente por área; compiten solo las carreras de dicho sector específico.</p>
+                    <p className="text-xs sm:text-sm text-white/80">Un Random Forest independiente por área; compiten solo las carreras de dicho sector específico.</p>
                   </div>
                 </div>
 
