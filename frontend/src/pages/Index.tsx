@@ -4,10 +4,11 @@ import { Info, ArrowRight } from "lucide-react";
 import Logo from "../images/UDG.png";
 
 const Index = () => {
-  const totalCareers = universityCenters.reduce(
-    (acc, center) => acc + center.careers.length,
-    0
-  );
+  const totalCareers = new Set(
+    universityCenters.flatMap((center) => 
+      center.careers.map((career) => career.name)
+    )
+  ).size;
 
   const handleScrollToCentros = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
