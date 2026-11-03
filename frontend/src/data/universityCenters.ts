@@ -3873,7 +3873,7 @@ export const universityCenters: UniversityCenter[] = [
       label: "Consultar puntajes mínimos de los ciclos escolares recientes",
       url: "/centers/puntajes_suv.pdf"
     },
-    address: "",
+    address: "Av. La Paz 2453, Col. Arcos Sur, 44140 Guadalajara, Jalisco",
     phone: "33 3268 8888",
     email: "atencion@redudg.udg.mx",
     website: "https://www.udgvirtual.udg.mx",
@@ -3883,7 +3883,7 @@ export const universityCenters: UniversityCenter[] = [
       "Sus programas han sido integrados gradualmente a los centros temáticos para fortalecer la multimodalidad",
       "Cuenta con una sólida red de investigación en gestión del conocimiento y educación virtual"
     ],
-    coordinates: { lat: 0, lng: 0 },
+    coordinates: { lat: 20.6720, lng: -103.3812 },
     image: "/centers/suv.jpg",
     careers: [
       {

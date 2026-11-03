@@ -140,7 +140,7 @@ const udgCenters = [
     address: "Av. La Paz 2453, Col. Arcos Sur, 44140 Guadalajara, Jal.",
     mapsQuery: "UDGVirtual Sede La Paz Guadalajara",
     link: "https://www.google.com/maps/search/?api=1&query=20.6720,-103.3812",
-    coordinates: { lat: 20.6720, lng: -103.3812 },
+    coordinates: { lat: 0, lng: 0 },
     transport: {
       massTransit: ["Modalidad 100% en línea (Sede administrativa cerca de Glorieta Minerva)"],
       busRoutes: ["T10 (626)", "T09 (604)", "C74 (101)", "C124 (625)", "C127 (183)", "C136"]
