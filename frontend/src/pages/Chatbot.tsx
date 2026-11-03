@@ -42,31 +42,55 @@ interface Question {
   text: string;
 }
 
+// 36 Preguntas (6 por cada dimensión RIASEC) diseñadas para cubrir todos los subsectores de la UdeG
 const QUESTIONS: Question[] = [
-  { id: 1, category: 'Realistic', categoryLabel: 'Área Realista (Trabajo práctico, herramientas, maquinaria y exteriores)', text: '¿Qué tanto disfrutas construir, armar o reparar cosas con tus propias manos utilizando herramientas?' },
-  { id: 2, category: 'Realistic', categoryLabel: 'Área Realista (Trabajo práctico, herramientas, maquinaria y exteriores)', text: '¿Te gustaría un trabajo que implique estar al aire libre, en contacto con la naturaleza, plantas o animales, en lugar de estar dentro de una oficina?' },
-  { id: 3, category: 'Realistic', categoryLabel: 'Área Realista (Trabajo práctico, herramientas, maquinaria y exteriores)', text: '¿Qué tan cómodo te sientes operando maquinaria, equipos mecánicos, electrónicos o vehículos pesados?' },
-  { id: 4, category: 'Realistic', categoryLabel: 'Área Realista (Trabajo práctico, herramientas, maquinaria y exteriores)', text: '¿Prefieres resolver problemas prácticos y tangibles donde puedas ver resultados físicos inmediatos?' },
-  { id: 5, category: 'Investigative', categoryLabel: 'Área Investigadora (Ciencia, análisis, matemáticas y resolución de problemas)', text: '¿Qué tanto te apasiona investigar el "por qué" de las cosas, leer artículos científicos o descubrir nuevos datos?' },
-  { id: 6, category: 'Investigative', categoryLabel: 'Área Investigadora (Ciencia, análisis, matemáticas y resolución de problemas)', text: '¿Disfrutas resolver problemas matemáticos, acertijos lógicos o de programación de computadoras en tu tiempo libre?' },
-  { id: 7, category: 'Investigative', categoryLabel: 'Área Investigadora (Ciencia, análisis, matemáticas y resolución de problemas)', text: '¿Qué tan atractivo te resulta trabajar en un laboratorio haciendo experimentos y analizando resultados paso a paso?' },
-  { id: 8, category: 'Investigative', categoryLabel: 'Área Investigadora (Ciencia, análisis, matemáticas y resolución de problemas)', text: '¿Prefieres tareas que requieran pensar de forma analítica, leer y estudiar teorías antes que actuar de inmediato?' },
-  { id: 9, category: 'Artistic', categoryLabel: 'Área Artística (Creatividad, diseño, expresión y originalidad)', text: '¿Qué tan importante es para ti expresar tus ideas a través del arte, la escritura, la música, la actuación o el diseño?' },
-  { id: 10, category: 'Artistic', categoryLabel: 'Área Artística (Creatividad, diseño, expresión y originalidad)', text: '¿Prefieres trabajar en entornos flexibles donde puedas usar tu imaginación y no haya reglas o rutinas rígidas?' },
-  { id: 11, category: 'Artistic', categoryLabel: 'Área Artística (Creatividad, diseño, expresión y originalidad)', text: '¿Disfrutas crear cosas originales, ya sea diseñando gráficos, escribiendo historias, pintando o decorando espacios?' },
-  { id: 12, category: 'Artistic', categoryLabel: 'Área Artística (Creatividad, diseño, expresión y originalidad)', text: '¿Qué tanto valoras la estética, la originalidad y la innovación visual o sonora en los proyectos que realizas?' },
-  { id: 13, category: 'Social', categoryLabel: 'Área Social (Ayuda, enseñanza, empatía y trabajo comunitario)', text: '¿Qué tanta satisfacción sientes al ayudar, cuidar, orientar o enseñar a otras personas?' },
-  { id: 14, category: 'Social', categoryLabel: 'Área Social (Ayuda, enseñanza, empatía y trabajo comunitario)', text: '¿Te gustaría un trabajo donde tu principal objetivo sea mejorar el bienestar físico, mental, educativo o emocional de la gente?' },
-  { id: 15, category: 'Social', categoryLabel: 'Área Social (Ayuda, enseñanza, empatía y trabajo comunitario)', text: '¿Disfrutas escuchar los problemas de los demás y brindar apoyo, consejos o contención de manera empática?' },
-  { id: 16, category: 'Social', categoryLabel: 'Área Social (Ayuda, enseñanza, empatía y trabajo comunitario)', text: '¿Prefieres trabajar en un rol donde tengas contacto humano constante, promoviendo el trabajo en equipo y la colaboración?' },
-  { id: 17, category: 'Enterprising', categoryLabel: 'Área Emprendedora (Liderazgo, persuasión, ventas y negocios)', text: '¿Qué tanto te gusta tomar la iniciativa, liderar equipos y dirigir proyectos hacia una meta específica?' },
-  { id: 18, category: 'Enterprising', categoryLabel: 'Área Emprendedora (Liderazgo, persuasión, ventas y negocios)', text: '¿Disfrutas convencer a otros sobre tus ideas, debatir, negociar o participar en actividades de ventas y marketing?' },
-  { id: 19, category: 'Enterprising', categoryLabel: 'Área Emprendedora (Liderazgo, persuasión, ventas y negocios)', text: '¿Te atrae la idea de iniciar tu propio negocio, tomar riesgos financieros o asumir roles gerenciales de alta responsabilidad?' },
-  { id: 20, category: 'Enterprising', categoryLabel: 'Área Emprendedora (Liderazgo, persuasión, ventas y negocios)', text: '¿Qué tan importante es para ti alcanzar posiciones de liderazgo, estatus, influencia o reconocimiento público en tu carrera?' },
-  { id: 21, category: 'Conventional', categoryLabel: 'Área Convencional (Organización, datos, rutinas y administración)', text: '¿Qué tanto disfrutas organizar información, llevar registros detallados y trabajar con bases de datos o sistemas de archivos?' },
-  { id: 22, category: 'Conventional', categoryLabel: 'Área Convencional (Organización, datos, rutinas y administración)', text: '¿Prefieres trabajos que tengan reglas claras, procedimientos predecibles y rutinas bien establecidas?' },
-  { id: 23, category: 'Conventional', categoryLabel: 'Área Convencional (Organización, datos, rutinas y administración)', text: '¿Te consideras una persona muy detallista que disfruta verificando errores en documentos, presupuestos o cálculos financieros?' },
-  { id: 24, category: 'Conventional', categoryLabel: 'Área Convencional (Organización, datos, rutinas y administración)', text: '¿Qué tan cómodo te sientes trabajando en un entorno estructurado de oficina manejando trámites, logística o procesos administrativos?' }
+  // 1. REALISTA (6 preguntas: Mecánica/Electrónica, Obra Civil/Topografía, Agro/Veterinaria, Naturaleza/Biología, Laboratorio Industrial, Deporte/Actividad Física)
+  { id: 1, category: 'Realistic', categoryLabel: 'Área Realista (Práctica, Ingeniería Física, Campo y Manufactura)', text: '¿Qué tanto te gustaría armar, programar o reparar circuitos electrónicos, robots, motores o maquinaria industrial?' },
+  { id: 2, category: 'Realistic', categoryLabel: 'Área Realista (Práctica, Ingeniería Física, Campo y Manufactura)', text: '¿Te atrae participar en la construcción de obras civiles, carreteras, puentes o hacer mediciones de terrenos con equipo topográfico?' },
+  { id: 3, category: 'Realistic', categoryLabel: 'Área Realista (Práctica, Ingeniería Física, Campo y Manufactura)', text: '¿Disfrutarías trabajar en granjas, invernaderos o clínicas cuidando animales, cultivos agrícolas o producción pecuaria?' },
+  { id: 4, category: 'Realistic', categoryLabel: 'Área Realista (Práctica, Ingeniería Física, Campo y Manufactura)', text: '¿Prefieres un trabajo de campo al aire libre (bosques, costas, ecosistemas o reservas naturales) en vez de estar todo el día en un escritorio?' },
+  { id: 5, category: 'Realistic', categoryLabel: 'Área Realista (Práctica, Ingeniería Física, Campo y Manufactura)', text: '¿Te llama la atención operar instrumentos especializados en plantas de producción, laboratorios de materiales o energías renovables?' },
+  { id: 6, category: 'Realistic', categoryLabel: 'Área Realista (Práctica, Ingeniería Física, Campo y Manufactura)', text: '¿Te gustan las actividades que exigen movimiento físico, destreza manual, uso de herramientas o entrenamiento deportivo?' },
+
+  // 2. INVESTIGADOR (6 preguntas: Software/IA, Medicina/Clínica, Química/Fármacos, Física/Matemáticas, Investigación Social/Forense, Biotecnología/Genética)
+  { id: 7, category: 'Investigative', categoryLabel: 'Área Investigadora (Ciencia, Código, Salud Analítica e Investigación)', text: '¿Qué tanto disfrutas resolver problemas de lógica, escribir código de programación, desarrollar software o entrenar inteligencia artificial?' },
+  { id: 8, category: 'Investigative', categoryLabel: 'Área Investigadora (Ciencia, Código, Salud Analítica e Investigación)', text: '¿Te interesa estudiar cómo funciona el cuerpo humano, analizar síntomas clínicos y diagnosticar enfermedades desde un enfoque médico?' },
+  { id: 9, category: 'Investigative', categoryLabel: 'Área Investigadora (Ciencia, Código, Salud Analítica e Investigación)', text: '¿Qué tan atractivo te resulta hacer experimentos en un laboratorio químico, analizar muestras clínicas o desarrollar nuevos medicamentos?' },
+  { id: 10, category: 'Investigative', categoryLabel: 'Área Investigadora (Ciencia, Código, Salud Analítica e Investigación)', text: '¿Te apasiona aplicar matemáticas avanzadas, estadística o física para modelar fenómenos complejos y entender el universo?' },
+  { id: 11, category: 'Investigative', categoryLabel: 'Área Investigadora (Ciencia, Código, Salud Analítica e Investigación)', text: '¿Te gustaría investigar evidencias científicas, analizar escenas forenses o estudiar a fondo las causas de los fenómenos históricos y sociales?' },
+  { id: 12, category: 'Investigative', categoryLabel: 'Área Investigadora (Ciencia, Código, Salud Analítica e Investigación)', text: '¿Disfrutas investigar sobre genética, biología molecular, nanotecnología o cómo mejorar los alimentos mediante la ciencia?' },
+
+  // 3. ARTÍSTICO (6 preguntas: Arquitectura/Interiores, Diseño Gráfico/Industrial, Cine/Animación/Videojuegos, Música/Artes Escénicas, Escritura/Letras, Moda/Artes Plásticas)
+  { id: 13, category: 'Artistic', categoryLabel: 'Área Artística (Arquitectura, Diseño, Medios Digitales y Creación)', text: '¿Qué tanto te gustaría diseñar planos arquitectónicos, imaginar edificios sustentables o transformar espacios interiores?' },
+  { id: 14, category: 'Artistic', categoryLabel: 'Área Artística (Arquitectura, Diseño, Medios Digitales y Creación)', text: '¿Te apasiona crear identidades visuales, ilustraciones, prototipos de productos industriales o experiencias interactivas?' },
+  { id: 15, category: 'Artistic', categoryLabel: 'Área Artística (Arquitectura, Diseño, Medios Digitales y Creación)', text: '¿Te atrae producir cine, dirigir fotografía, hacer animación 2D/3D o diseñar el arte visual para videojuegos?' },
+  { id: 16, category: 'Artistic', categoryLabel: 'Área Artística (Arquitectura, Diseño, Medios Digitales y Creación)', text: '¿Qué tan importante es para ti expresarte en un escenario mediante la música, el teatro, la actuación o la danza?' },
+  { id: 17, category: 'Artistic', categoryLabel: 'Área Artística (Arquitectura, Diseño, Medios Digitales y Creación)', text: '¿Disfrutas escribir historias originales, guiones, crónicas periodísticas, literatura o analizar obras artísticas?' },
+  { id: 18, category: 'Artistic', categoryLabel: 'Área Artística (Arquitectura, Diseño, Medios Digitales y Creación)', text: '¿Te entusiasma crear colecciones de moda, escultura, pintura o innovar en el diseño artesanal y cultural?' },
+
+  // 4. SOCIAL (6 preguntas: Psicología/Salud Mental, Enfermería/Rehabilitación, Docencia/Idiomas, Trabajo Social/Comunidad, Nutrición/Gerontología, Comunicación/Mediación)
+  { id: 19, category: 'Social', categoryLabel: 'Área Social (Salud Humana, Psicología, Educación y Comunidad)', text: '¿Qué tanto te interesa comprender la mente humana, escuchar a las personas y brindar terapia o apoyo psicológico?' },
+  { id: 20, category: 'Social', categoryLabel: 'Área Social (Salud Humana, Psicología, Educación y Comunidad)', text: '¿Te daría satisfacción atender directamente a pacientes en un hospital, cuidando su recuperación física, dental o de enfermería?' },
+  { id: 21, category: 'Social', categoryLabel: 'Área Social (Salud Humana, Psicología, Educación y Comunidad)', text: '¿Disfrutas enseñar, explicar temas complejos con paciencia, aprender otros idiomas o diseñar programas educativos?' },
+  { id: 22, category: 'Social', categoryLabel: 'Área Social (Salud Humana, Psicología, Educación y Comunidad)', text: '¿Te motiva trabajar en proyectos comunitarios, defender derechos humanos o apoyar a grupos vulnerables desde el trabajo social?' },
+  { id: 23, category: 'Social', categoryLabel: 'Área Social (Salud Humana, Psicología, Educación y Comunidad)', text: '¿Te gustaría guiar a las personas para mejorar sus hábitos de nutrición, su bienestar en la tercera edad o su rehabilitación física?' },
+  { id: 24, category: 'Social', categoryLabel: 'Área Social (Salud Humana, Psicología, Educación y Comunidad)', text: '¿Prefieres profesiones con trato humano diario, orientando personas y comunicándote en equipo todo el tiempo?' },
+
+  // 5. EMPRENDEDOR (6 preguntas: Dirección de Empresas, Marketing/Publicidad, Comercio Internacional, Derecho/Política, Turismo/Gastronomía, Gestión de Proyectos/Ventas)
+  { id: 25, category: 'Enterprising', categoryLabel: 'Área Emprendedora (Negocios, Liderazgo, Derecho, Marketing y Turismo)', text: '¿Qué tanto te atrae fundar tu propio negocio, dirigir empresas y tomar decisiones estratégicas de alto impacto?' },
+  { id: 26, category: 'Enterprising', categoryLabel: 'Área Emprendedora (Negocios, Liderazgo, Derecho, Marketing y Turismo)', text: '¿Disfrutas crear campañas de mercadotecnia, posicionar marcas en redes digitales, hacer relaciones públicas o persuadir clientes?' },
+  { id: 27, category: 'Enterprising', categoryLabel: 'Área Emprendedora (Negocios, Liderazgo, Derecho, Marketing y Turismo)', text: '¿Te entusiasma el comercio internacional, negociar con empresas de otros países, la diplomacia o los agronegocios de exportación?' },
+  { id: 28, category: 'Enterprising', categoryLabel: 'Área Emprendedora (Negocios, Liderazgo, Derecho, Marketing y Turismo)', text: '¿Qué tanta facilidad tienes para debatir leyes, defender casos legales como abogado o participar en política y gobierno?' },
+  { id: 29, category: 'Enterprising', categoryLabel: 'Área Emprendedora (Negocios, Liderazgo, Derecho, Marketing y Turismo)', text: '¿Te gustaría dirigir hoteles, organizar grandes eventos, gestionar destinos turísticos o administrar negocios gastronómicos?' },
+  { id: 30, category: 'Enterprising', categoryLabel: 'Área Emprendedora (Negocios, Liderazgo, Derecho, Marketing y Turismo)', text: '¿Te sientes cómodo liderando equipos de personas, gestionando el talento humano y asumiendo retos competitivos?' },
+
+  // 6. CONVENCIONAL (6 preguntas: Contaduría/Impuestos, Finanzas/Economía, Bases de Datos/TI, Logística/Aduanas, Auditoría/Calidad, Administración Documental)
+  { id: 31, category: 'Conventional', categoryLabel: 'Área Convencional (Finanzas, Contaduría, Logística, Datos y Control)', text: '¿Qué tanto te agrada llevar el control exacto de presupuestos, impuestos, contabilidad o estados financieros de una empresa?' },
+  { id: 32, category: 'Conventional', categoryLabel: 'Área Convencional (Finanzas, Contaduría, Logística, Datos y Control)', text: '¿Te interesa analizar mercados financieros, evaluar riesgos de inversión, banca digital (Fintech) o indicadores económicos?' },
+  { id: 33, category: 'Conventional', categoryLabel: 'Área Convencional (Finanzas, Contaduría, Logística, Datos y Control)', text: '¿Disfrutas organizar grandes bases de datos, administrar redes informáticas, ciberseguridad o sistematizar información?' },
+  { id: 34, category: 'Conventional', categoryLabel: 'Área Convencional (Finanzas, Contaduría, Logística, Datos y Control)', text: '¿Te atrae planificar rutas de transporte, controlar inventarios industriales, cadenas de suministro o logística aeroportuaria?' },
+  { id: 35, category: 'Conventional', categoryLabel: 'Área Convencional (Finanzas, Contaduría, Logística, Datos y Control)', text: '¿Eres meticuloso para hacer auditorías, verificar el cumplimiento de normas de calidad y detectar errores en documentos o contratos?' },
+  { id: 36, category: 'Conventional', categoryLabel: 'Área Convencional (Finanzas, Contaduría, Logística, Datos y Control)', text: '¿Prefieres entornos de trabajo bien estructurados, con procesos claros, ordenados y metas cuantificables?' },
 ];
 
 const SCALE_1_TO_10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -76,37 +100,72 @@ interface AreaMetrics {
   precision: number;
   recall: number;
   'f1-score': number;
+  support?: number;
 }
 
 interface ResultadoVocacional {
   area_recomendada: string;
+  afinidad_areas?: Record<string, number>;
   top_carreras: { carrera: string; afinidad: number }[];
   posicion_estudiante: { x: number; y: number; cluster: number };
   mapa_carreras: { Title: string; PCA_X: number; PCA_Y: number; Cluster: number; }[];
   metricas?: { acc_area: number; top3_acc: number; reporte_areas: Record<string, AreaMetrics>; };
 }
 
-const DEFAULT_METRICS: Record<string, AreaMetrics> = {
-  'Ciencias Económico Administrativas': { precision: 0.91, recall: 0.90, 'f1-score': 0.90 },
-  'Ciencias Exactas e Ingenierías': { precision: 0.93, recall: 0.92, 'f1-score': 0.92 },
-  'Ciencias de la Salud': { precision: 0.89, recall: 0.91, 'f1-score': 0.90 },
-  'Ciencias Biológicas y Agropecuarias': { precision: 0.88, recall: 0.86, 'f1-score': 0.87 },
-  'Ciencias Sociales y Humanidades': { precision: 0.87, recall: 0.89, 'f1-score': 0.88 },
-  'Arte, Arquitectura y Diseño': { precision: 0.92, recall: 0.90, 'f1-score': 0.91 },
+const ALIAS_MAP: Record<string, string[]> = {
+  "terapia ocupacional": ["terapia fisica", "podologia", "cultura fisica"],
+  "medico cirujano y partero": ["medicina", "medico cirujano"],
+  "cirujano dentista": ["odontologia", "cirujano dentista"],
+  "educacion / pedagogia": ["educacion", "pedagogia", "didactica"],
+  "antropologia / arqueologia": ["antropologia", "arqueologia"],
+  "criminologia / ciencias forenses": ["criminologia", "ciencias forenses"],
+  "periodismo / comunicacion publica": ["periodismo", "comunicacion publica", "ciencias de la comunicacion", "ciencias y artes audiovisuales"],
+  "docencia del ingles / lenguas": ["docencia del ingles", "lenguas y culturas extranjeras", "didactica del frances"],
+  "artes escenicas (teatro y danza)": ["artes escenicas", "expresion dancistica", "expresion teatral"],
+  "artes audiovisuales (cine)": ["artes audiovisuales", "cine", "animacion y arte digital"],
+  "energia / nanotecnologia": ["energia", "nanotecnologia"],
+  "ciencias ambientales": ["biologia", "recursos naturales"],
+  "sistemas biologicos": ["agrobiotecnologia", "biotecnologia"],
 };
 
-// Función para mapear el nombre de la IA al ID de la carrera en tus datos
+const normalizeText = (text: string) => {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/^lic\.\s+en\s+|^licenciatura\s+en\s+|^ing\.\s+|^ingenieria\s+en\s+/, "")
+    .trim();
+};
+
 const findCareerInfo = (carreraName: string) => {
-  const normalizedInput = carreraName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const normalizedInput = normalizeText(carreraName);
+  const searchTerms = [normalizedInput];
+
+  for (const [key, aliases] of Object.entries(ALIAS_MAP)) {
+    if (normalizedInput.includes(normalizeText(key))) {
+      searchTerms.push(...aliases);
+    }
+  }
+
   for (const center of universityCenters) {
     for (const c of center.careers) {
-      const normalizedC = c.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      if (normalizedC === normalizedInput || normalizedC.includes(normalizedInput) || normalizedInput.includes(normalizedC)) {
-        return { careerId: c.id, centerAcronym: center.acronym };
+      const normalizedC = normalizeText(c.name);
+      for (const term of searchTerms) {
+        if (
+          normalizedC === term ||
+          normalizedC.includes(term) ||
+          term.includes(normalizedC)
+        ) {
+          return { careerId: c.id, centerAcronym: center.acronym };
+        }
       }
     }
   }
   return null;
+};
+
+export const convertirEscala = (respuesta_1_10: number): number => {
+  return ((respuesta_1_10 - 1) / 9) * 6 + 1;
 };
 
 export const Chatbot = () => {
@@ -175,11 +234,10 @@ export const Chatbot = () => {
     setStage('intro');
   };
 
-  const areaReport = resultados?.metricas?.reporte_areas || DEFAULT_METRICS;
-  const accArea = resultados?.metricas?.acc_area ?? 90.45;
-  const top3Acc = resultados?.metricas?.top3_acc ?? 88.20;
+  // Leemos directamente las métricas enviadas por el modelo en el backend (sin constantes hardcodeadas)
+  const areaReport = resultados?.metricas?.reporte_areas || null;
+  const afinidadAreas = resultados?.afinidad_areas || null;
 
-  // Datos formateados para el RadarChart RIASEC
   const radarData = promediosUsuario ? [
     { subject: 'Realista', A: promediosUsuario.Realistic, fullMark: 10 },
     { subject: 'Investigador', A: promediosUsuario.Investigative, fullMark: 10 },
@@ -202,19 +260,18 @@ export const Chatbot = () => {
               <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-4xl">Conoce la arquitectura matemática y de Machine Learning que procesará tus respuestas para encontrar tu carrera ideal en la Red Universitaria.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 my-auto">
-              {/* Tarjetas Explicativas (mismas que antes) */}
               <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-2"><Layers className="w-4 h-4 sm:w-5 sm:h-5" /></div>
                   <h3 className="font-bold text-slate-800 text-sm sm:text-base mb-1">1. Perfilamiento RIASEC</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">Evaluamos <strong>24 reactivos</strong> (Realista, Investigador, Artístico, Social, Emprendedor, Convencional) promediando cada vector.</p>
+                  <p className="text-xs text-slate-600 leading-relaxed">Evaluamos <strong>36 reactivos</strong> (6 por cada dimensión: Realista, Investigador, Artístico, Social, Emprendedor, Convencional) abarcando todas las disciplinas.</p>
                 </div>
               </div>
               <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-2"><GitBranch className="w-4 h-4 sm:w-5 sm:h-5" /></div>
                   <h3 className="font-bold text-slate-800 text-sm sm:text-base mb-1">2. Random Forest Jerárquico</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed"><strong>Nivel 1:</strong> Clasifica tu Área UdeG.<br /><strong>Nivel 2:</strong> Calcula probabilidad de cada carrera.</p>
+                  <p className="text-xs text-slate-600 leading-relaxed"><strong>Nivel 1:</strong> Clasifica tu Área UdeG.<br /><strong>Nivel 2:</strong> Calcula la probabilidad de cada licenciatura específica.</p>
                 </div>
               </div>
               <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
@@ -227,15 +284,15 @@ export const Chatbot = () => {
               <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-2"><BarChart3 className="w-4 h-4 sm:w-5 sm:h-5" /></div>
-                  <h3 className="font-bold text-slate-800 text-sm sm:text-base mb-1">4. Métricas de Validación</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">Inspecciona Exactitud, Precision, Recall y F1-Score calculados estadísticamente al terminar tu test.</p>
+                  <h3 className="font-bold text-slate-800 text-sm sm:text-base mb-1">4. Métricas del Modelo</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">Extraemos directamente del modelo entrenado tu afinidad por área, Exactitud, Precision, Recall y F1-Score.</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-gray-200 shrink-0">
-              <p className="text-xs text-slate-500 text-center sm:text-left">⏱️ Tiempo estimado: <strong>3 minutos</strong></p>
+              <p className="text-xs text-slate-500 text-center sm:text-left">⏱️ Tiempo estimado: <strong>4 minutos</strong> · 36 preguntas en total</p>
               <button onClick={() => setStage('quiz')} className="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md flex items-center justify-center gap-2 transition-all">
-                Comenzar Cuestionario <ArrowRight className="w-4 h-4" />
+                Comenzar Cuestionario (36 preguntas) <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -273,15 +330,15 @@ export const Chatbot = () => {
             </div>
 
             <div className="flex items-center justify-between pt-3 border-t border-gray-200 shrink-0 gap-3">
-              <button type="button" onClick={handlePrevious} disabled={currentIndex === 0 || isSubmitting} className="px-4 sm:px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-slate-600 bg-white border border-gray-200 hover:bg-gray-100 flex items-center gap-1.5"><ArrowLeft className="w-4 h-4" /> Anterior</button>
-              <button type="button" onClick={handleNext} disabled={!selectedValue || isSubmitting} className="px-6 sm:px-8 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-blue-600 hover:bg-blue-700 flex items-center gap-2 shadow-md">
+              <button type="button" onClick={handlePrevious} disabled={currentIndex === 0 || isSubmitting} className="px-4 sm:px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-slate-600 bg-white border border-gray-200 hover:bg-gray-100 disabled:opacity-40 flex items-center gap-1.5"><ArrowLeft className="w-4 h-4" /> Anterior</button>
+              <button type="button" onClick={handleNext} disabled={!selectedValue || isSubmitting} className="px-6 sm:px-8 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-blue-600 hover:bg-blue-700 disabled:opacity-50 flex items-center gap-2 shadow-md">
                 {isSubmitting ? <><Loader2 className="w-4 h-4 animate-spin" /> Calculando...</> : currentIndex === QUESTIONS.length - 1 ? <>Ver Resultados <CheckCircle2 className="w-4 h-4" /></> : <>Siguiente <ArrowRight className="w-4 h-4" /></>}
               </button>
             </div>
           </div>
         )}
 
-        {/* ================= ETAPA 3: DASHBOARD DE RESULTADOS (RADAR + ENLACES) ================= */}
+        {/* ================= ETAPA 3: DASHBOARD DE RESULTADOS ================= */}
         {stage === 'results' && resultados && (
           <div className="flex-1 flex flex-col justify-between p-3.5 sm:p-5 lg:px-6 lg:py-4 bg-slate-50 lg:min-h-0 lg:overflow-hidden gap-3">
             
@@ -292,15 +349,23 @@ export const Chatbot = () => {
                 <h2 className="text-base sm:text-xl font-extrabold text-slate-800">{resultados.area_recomendada}</h2>
               </div>
               <div className="flex flex-wrap items-center gap-2">
-                <div className="bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-lg text-[11px] font-bold text-emerald-800">🎯 Exactitud Nivel 1: {accArea}%</div>
-                <div className="bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-lg text-[11px] font-bold text-indigo-800">🏆 Exactitud Top-3: {top3Acc}%</div>
+                {resultados.metricas?.acc_area !== undefined && (
+                  <div className="bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-lg text-[11px] font-bold text-emerald-800">
+                    🎯 Exactitud Nivel 1: {resultados.metricas.acc_area}%
+                  </div>
+                )}
+                {resultados.metricas?.top3_acc !== undefined && (
+                  <div className="bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-lg text-[11px] font-bold text-indigo-800">
+                    🏆 Exactitud Top-3: {resultados.metricas.top3_acc}%
+                  </div>
+                )}
                 <button onClick={handleReiniciar} className="px-2.5 py-1 bg-white border border-gray-300 hover:bg-gray-100 text-slate-700 font-semibold rounded-lg text-[11px] flex items-center gap-1 shadow-sm ml-auto sm:ml-0"><RefreshCw className="w-3 h-3" /> Repetir</button>
               </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 flex-1 lg:min-h-0">
               
-              {/* COLUMNA IZQUIERDA (5 cols): Top 3 + Huella RIASEC + Métricas */}
+              {/* COLUMNA IZQUIERDA (5 cols): Top 3 + Huella RIASEC + Métricas del Modelo */}
               <div className="lg:col-span-5 flex flex-col justify-between gap-2.5 lg:min-h-0 overflow-y-auto lg:overflow-visible">
                 
                 {/* Top 3 Carreras Clickables */}
@@ -336,46 +401,63 @@ export const Chatbot = () => {
                 {/* Gráfica de Radar RIASEC */}
                 <div className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm shrink-0 flex flex-col items-center">
                   <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1 self-start">Huella Vocacional RIASEC</h4>
-                  <div className="w-full h-[180px] sm:h-[220px] lg:h-[200px]">
+                  <div className="w-full h-[170px] sm:h-[200px] lg:h-[185px]">
                     <ResponsiveContainer width="100%" height="100%">
                       <RadarChart cx="50%" cy="50%" outerRadius="75%" data={radarData}>
                         <PolarGrid stroke="#e2e8f0" />
                         <PolarAngleAxis dataKey="subject" tick={{ fill: '#64748b', fontSize: 9.5, fontWeight: 'bold' }} />
                         <PolarRadiusAxis angle={30} domain={[0, 10]} tick={false} axisLine={false} />
-                        <Radar name="Afinidad" dataKey="A" stroke="#2563eb" fill="#3b82f6" fillOpacity={0.4} />
+                        <Radar name="Promedio (1-10)" dataKey="A" stroke="#2563eb" fill="#3b82f6" fillOpacity={0.4} />
                         <Tooltip wrapperStyle={{ fontSize: '11px' }} />
                       </RadarChart>
                     </ResponsiveContainer>
                   </div>
                 </div>
 
-                {/* Tabla de Métricas (Recall / F1) */}
+                {/* Tabla de Métricas Directas del Backend */}
                 <div className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex-1 flex flex-col justify-between lg:min-h-0">
                   <div className="flex items-center justify-between mb-1">
-                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1"><Activity className="w-3.5 h-3.5 text-indigo-600" /> Métricas por Área (Recall / F1)</h4>
+                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1">
+                      <Activity className="w-3.5 h-3.5 text-indigo-600" /> Métricas del Modelo y Afinidad por Área
+                    </h4>
                   </div>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-left border-collapse text-[10.5px]">
-                      <thead>
-                        <tr className="border-b border-gray-200 text-slate-500">
-                          <th className="py-1 font-bold">Área UdeG</th>
-                          <th className="py-1 text-center font-bold">Prec.</th>
-                          <th className="py-1 text-center font-bold">Recall</th>
-                          <th className="py-1 text-center font-bold">F1</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-gray-100">
-                        {Object.entries(areaReport).filter(([key]) => !['accuracy', 'macro avg', 'weighted avg'].includes(key)).map(([areaName, m]) => (
-                          <tr key={areaName} className={areaName === resultados.area_recomendada ? 'bg-blue-50/90 font-bold text-blue-900' : 'text-slate-700'}>
-                            <td className="py-0.5 pr-1 truncate max-w-[145px] sm:max-w-[180px]" title={areaName}>{areaName}</td>
-                            <td className="py-0.5 text-center">{(m.precision * 100).toFixed(0)}%</td>
-                            <td className="py-0.5 text-center text-emerald-700 font-semibold">{(m.recall * 100).toFixed(0)}%</td>
-                            <td className="py-0.5 text-center text-indigo-700 font-semibold">{(m['f1-score'] * 100).toFixed(0)}%</td>
+
+                  {areaReport ? (
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-left border-collapse text-[10.5px]">
+                        <thead>
+                          <tr className="border-b border-gray-200 text-slate-500">
+                            <th className="py-1 font-bold">Área UdeG</th>
+                            {afinidadAreas && <th className="py-1 text-center font-bold text-blue-600">Tu Afinidad</th>}
+                            <th className="py-1 text-center font-bold">Prec.</th>
+                            <th className="py-1 text-center font-bold">Recall</th>
+                            <th className="py-1 text-center font-bold">F1</th>
                           </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
+                        </thead>
+                        <tbody className="divide-y divide-gray-100">
+                          {Object.entries(areaReport)
+                            .filter(([key]) => !['accuracy', 'macro avg', 'weighted avg'].includes(key))
+                            .map(([areaName, m]) => (
+                              <tr key={areaName} className={areaName === resultados.area_recomendada ? 'bg-blue-50/90 font-bold text-blue-900' : 'text-slate-700'}>
+                                <td className="py-0.5 pr-1 truncate max-w-[135px] sm:max-w-[165px]" title={areaName}>{areaName}</td>
+                                {afinidadAreas && (
+                                  <td className="py-0.5 text-center font-bold text-blue-600">
+                                    {afinidadAreas[areaName] !== undefined ? `${afinidadAreas[areaName]}%` : '-'}
+                                  </td>
+                                )}
+                                <td className="py-0.5 text-center">{(m.precision * 100).toFixed(0)}%</td>
+                                <td className="py-0.5 text-center text-emerald-700 font-semibold">{(m.recall * 100).toFixed(0)}%</td>
+                                <td className="py-0.5 text-center text-indigo-700 font-semibold">{(m['f1-score'] * 100).toFixed(0)}%</td>
+                              </tr>
+                            ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : (
+                    <p className="text-[11px] text-slate-500 my-auto">
+                      Sube <strong>metricas_modelo.pkl</strong> a tu servicio en Render para visualizar Precision, Recall y F1-Score directos del modelo.
+                    </p>
+                  )}
                 </div>
               </div>
 

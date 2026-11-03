@@ -21,8 +21,7 @@ modelos_por_area = joblib.load("modelos_rf_carreras.pkl")
 pca = joblib.load("modelo_pca.pkl")
 kmeans = joblib.load("modelo_kmeans.pkl")
 centroides_carreras = joblib.load("centroides_carreras.pkl")
-metricas_modelo = joblib.load("metricas_modelo.pkl")
-
+metricas_modelo = joblib.load("metricas_modelo.pkl") if os.path.exists("metricas_modelo.pkl") else None
 
 COLUMNAS_RIASEC = ['Realistic', 'Investigative', 'Artistic', 'Social', 'Enterprising', 'Conventional']
 
@@ -53,6 +52,11 @@ def predecir_vocacion(perfil: PerfilRIASEC):
 
         # A) Nivel 1: Predecir Área UdeG
         area_predicha = rf_area.predict(df_estudiante)[0]
+        probs_areas = rf_area.predict_proba(df_estudiante)[0]
+        afinidad_areas = {
+            clase: round(float(prob) * 100, 1)
+            for clase, prob in zip(rf_area.classes_, probs_areas)
+        }
 
         # B) Nivel 2: Predecir Top 3 Carreras dentro del Área
         modelo_especifico = modelos_por_area[area_predicha]
@@ -81,6 +85,7 @@ def predecir_vocacion(perfil: PerfilRIASEC):
         # Respuesta JSON lista para graficar en el Frontend
         return {
             "area_recomendada": area_predicha,
+            "afinidad_areas": afinidad_areas, # <-- Dinámico por cada estudiante
             "top_carreras": top_carreras,
             "posicion_estudiante": {
                 "x": round(float(coords_usuario[0]), 4),
